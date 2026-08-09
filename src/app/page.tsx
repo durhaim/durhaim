@@ -63,9 +63,9 @@ const features = [
 ] as const;
 
 const categoryStrip = [
-  ["Bodyvest Chestrig", "/catalogue?category=vest", "/storefront/figma/homepage/page-4/bv-nccopy-1.png"],
-  ["Pack & Pouch", "/catalogue?category=pack", "/storefront/figma/homepage/page-4/bg-pack-and-pouch-copy-1.png"],
-  ["Belt", "/catalogue?category=belt", "/storefront/figma/homepage/page-4/bg-belt-copy-2.png"],
+  ["Bodyvest Chestrig", "/catalogue?category=vest", "/storefront/custom/bodyvest-chestrig-raw.png"],
+  ["Pack & Pouch", "/catalogue?category=pack", "/storefront/custom/pack-pouch-raw.png"],
+  ["Belt", "/catalogue?category=belt", "/storefront/custom/belt-raw.png"],
 ] as const;
 
 export default async function HomePage() {
@@ -149,7 +149,7 @@ export default async function HomePage() {
 
       <section className="home-category-strip" data-figma-node="29:79" aria-label="Browse categories">
         {categoryStrip.map(([label, href, image]) => (
-          <Link href={href} key={label}>
+          <Link className="home-category-strip__card" href={href} key={label}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={image} alt="" />
             <span>{label}</span>

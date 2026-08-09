@@ -718,13 +718,14 @@
   background: url("/storefront/figma/homepage/page-4/bg-7.png") center / cover no-repeat;
 }
 
-.home-category-strip a {
+.home-category-strip__card {
   position: relative;
   min-width: 0;
   overflow: hidden;
   width: 100%;
   max-width: 486px;
   aspect-ratio: 1;
+  background: #000;
 }
 
 .home-category-strip img {
@@ -734,7 +735,8 @@
   transition: transform 240ms var(--store-ease);
 }
 
-.home-category-strip a:hover img {
+.home-category-strip__card:hover img,
+.home-category-strip__card:focus-visible img {
   transform: scale(1.015);
 }
 
@@ -745,14 +747,29 @@
   display: flex;
   align-items: center;
   padding: 16px;
-  background: linear-gradient(transparent, rgb(0 0 0 / 80%));
+  background: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 92%) 0%,
+    rgb(0 0 0 / 86%) 55%,
+    rgb(0 0 0 / 0%) 100%
+  );
   color: var(--store-white);
   font-size: clamp(28px, 2.1vw, 40px);
   font-weight: 700;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 240ms var(--store-ease), transform 240ms var(--store-ease);
+  z-index: 1;
 }
 
-.home-category-strip a:focus-visible {
+.home-category-strip__card:hover span,
+.home-category-strip__card:focus-visible span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-category-strip__card:focus-visible {
   outline: 2px solid var(--store-white);
   outline-offset: 4px;
 }
@@ -997,24 +1014,18 @@
     position: relative;
     display: block;
   }
-  .home-category-strip a {
+  .home-category-strip__card {
     position: absolute;
     top: 99px;
     width: 486px;
     height: 486px;
   }
-  .home-category-strip a:nth-child(1) { left: 68px; }
-  .home-category-strip a:nth-child(2) { left: 716px; }
-  .home-category-strip a:nth-child(3) { left: 1374px; }
-  .home-category-strip span {
-    background: transparent;
-  }
-  .home-category-strip a:first-child span {
+  .home-category-strip__card:nth-child(1) { left: 68px; }
+  .home-category-strip__card:nth-child(2) { left: 716px; }
+  .home-category-strip__card:nth-child(3) { left: 1374px; }
+  .home-category-strip__card:first-child span {
     padding: 6px 16px;
     line-height: 1.2;
-  }
-  .home-category-strip a:not(:first-child) span {
-    transform: translateY(-1px);
   }
   html[lang="en"] .home-category-strip {
     background: url("/storefront/figma/homepage/page-4/bg-7.png") center / 1920px 688px no-repeat;
@@ -1193,7 +1204,7 @@
     gap: 24px;
     padding: 48px var(--store-edge);
   }
-  .home-category-strip a {
+  .home-category-strip__card {
     min-height: 480px;
     border-right: 0;
     border-bottom: 1px solid var(--store-divider);
@@ -1251,7 +1262,7 @@
   .home-feature__copy p {
     letter-spacing: .04em;
   }
-  .home-category-strip a {
+  .home-category-strip__card {
     min-height: 360px;
   }
   .home-battle {
