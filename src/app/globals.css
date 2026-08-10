@@ -664,6 +664,7 @@
   width: min(100%, 765px);
   aspect-ratio: 1;
   overflow: hidden;
+  background: var(--store-black);
 }
 .home-feature__image span {
   position: absolute;
@@ -672,17 +673,46 @@
   display: flex;
   align-items: center;
   padding: 18px 24px;
+  background: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 92%) 0%,
+    rgb(0 0 0 / 86%) 55%,
+    rgb(0 0 0 / 0%) 100%
+  );
   color: var(--store-white);
   font-size: 40px;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 240ms var(--store-ease), transform 240ms var(--store-ease);
+  z-index: 1;
 }
 
 .home-feature__image img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
+  transition: transform 240ms var(--store-ease);
+}
+
+.home-feature__image:hover img,
+.home-feature__image:focus-visible img {
+  transform: scale(1.015);
+}
+
+.home-feature__image:hover span,
+.home-feature__image:focus-visible span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-feature__image:focus-visible {
+  outline: 2px solid var(--store-white);
+  outline-offset: 4px;
 }
 
 .home-feature__copy h2 {
@@ -729,9 +759,11 @@
 }
 
 .home-category-strip img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 240ms var(--store-ease);
 }
 
@@ -971,34 +1003,6 @@
     background-repeat: no-repeat;
   }
   html[lang="en"] .home-intro__panels {
-    opacity: 0;
-  }
-  html[lang="en"] .home-features {
-    background-image:
-      url("/storefront/figma/homepage/page-3/explore-31.png"),
-      url("/storefront/figma/homepage/page-3/explore-21.png"),
-      url("/storefront/figma/homepage/page-3/explore-1.png"),
-      url("/storefront/figma/homepage/page-3/bg-6.png");
-    background-position: center top;
-    background-size: 1920px 2638px;
-    background-repeat: no-repeat;
-  }
-  html[lang="en"] .home-feature__copy .store-outline-button,
-  html[lang="en"] .home-feature:first-child .home-feature__copy .store-outline-button {
-    opacity: 0;
-  }
-  html[lang="en"] .home-feature:first-child .home-feature__copy {
-    transform: translateY(-12px);
-  }
-  .home-feature:nth-child(1) .home-feature__image span { bottom: 30px; }
-  .home-feature:nth-child(3) .home-feature__image span { bottom: 8px; }
-  .home-feature:nth-child(1) .home-feature__image { transform: translate(10px, 25px); }
-  .home-feature:nth-child(2) .home-feature__image { transform: translateY(15px); }
-  .home-feature:nth-child(3) .home-feature__image { transform: translate(10px, 10px); }
-  html[lang="en"] .home-features {
-    background: url("/storefront/figma/reference/29-44.png") center / 1920px 2515px no-repeat;
-  }
-  html[lang="en"] .home-features .home-feature {
     opacity: 0;
   }
   .store-scanner__frame {

@@ -43,21 +43,21 @@ const features = [
     title: { en: "Bodyvest & Chestrig", id: "Bodyvest & Chestrig" },
     subtitle: { en: "Durability hard impact and modular", id: "Tahan Benturan Berat dan modular" },
     href: "/catalogue?category=vest",
-    image: "/storefront/figma/homepage/page-3/bv-nccopy-1.png",
+    image: "/storefront/custom/bodyvest-chestrig-raw.png",
     align: "right",
   },
   {
     title: { en: "Pack & Pouch", id: "Pack & Pouch" },
     subtitle: { en: "Perfect for carrying your equipment", id: "Ideal untuk membawa Perlengkapan Anda" },
     href: "/catalogue?category=pack",
-    image: "/storefront/figma/homepage/page-3/bg-pack-and-pouch-copy-1.png",
+    image: "/storefront/custom/pack-pouch-raw.png",
     align: "left",
   },
   {
     title: { en: "Belt", id: "Belt" },
     subtitle: { en: "It’s all about the waist", id: "Semua bertumpu pada pinggang" },
     href: "/catalogue?category=belt",
-    image: "/storefront/figma/homepage/page-3/bg-belt-copy-1.png",
+    image: "/storefront/custom/belt-raw.png",
     align: "right",
   },
 ] as const;
@@ -131,11 +131,11 @@ export default async function HomePage() {
       <section className="home-features" data-figma-node="29:44" aria-label="Equipment categories">
         {features.map((feature) => (
           <article className={`home-feature home-feature--${feature.align}`} key={feature.title.en}>
-            <div className="home-feature__image">
+            <Link className="home-feature__image" href={feature.href}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={feature.image} alt="" />
               <span><LocalizedText en={feature.title.en} id={feature.title.id} /></span>
-            </div>
+            </Link>
             <div className="home-feature__copy">
               <h2><LocalizedText en={feature.title.en} id={feature.title.id} /></h2>
               <p><LocalizedText en={feature.subtitle.en} id={feature.subtitle.id} /></p>
