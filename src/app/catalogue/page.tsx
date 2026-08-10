@@ -28,7 +28,7 @@ type CatalogueGroup = {
 };
 
 export default function CataloguePage() {
-  const { language, region, formatPrice, t } = useCommerce();
+  const { language, t } = useCommerce();
   const siteSettings = useSiteSettings();
   const [category, setCategory] = useState("all");
   const [queryInput, setQueryInput] = useState("");
@@ -59,7 +59,7 @@ export default function CataloguePage() {
       setError("");
       setWarning("");
       try {
-        const params = new URLSearchParams({ sort, limit: "200", region });
+        const params = new URLSearchParams({ sort, limit: "200" });
         if (category !== "all") params.set("category", category);
         if (query.trim()) params.set("search", query.trim());
         const response = await fetch(`/api/products?${params}`, { signal: controller.signal, cache: "no-store" });
@@ -87,7 +87,7 @@ export default function CataloguePage() {
     }
     void fetchProducts();
     return () => controller.abort();
-  }, [category, query, region, sort, t.catalogue.unableToLoad]);
+  }, [category, query, sort, t.catalogue.unableToLoad]);
 
   const groups = useMemo<CatalogueGroup[]>(() => {
     const categoryMap = new Map<string, CatalogueGroup>();
@@ -205,8 +205,6 @@ export default function CataloguePage() {
                 <option value="display">{language === "id" ? "Urutan katalog" : "Catalogue order"}</option>
                 <option value="name-az">{t.catalogue.nameAz}</option>
                 <option value="name-za">{t.catalogue.nameZa}</option>
-                <option value="price-high">{t.catalogue.priceHigh}</option>
-                <option value="price-low">{t.catalogue.priceLow}</option>
               </select>
             </label>
           </div>
@@ -236,8 +234,6 @@ export default function CataloguePage() {
                     {expanded && (
                       <div className="store-product-grid" id={`series-${seriesGroup.key}`}>
                         {seriesGroup.products.map((product) => {
-                          const regionalPrice = product.regional_prices[region];
-                          const hasPrice = product.price !== null || typeof regionalPrice === "number";
                           const enquiry = t.product.enquiry(product.name, product.slug);
                           return (
                             <article className="store-product-card" key={product.slug}>
@@ -245,7 +241,6 @@ export default function CataloguePage() {
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img src={product.images[0] ?? ""} alt={product.name} loading="lazy" />
                                 <div className="store-product-card__utility">
-                                  {hasPrice && <span>{formatPrice(product.price ?? regionalPrice ?? 0, product.regional_prices)}</span>}
                                   <a href={buildWhatsAppUrl(siteSettings, enquiry)} target="_blank" rel="noopener noreferrer">
                                     WhatsApp
                                   </a>
