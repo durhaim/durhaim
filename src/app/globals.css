@@ -122,6 +122,21 @@
 .storefront-v2 .border-outline-variant {
   border-color: var(--store-divider) !important;
 }
+.storefront-v2 .rounded-2xl {
+  border-radius: 16px !important;
+}
+.storefront-v2 .rounded-xl {
+  border-radius: 14px !important;
+}
+.storefront-v2 .rounded-lg {
+  border-radius: 12px !important;
+}
+.storefront-v2 .rounded-md {
+  border-radius: 8px !important;
+}
+.storefront-v2 .rounded-sm {
+  border-radius: 6px !important;
+}
 .storefront-v2 .text-on-tertiary-fixed-variant,
 .storefront-v2 .text-on-surface-variant {
   color: var(--store-muted) !important;

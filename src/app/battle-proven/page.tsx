@@ -27,7 +27,7 @@ export default function BattleProvenPage() {
         </div>
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center text-center px-margin-edge max-w-[1000px] mx-auto mt-16">
-          <div className="inline-block border border-signal-orange bg-tactical-black/80 px-4 py-2 mb-stack-lg backdrop-blur-sm rounded-md">
+          <div className="inline-block border border-signal-orange bg-tactical-black/80 px-4 py-2 mb-stack-lg backdrop-blur-sm rounded-md" style={{ borderRadius: '6px' }}>
             <span className="font-data-mono text-data-mono text-signal-orange uppercase tracking-widest">
               <LocalizedText en="Operationally Ready" id="Siap Operasi" />
             </span>
@@ -44,6 +44,7 @@ export default function BattleProvenPage() {
           <div className="flex flex-col sm:flex-row gap-stack-md mt-stack-md">
             <a
               className="inline-flex items-center justify-center bg-signal-orange text-tactical-black font-label-caps text-label-caps uppercase px-8 py-4 border border-signal-orange hover:bg-tactical-black hover:text-signal-orange transition-all duration-300 active:scale-95 group rounded-md"
+              style={{ borderRadius: '6px' }}
               href="#innovation"
             >
               <LocalizedText en="Explore The Mission" id="Jelajahi Misi" />
@@ -89,13 +90,13 @@ export default function BattleProvenPage() {
               </p>
             </div>
             <div className="mt-stack-lg grid grid-cols-2 gap-stack-md">
-              <div className="bg-tactical-black border border-surface-container-highest p-stack-md flex flex-col rounded-xl">
+              <div className="bg-tactical-black border border-surface-container-highest p-stack-md flex flex-col rounded-2xl" style={{ borderRadius: '16px' }}>
                 <span className="material-symbols-outlined text-signal-orange mb-2 text-3xl">precision_manufacturing</span>
                 <span className="font-label-caps text-label-caps text-stark-white uppercase">
                   <LocalizedText en="Machined Precision" id="Presisi Produksi" />
                 </span>
               </div>
-              <div className="bg-tactical-black border border-surface-container-highest p-stack-md flex flex-col rounded-xl">
+              <div className="bg-tactical-black border border-surface-container-highest p-stack-md flex flex-col rounded-2xl" style={{ borderRadius: '16px' }}>
                 <span className="material-symbols-outlined text-signal-orange mb-2 text-3xl">science</span>
                 <span className="font-label-caps text-label-caps text-stark-white uppercase">
                   <LocalizedText en="Iterative Testing" id="Pengujian Berulang" />
@@ -105,15 +106,16 @@ export default function BattleProvenPage() {
           </div>
           {/* Image */}
           <div className="lg:col-span-7 order-1 lg:order-2 relative mb-stack-lg lg:mb-0">
-            <div className="relative w-full aspect-[4/3] bg-tactical-black border border-surface-container-highest overflow-hidden group rounded-xl">
+            <div className="relative w-full aspect-[4/3] bg-tactical-black border border-surface-container-highest overflow-hidden group rounded-2xl" style={{ borderRadius: '16px' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 alt="Blue training pistols in a rigid black tactical holster"
-                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100 rounded-xl"
+                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
+                style={{ borderRadius: '16px' }}
                 src="/images/15_Holster-1.png"
               />
               {/* Overlay badge */}
-              <div className="absolute top-4 right-4 bg-tactical-black/80 border border-signal-orange px-3 py-1 backdrop-blur-sm rounded-md">
+              <div className="absolute top-4 right-4 bg-tactical-black/80 border border-signal-orange px-3 py-1 backdrop-blur-sm rounded-md" style={{ borderRadius: '6px' }}>
                 <span className="font-data-mono text-data-mono text-signal-orange">
                   <LocalizedText en="STATUS: ACTIVE" id="STATUS: AKTIF" />
                 </span>
@@ -155,18 +157,19 @@ export default function BattleProvenPage() {
           {/* Bento Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter auto-rows-[300px]">
             {/* Card 1: Large Feature */}
-            <div className="md:col-span-2 bg-charcoal-field border border-surface-container-highest relative overflow-hidden group flex flex-col justify-end p-stack-lg rounded-xl">
+            <div className="md:col-span-2 bg-charcoal-field border border-surface-container-highest relative overflow-hidden group flex flex-col justify-end p-stack-lg rounded-2xl" style={{ borderRadius: '16px' }}>
               <div className="absolute inset-0 z-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  className="w-full h-full object-cover opacity-30 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700 rounded-xl"
+                  className="w-full h-full object-cover opacity-30 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700"
+                  style={{ borderRadius: '16px' }}
                   alt="Heavy duty ballistic nylon fabric"
                   src="/images/durhaim_image_4.png"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-tactical-black to-transparent"></div>
               </div>
               <div className="relative z-10">
-                <div className="inline-block bg-tactical-black border border-stark-white/20 px-2 py-1 mb-stack-sm rounded-md">
+                <div className="inline-block bg-tactical-black border border-stark-white/20 px-2 py-1 mb-stack-sm rounded-md" style={{ borderRadius: '6px' }}>
                   <span className="font-data-mono text-data-mono text-stark-white uppercase">
                     <LocalizedText en="Material Base" id="Basis Material" />
                   </span>
@@ -183,7 +186,7 @@ export default function BattleProvenPage() {
               </div>
             </div>
             {/* Card 2: Stat */}
-            <div className="bg-tactical-black border border-surface-container-highest flex flex-col items-center justify-center p-stack-lg text-center group hover:border-signal-orange transition-colors rounded-xl">
+            <div className="bg-tactical-black border border-surface-container-highest flex flex-col items-center justify-center p-stack-lg text-center group hover:border-signal-orange transition-colors rounded-2xl" style={{ borderRadius: '16px' }}>
               <span className="material-symbols-outlined text-signal-orange text-6xl mb-stack-md font-light" style={{fontVariationSettings: "'wght' 200"}}>shield</span>
               <div className="font-display-xl text-headline-lg text-stark-white mb-2">MIL-SPEC</div>
               <p className="font-body-md text-body-md text-on-surface-variant">
@@ -194,7 +197,7 @@ export default function BattleProvenPage() {
               </p>
             </div>
             {/* Card 3: Modular */}
-            <div className="bg-charcoal-field border border-surface-container-highest relative overflow-hidden group p-stack-lg flex flex-col justify-between rounded-xl">
+            <div className="bg-charcoal-field border border-surface-container-highest relative overflow-hidden group p-stack-lg flex flex-col justify-between rounded-2xl" style={{ borderRadius: '16px' }}>
               <div className="flex justify-between items-start">
                 <span className="material-symbols-outlined text-stark-white text-3xl">view_module</span>
                 <span className="font-data-mono text-data-mono text-signal-orange">MOD-01</span>
@@ -203,7 +206,7 @@ export default function BattleProvenPage() {
                 <h3 className="font-headline-md text-headline-md text-stark-white uppercase mb-2">
                   <LocalizedText en="Total Modularity" id="Modularitas Penuh" />
                 </h3>
-                <div className="w-full h-2 bg-surface-container mt-stack-md flex gap-1 rounded-full overflow-hidden">
+                <div className="w-full h-2 bg-surface-container mt-stack-md flex gap-1 rounded-full overflow-hidden" style={{ borderRadius: '9999px' }}>
                   <div className="h-full w-1/4 bg-signal-orange rounded-full"></div>
                   <div className="h-full w-1/4 bg-signal-orange rounded-full"></div>
                   <div className="h-full w-1/4 bg-surface-container-highest rounded-full"></div>
@@ -212,7 +215,7 @@ export default function BattleProvenPage() {
               </div>
             </div>
             {/* Card 4: Action */}
-            <div className="md:col-span-2 bg-tactical-black border border-surface-container-highest flex flex-col md:flex-row items-center p-stack-lg gap-stack-lg group hover:bg-surface-container-low transition-colors rounded-xl">
+            <div className="md:col-span-2 bg-tactical-black border border-surface-container-highest flex flex-col md:flex-row items-center p-stack-lg gap-stack-lg group hover:bg-surface-container-low transition-colors rounded-2xl" style={{ borderRadius: '16px' }}>
               <div className="w-24 h-24 rounded-full border-2 border-signal-orange flex items-center justify-center flex-shrink-0 relative">
                 <div className="absolute inset-0 rounded-full border border-signal-orange animate-ping opacity-20"></div>
                 <span className="material-symbols-outlined text-signal-orange text-4xl">my_location</span>
@@ -254,6 +257,7 @@ export default function BattleProvenPage() {
           </p>
           <Link
             className="inline-flex items-center justify-center bg-tactical-black text-stark-white font-label-caps text-label-caps uppercase px-10 py-5 border-2 border-tactical-black hover:bg-transparent hover:text-tactical-black transition-all duration-300 active:scale-95 group rounded-md"
+            style={{ borderRadius: '8px' }}
             href="/catalogue"
           >
             <LocalizedText en="Explore Full Catalogue" id="Jelajahi Katalog Lengkap" />
