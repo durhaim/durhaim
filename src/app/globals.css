@@ -55,9 +55,9 @@
   --store-overlay-strong: rgb(0 0 0 / 68%);
   --store-edge: clamp(16px, 3.65vw, 70px);
   --store-ease: cubic-bezier(.22, 1, .36, 1);
-  --store-radius-sm: 4px;
-  --store-radius: 8px;
-  --store-radius-lg: 12px;
+  --store-radius-sm: 6px;
+  --store-radius: 12px;
+  --store-radius-lg: 18px;
   width: 100%;
   max-width: 100vw;
   overflow-x: clip;
@@ -1388,7 +1388,7 @@
   height: 17px;
   appearance: none;
   border: 1px solid var(--store-white);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 .store-category-options input:checked {
   background: var(--store-white);
