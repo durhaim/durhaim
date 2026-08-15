@@ -62,14 +62,14 @@ export default function OurStoryPage() {
           </div>
           <div className="space-y-stack-md lg:col-span-7">
             {principles.map((principle, index) => (
-              <div key={principle.en} className="flex items-center gap-4 border border-surface-container-highest bg-charcoal-field p-stack-md">
-                <span className="font-data-mono text-signal-orange">0{index + 1}</span>
+              <div key={principle.en} className="flex items-center gap-4 border border-surface-container-highest bg-charcoal-field p-stack-md rounded-xl transition-colors hover:border-signal-orange" style={{ borderRadius: '12px' }}>
+                <span className="font-data-mono text-signal-orange border border-signal-orange/30 bg-tactical-black/80 px-2.5 py-1 rounded-md" style={{ borderRadius: '6px' }}>0{index + 1}</span>
                 <span className="font-label-caps text-label-caps uppercase text-stark-white">
                   <LocalizedText en={principle.en} id={principle.id} />
                 </span>
               </div>
             ))}
-            <Link href="/battle-proven" className="btn btn-primary inline-flex">
+            <Link href="/battle-proven" className="btn btn-primary inline-flex rounded-md" style={{ borderRadius: '6px' }}>
               <LocalizedText en="Battle Proven" id="Teruji Lapangan" />
             </Link>
           </div>

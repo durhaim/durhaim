@@ -51,8 +51,8 @@ export default async function QrGuidePage() {
 
         <div className="mt-section-gap grid gap-gutter md:grid-cols-3">
           {steps.map((step, index) => (
-            <section key={step.title.en} className="border border-surface-container-highest bg-charcoal-field p-stack-lg">
-              <div className="font-data-mono text-signal-orange">0{index + 1}</div>
+            <section key={step.title.en} className="border border-surface-container-highest bg-charcoal-field p-stack-lg rounded-2xl" style={{ borderRadius: '16px' }}>
+              <div className="inline-block border border-signal-orange/40 bg-tactical-black/80 px-2.5 py-1 font-data-mono text-signal-orange rounded-md" style={{ borderRadius: '6px' }}>0{index + 1}</div>
               <h2 className="mt-stack-sm font-headline-md text-headline-md uppercase text-stark-white">
                 <LocalizedText en={step.title.en} id={step.title.id} />
               </h2>
@@ -64,14 +64,15 @@ export default async function QrGuidePage() {
         </div>
 
         <div className="mt-stack-lg flex flex-col gap-stack-sm sm:flex-row">
-          <Link href="/verify" className="btn btn-primary inline-flex justify-center">
+          <Link href="/verify" className="btn btn-primary inline-flex justify-center rounded-md" style={{ borderRadius: '6px' }}>
             <LocalizedText en="Verify a Serial" id="Verifikasi Serial" />
           </Link>
           <a
             href={buildWhatsAppUrl(siteSettings)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex justify-center border border-surface-container-highest px-6 py-3 font-label-caps text-label-caps uppercase text-stark-white hover:border-signal-orange hover:text-signal-orange"
+            className="inline-flex justify-center border border-surface-container-highest px-6 py-3 font-label-caps text-label-caps uppercase text-stark-white hover:border-signal-orange hover:text-signal-orange rounded-md transition-colors"
+            style={{ borderRadius: '6px' }}
           >
             <LocalizedText en="Contact Support" id="Hubungi Bantuan" />
           </a>
