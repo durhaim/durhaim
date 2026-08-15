@@ -953,6 +953,14 @@
   border: 1px solid var(--store-divider);
   color: var(--store-muted);
   font-size: 12px;
+  border-radius: var(--store-radius-sm);
+  transition: border-color 180ms var(--store-ease), color 180ms var(--store-ease), background-color 180ms var(--store-ease);
+}
+
+.store-footer__social a:hover {
+  border-color: var(--store-white);
+  color: var(--store-white);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .store-footer__form {
@@ -969,6 +977,7 @@
   background: #0c0c0c;
   color: var(--store-white);
   padding: 0 14px;
+  border-radius: var(--store-radius-sm) 0 0 var(--store-radius-sm);
 }
 
 .store-footer__form input::placeholder {
@@ -982,6 +991,7 @@
   place-items: center;
   background: var(--store-white);
   color: var(--store-black);
+  border-radius: 0 var(--store-radius-sm) var(--store-radius-sm) 0;
 }
 
 .store-footer__message {
