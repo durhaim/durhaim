@@ -52,11 +52,8 @@ export async function GET(req: NextRequest) {
   const includeFigmaCatalogue = process.env.STOREFRONT_V2_ENABLED !== "false";
   let tombstonedSlugs = new Set<string>();
   try {
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    );
-    tombstonedSlugs = await getCatalogueTombstoneSlugs(createAdminClient());
+    const supabase = createAdminClient();
+    tombstonedSlugs = await getCatalogueTombstoneSlugs(supabase);
     const visibleFallbackProducts = fallbackProducts.filter((product) => !tombstonedSlugs.has(product.slug));
     const categoryResult = await supabase
       .from("categories")
@@ -66,14 +63,12 @@ export async function GET(req: NextRequest) {
     let { data, error } = await supabase
       .from("products")
       .select("*, categories!inner(name, slug), product_series(name, slug, display_order)")
-      .eq("is_published", true)
       .limit(200);
 
     if (error && isMissingCatalogueExtension(error)) {
       const legacy = await supabase
         .from("products")
         .select("*, categories!inner(name, slug)")
-        .eq("is_published", true)
         .limit(200);
       data = legacy.data;
       error = legacy.error;
@@ -93,11 +88,11 @@ export async function GET(req: NextRequest) {
     }
 
     const databaseProducts = (data ?? []).map((product) => normalizeProduct(product as Record<string, unknown>));
-    const figmaSlugs = new Set(fallbackProducts.map((product) => product.slug));
-    const sourceProducts = includeFigmaCatalogue
+    const mergedProducts = includeFigmaCatalogue
       ? mergeCatalogueProducts(databaseProducts, fallbackProducts, tombstonedSlugs)
       : databaseProducts;
-    const categorizedProducts = applyCategoryOverrides(sourceProducts, categoryOverrides);
+    const publishedProducts = mergedProducts.filter((product) => product.is_published !== false);
+    const categorizedProducts = applyCategoryOverrides(publishedProducts, categoryOverrides);
     return NextResponse.json({
       ...buildProductResponse(req, categorizedProducts),
       categories: categoryOverrides,

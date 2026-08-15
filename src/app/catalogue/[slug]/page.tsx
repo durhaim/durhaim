@@ -31,13 +31,9 @@ function isMissingCatalogueExtension(error: unknown) {
 async function getProduct(slug: string): Promise<CatalogueProduct | null> {
   const fallback = fallbackProducts.find((product) => product.slug === slug) ?? null;
   try {
-    const tombstonedSlugs = await getCatalogueTombstoneSlugs(createAdminClient());
+    const supabase = createAdminClient();
+    const tombstonedSlugs = await getCatalogueTombstoneSlugs(supabase);
     if (tombstonedSlugs.has(slug)) return null;
-
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    );
     const categoryResult = await supabase
       .from("categories")
       .select("name, slug");
@@ -49,32 +45,40 @@ async function getProduct(slug: string): Promise<CatalogueProduct | null> {
       .from("products")
       .select("*, categories(name, slug), product_series(name, slug)")
       .eq("slug", slug)
-      .eq("is_published", true)
-      .single();
+      .maybeSingle();
 
     if (error && isMissingCatalogueExtension(error)) {
       const legacy = await supabase
         .from("products")
         .select("*, categories(name, slug)")
         .eq("slug", slug)
-        .eq("is_published", true)
-        .single();
+        .maybeSingle();
       data = legacy.data;
       error = legacy.error;
     }
 
     if (error) {
       if (isMissingSchemaError(error)) return categorizedFallback;
-      return categorizedFallback;
+      return null;
     }
-    return applyCategoryOverrides(
-      mergeCatalogueProducts(
-        [normalizeProduct(data as Record<string, unknown>)],
-        fallbackProducts,
-        tombstonedSlugs,
-      ),
-      categoryOverrides,
-    ).find((product) => product.slug === slug) ?? categorizedFallback;
+
+    if (data) {
+      const normalized = normalizeProduct(data as Record<string, unknown>);
+      if (normalized.is_published === false) {
+        return null;
+      }
+      return applyCategoryOverrides(
+        mergeCatalogueProducts(
+          [normalized],
+          fallbackProducts,
+          tombstonedSlugs,
+        ),
+        categoryOverrides,
+      ).find((product) => product.slug === slug) ?? null;
+    }
+
+    if (tombstonedSlugs.has(slug)) return null;
+    return categorizedFallback;
   } catch {
     return fallback;
   }
