@@ -9,20 +9,16 @@ import { useSiteSettings } from "@/components/SiteSettingsProvider";
 import { localizeCategoryName } from "@/lib/product-localization";
 import { buildWhatsAppUrl } from "@/lib/site-settings";
 
-const categoryOrder = ["vest", "pack", "belt"];
+const categoryOrder = ["vest", "pack", "belt", "accessories"];
 const categoryOptions = ["all", "vest", "pack", "belt", "accessories"] as const;
-const seriesOrder = [
-  "chitto-series", "cobra-series", "mamba-series", "thunder-chestrig-series", "viper-series",
-  "aim-vortex-rifle-bag", "anaconda", "bite-bee-handbag", "cobra-backpack",
-  "dregon-head-backpack", "dump-pouch", "fabric-holster", "handgun-double-mag-pouch",
-  "rifle-mag-pouch", "snake-head-sling-bag", "wolven-messenger-bag", "rattle-belt", "trojan-pro-warbelt",
-];
+
 
 type CatalogueGroup = {
   category: CatalogueProduct["category"];
   series: Array<{
     key: string;
     name: string;
+    display_order?: number;
     products: CatalogueProduct[];
   }>;
 };
@@ -92,9 +88,7 @@ export default function CataloguePage() {
   const groups = useMemo<CatalogueGroup[]>(() => {
     const categoryMap = new Map<string, CatalogueGroup>();
     for (const product of products) {
-      const displayCategory = product.category.slug === "accessories"
-        ? { ...product.category, slug: "pack", name: "Pack & Pouch" }
-        : product.category;
+      const displayCategory = product.category;
       let categoryGroup = categoryMap.get(displayCategory.slug);
       if (!categoryGroup) {
         categoryGroup = { category: displayCategory, series: [] };
@@ -103,23 +97,32 @@ export default function CataloguePage() {
       const seriesKey = product.series?.slug ?? "uncategorized";
       let seriesGroup = categoryGroup.series.find((item) => item.key === seriesKey);
       if (!seriesGroup) {
-        seriesGroup = { key: seriesKey, name: product.series?.name ?? product.category.name, products: [] };
+        seriesGroup = {
+          key: seriesKey,
+          name: product.series?.name ?? product.category.name,
+          display_order: product.series?.display_order ?? 9999,
+          products: [],
+        };
         categoryGroup.series.push(seriesGroup);
       }
       seriesGroup.products.push(product);
     }
-    const packGroup = categoryMap.get("pack");
-    if (packGroup && !packGroup.series.some((item) => item.key === "anaconda")) {
-      packGroup.series.push({ key: "anaconda", name: "Anaconda Assault Backpack", products: [] });
-    }
     return [...categoryMap.values()]
-      .sort((a, b) => categoryOrder.indexOf(a.category.slug) - categoryOrder.indexOf(b.category.slug))
+      .sort((a, b) => {
+        const aIndex = categoryOrder.indexOf(a.category.slug);
+        const bIndex = categoryOrder.indexOf(b.category.slug);
+        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+        if (aIndex !== -1) return -1;
+        if (bIndex !== -1) return 1;
+        return a.category.name.localeCompare(b.category.name);
+      })
       .map((group) => ({
         ...group,
         series: group.series.sort((a, b) => {
-          const aIndex = seriesOrder.indexOf(a.key);
-          const bIndex = seriesOrder.indexOf(b.key);
-          return (aIndex < 0 ? Number.MAX_SAFE_INTEGER : aIndex) - (bIndex < 0 ? Number.MAX_SAFE_INTEGER : bIndex);
+          const aOrder = typeof a.display_order === 'number' ? a.display_order : 9999;
+          const bOrder = typeof b.display_order === 'number' ? b.display_order : 9999;
+          if (aOrder !== bOrder) return aOrder - bOrder;
+          return a.name.localeCompare(b.name);
         }),
       }));
   }, [products]);

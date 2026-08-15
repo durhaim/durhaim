@@ -9,6 +9,7 @@ export type ProductCategory = {
 export type ProductSeries = {
   name: string;
   slug: string;
+  display_order?: number;
 };
 
 export type CatalogueProduct = {

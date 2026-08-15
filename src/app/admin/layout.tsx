@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { cookies } from "next/headers";
-import { LayoutDashboard, Box, FolderTree, QrCode, Settings, Users } from "lucide-react";
+import { LayoutDashboard, Box, FolderTree, QrCode, Settings, Users, Layers } from "lucide-react";
 import AdminSignOutButton from "@/components/AdminSignOutButton";
 import { ADMIN_SESSION_COOKIE, getAdminSessionUser } from "@/lib/admin-auth";
 import type { Metadata } from "next";
@@ -48,6 +48,12 @@ export default async function AdminLayout({
               <Link href="/admin/categories" className="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-surface-container-highest text-on-surface-variant hover:text-signal-orange transition-colors">
                 <FolderTree className="w-5 h-5" />
                 <span className="font-label-caps uppercase">Categories</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/admin/series" className="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-surface-container-highest text-on-surface-variant hover:text-signal-orange transition-colors">
+                <Layers className="w-5 h-5" />
+                <span className="font-label-caps uppercase">Series</span>
               </Link>
             </li>
             <li>

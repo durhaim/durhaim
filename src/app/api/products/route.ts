@@ -65,7 +65,7 @@ export async function GET(req: NextRequest) {
 
     let { data, error } = await supabase
       .from("products")
-      .select("*, categories!inner(name, slug), product_series(name, slug)")
+      .select("*, categories!inner(name, slug), product_series(name, slug, display_order)")
       .eq("is_published", true)
       .limit(200);
 
@@ -96,7 +96,6 @@ export async function GET(req: NextRequest) {
     const figmaSlugs = new Set(fallbackProducts.map((product) => product.slug));
     const sourceProducts = includeFigmaCatalogue
       ? mergeCatalogueProducts(databaseProducts, fallbackProducts, tombstonedSlugs)
-          .filter((product) => figmaSlugs.has(product.slug))
       : databaseProducts;
     const categorizedProducts = applyCategoryOverrides(sourceProducts, categoryOverrides);
     return NextResponse.json({

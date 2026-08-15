@@ -100,9 +100,17 @@ function getCategorySlug(category: CategoryRelation) {
   return getCategory(category)?.slug ?? 'vest';
 }
 
+function getSeries(series: Product['product_series']) {
+  if (Array.isArray(series)) return series[0] ?? null;
+  return series;
+}
+
+function getSeriesName(series: Product['product_series']) {
+  return getSeries(series)?.name ?? '-';
+}
+
 function getSeriesSlug(series: Product['product_series']) {
-  if (Array.isArray(series)) return series[0]?.slug ?? '';
-  return series?.slug ?? '';
+  return getSeries(series)?.slug ?? '';
 }
 
 function slugify(value: string) {
@@ -221,9 +229,11 @@ export default function AdminProductsPage() {
 
     return products.filter((product) => {
       const category = getCategoryName(product.categories).toLowerCase();
+      const series = getSeriesName(product.product_series).toLowerCase();
       return product.name.toLowerCase().includes(normalizedQuery)
         || product.slug.toLowerCase().includes(normalizedQuery)
-        || category.includes(normalizedQuery);
+        || category.includes(normalizedQuery)
+        || series.includes(normalizedQuery);
     });
   }, [products, query]);
 
@@ -492,16 +502,18 @@ export default function AdminProductsPage() {
         <div className="overflow-x-auto">
           <table className="w-full table-fixed border-collapse text-left">
             <colgroup>
-              <col className="w-[18%]" />
-              <col className="w-[14%]" />
+              <col className="w-[17%]" />
+              <col className="w-[12%]" />
               <col className="w-[13%]" />
-              <col className="w-[20%]" />
-              <col className="w-[35%]" />
+              <col className="w-[12%]" />
+              <col className="w-[16%]" />
+              <col className="w-[30%]" />
             </colgroup>
             <thead>
               <tr className="border-b border-surface-container-highest bg-surface-container-lowest">
                 <th className="px-3 py-3 font-label-caps uppercase text-on-surface-variant">Product</th>
                 <th className="px-3 py-3 font-label-caps uppercase text-on-surface-variant">Category</th>
+                <th className="px-3 py-3 font-label-caps uppercase text-on-surface-variant">Series</th>
                 <th className="px-3 py-3 font-label-caps uppercase text-on-surface-variant">Price</th>
                 <th className="px-3 py-3 font-label-caps uppercase text-on-surface-variant">Slug</th>
                 <th className="px-3 py-3 text-right font-label-caps uppercase text-on-surface-variant">Readiness</th>
@@ -510,11 +522,11 @@ export default function AdminProductsPage() {
             <tbody className="font-data-mono text-sm text-stark-white">
               {loading ? (
                 <tr>
-                  <td className="px-4 py-8 text-center text-on-surface-variant" colSpan={5}>Loading products...</td>
+                  <td className="px-4 py-8 text-center text-on-surface-variant" colSpan={6}>Loading products...</td>
                 </tr>
               ) : filteredProducts.length === 0 ? (
                 <tr>
-                  <td className="px-4 py-8 text-center text-on-surface-variant" colSpan={5}>No products found.</td>
+                  <td className="px-4 py-8 text-center text-on-surface-variant" colSpan={6}>No products found.</td>
                 </tr>
               ) : (
                 filteredProducts.map((product) => (
@@ -523,6 +535,7 @@ export default function AdminProductsPage() {
                       <Link href={`/catalogue/${product.slug}`} className="hover:underline">{product.name}</Link>
                     </td>
                     <td className="break-words px-3 py-4 align-top">{getCategoryName(product.categories)}</td>
+                    <td className="break-words px-3 py-4 align-top text-on-surface-variant">{getSeriesName(product.product_series)}</td>
                     <td className="whitespace-nowrap px-3 py-4 align-top text-on-surface-variant">
                       ID {Number(product.regional_prices?.ID ?? product.price ?? 0).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}
                       <div className="mt-1 text-xs text-on-surface-variant/80">
@@ -609,7 +622,22 @@ export default function AdminProductsPage() {
             </div>
             <div>
               <label className="block font-label-caps text-on-surface-variant mb-2">Category</label>
-              <select value={form.categorySlug} onChange={(event) => setField('categorySlug', event.target.value)} className="w-full bg-tactical-black border border-surface-container-highest p-3 text-stark-white">
+              <select
+                value={form.categorySlug}
+                onChange={(event) => {
+                  const newCategorySlug = event.target.value;
+                  const newCategoryId = categories.find((c) => c.slug === newCategorySlug)?.id;
+                  setForm((current) => {
+                    const isValidSeries = series.some((s) => s.slug === current.seriesSlug && s.category_id === newCategoryId);
+                    return {
+                      ...current,
+                      categorySlug: newCategorySlug,
+                      seriesSlug: isValidSeries ? current.seriesSlug : '',
+                    };
+                  });
+                }}
+                className="w-full bg-tactical-black border border-surface-container-highest p-3 text-stark-white"
+              >
                 <option value="">Unassigned</option>
                 {categories.map((category) => <option key={category.id} value={category.slug}>{category.name}</option>)}
               </select>
@@ -618,7 +646,14 @@ export default function AdminProductsPage() {
               <label className="block font-label-caps text-on-surface-variant mb-2">Series</label>
               <select value={form.seriesSlug} onChange={(event) => setField('seriesSlug', event.target.value)} className="w-full bg-tactical-black border border-surface-container-highest p-3 text-stark-white">
                 <option value="">Unassigned</option>
-                {series.map((item) => <option key={item.id} value={item.slug}>{item.name}</option>)}
+                {series
+                  .filter((item) => {
+                    if (!form.categorySlug) return true;
+                    const selectedCategory = categories.find((c) => c.slug === form.categorySlug);
+                    return item.category_id === selectedCategory?.id;
+                  })
+                  .map((item) => <option key={item.id} value={item.slug}>{item.name}</option>)
+                }
               </select>
             </div>
             <div>
