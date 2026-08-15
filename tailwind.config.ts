@@ -67,9 +67,12 @@ const config: Config = {
         "inverse-surface": "#e5e2e1",
       },
       borderRadius: {
-        "DEFAULT": "0px",
-        "lg": "0px",
-        "xl": "0px",
+        "sm": "6px",
+        "DEFAULT": "8px",
+        "md": "8px",
+        "lg": "12px",
+        "xl": "16px",
+        "2xl": "20px",
         "full": "9999px"
       },
       spacing: {
