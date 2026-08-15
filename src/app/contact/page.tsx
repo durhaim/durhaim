@@ -59,7 +59,8 @@ export default async function ContactPage() {
             href={buildWhatsAppUrl(siteSettings)}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-surface-container-highest bg-charcoal-field p-stack-lg hover:border-signal-orange"
+            className="border border-surface-container-highest bg-charcoal-field p-stack-lg hover:border-signal-orange rounded-2xl transition-colors"
+            style={{ borderRadius: '16px' }}
           >
             <div className="font-data-mono text-signal-orange">WHATSAPP</div>
             <div className="mt-2 font-headline-md text-stark-white">
@@ -68,14 +69,15 @@ export default async function ContactPage() {
           </a>
           <a
             href={`mailto:${siteSettings.support_email}`}
-            className="border border-surface-container-highest bg-charcoal-field p-stack-lg hover:border-signal-orange"
+            className="border border-surface-container-highest bg-charcoal-field p-stack-lg hover:border-signal-orange rounded-2xl transition-colors"
+            style={{ borderRadius: '16px' }}
           >
             <div className="font-data-mono text-signal-orange">EMAIL</div>
             <div className="mt-2 font-headline-md text-stark-white">
               {siteSettings.support_email}
             </div>
           </a>
-          <section className="border border-surface-container-highest bg-charcoal-field p-stack-lg">
+          <section className="border border-surface-container-highest bg-charcoal-field p-stack-lg rounded-2xl" style={{ borderRadius: '16px' }}>
             <div className="font-data-mono text-signal-orange">
               <LocalizedText en="LOCATION" id="LOKASI" />
             </div>

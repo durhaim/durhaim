@@ -37,7 +37,7 @@ export default function LatestProjectsPage() {
         </p>
         <div className="mt-section-gap space-y-stack-md">
           {projects.map((project, index) => (
-            <section key={project.en} className="border border-surface-container-highest bg-charcoal-field p-stack-lg">
+            <section key={project.en} className="border border-surface-container-highest bg-charcoal-field p-stack-lg rounded-2xl" style={{ borderRadius: '16px' }}>
               <div className="font-data-mono text-signal-orange">
                 <LocalizedText en={`PROJECT 0${index + 1}`} id={`PROYEK 0${index + 1}`} />
               </div>
@@ -47,7 +47,7 @@ export default function LatestProjectsPage() {
             </section>
           ))}
         </div>
-        <Link href="/social-engagement" className="btn btn-primary mt-stack-lg inline-flex">
+        <Link href="/social-engagement" className="btn btn-primary mt-stack-lg inline-flex rounded-md" style={{ borderRadius: '6px' }}>
           <LocalizedText en="Follow Social Updates" id="Ikuti Media Sosial" />
         </Link>
       </div>

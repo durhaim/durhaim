@@ -54,7 +54,7 @@ export default function SocialEngagementPage() {
             </p>
           </div>
           <div className="lg:col-span-4 lg:text-right">
-            <Link className="btn btn-primary inline-flex" href="/catalogue">
+            <Link className="btn btn-primary inline-flex rounded-md" style={{ borderRadius: '6px' }} href="/catalogue">
               <LocalizedText en="View Catalogue" id="Lihat Katalog" />
             </Link>
           </div>
@@ -69,17 +69,24 @@ export default function SocialEngagementPage() {
               href={channel.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group border border-surface-container-highest bg-charcoal-field p-stack-lg transition-colors hover:border-signal-orange"
+              className="group border border-surface-container-highest bg-charcoal-field p-stack-lg transition-colors hover:border-signal-orange rounded-2xl flex flex-col justify-between"
+              style={{ borderRadius: '16px' }}
             >
-              <div className="font-data-mono text-data-mono uppercase text-signal-orange">{channel.handle}</div>
-              <h2 className="mt-stack-sm font-headline-md text-headline-md uppercase text-stark-white group-hover:text-signal-orange">
-                {channel.name}
-              </h2>
-              <p className="mt-stack-md font-body-md text-on-surface-variant">
-                <LocalizedText en={channel.description.en} id={channel.description.id} />
-              </p>
+              <div>
+                <div className="inline-block border border-signal-orange/40 bg-tactical-black/80 px-2.5 py-1 font-data-mono text-data-mono uppercase text-signal-orange rounded-md" style={{ borderRadius: '6px' }}>
+                  {channel.handle}
+                </div>
+                <h2 className="mt-stack-sm font-headline-md text-headline-md uppercase text-stark-white group-hover:text-signal-orange">
+                  {channel.name}
+                </h2>
+                <p className="mt-stack-md font-body-md text-on-surface-variant">
+                  <LocalizedText en={channel.description.en} id={channel.description.id} />
+                </p>
+              </div>
               <div className="mt-stack-lg font-label-caps text-label-caps uppercase text-stark-white">
-                <LocalizedText en="Open Channel" id="Buka Kanal" />
+                <span className="inline-flex items-center gap-1 border border-surface-container-highest px-3 py-1.5 rounded-md group-hover:border-signal-orange transition-colors" style={{ borderRadius: '6px' }}>
+                  <LocalizedText en="Open Channel" id="Buka Kanal" /> →
+                </span>
               </div>
             </a>
           ))}
