@@ -45,7 +45,7 @@ const features = [
     href: "/catalogue?category=vest",
     background: "/storefront/rev/bodyvest-bg.jpg",
     product: "/storefront/rev/bodyvest.png",
-    align: "right",
+    productWidth: "25.2%",
   },
   {
     title: { en: "Pack & Pouch", id: "Pack & Pouch" },
@@ -53,7 +53,7 @@ const features = [
     href: "/catalogue?category=pack",
     background: "/storefront/rev/pack-bg.jpg",
     product: "/storefront/rev/pack.png",
-    align: "left",
+    productWidth: "24.1%",
   },
   {
     title: { en: "Belt", id: "Belt" },
@@ -61,7 +61,7 @@ const features = [
     href: "/catalogue?category=belt",
     background: "/storefront/rev/belt-bg.jpg",
     product: "/storefront/rev/belt-rig.png",
-    align: "right",
+    productWidth: "27.4%",
   },
   {
     title: { en: "Pouch", id: "Pouch" },
@@ -69,7 +69,7 @@ const features = [
     href: "/catalogue?category=pouch",
     background: "/storefront/rev/pouch-bg.jpg",
     product: "/storefront/rev/belt.png",
-    align: "left",
+    productWidth: "21.1%",
   },
 ] as const;
 
@@ -142,31 +142,38 @@ export default async function HomePage() {
 
       <section className="home-features" data-figma-node="29:44" aria-label="Equipment categories">
         {features.map((feature) => (
-          <article className={`home-feature home-feature--${feature.align}`} key={feature.title.en}>
-            <Link className="home-feature__image" href={feature.href}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="home-feature__background" src={feature.background} alt="" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="home-feature__product" src={feature.product} alt="" />
-              <span><LocalizedText en={feature.title.en} id={feature.title.id} /></span>
-            </Link>
+          <Link className="home-feature" href={feature.href} key={feature.title.en}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="home-feature__background" src={feature.background} alt="" />
+            <span className="home-feature__panel" aria-hidden="true" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="home-feature__product"
+              style={{ "--product-width": feature.productWidth } as React.CSSProperties}
+              src={feature.product}
+              alt=""
+            />
             <div className="home-feature__copy">
               <h2><LocalizedText en={feature.title.en} id={feature.title.id} /></h2>
               <p><LocalizedText en={feature.subtitle.en} id={feature.subtitle.id} /></p>
-              <Link className="store-outline-button" href={feature.href}>
+              <span className="home-feature__cta">
                 <LocalizedText en="Explore now" id="Jelajahi" />
-              </Link>
+              </span>
             </div>
-          </article>
+          </Link>
         ))}
       </section>
 
       <section className="home-category-strip" data-figma-node="29:79" aria-label="Browse categories">
         {categoryStrip.map(([label, href, image]) => (
           <Link className="home-category-strip__card" href={href} key={label}>
+            <span className="home-category-strip__panel" aria-hidden="true" />
+            <svg className="home-category-strip__outline" viewBox="0 0 209 293" preserveAspectRatio="none" aria-hidden="true">
+              <polygon points="0,0 197,0 209,15 209,127 198,140 198,293 9,293 9,183 0,170" />
+            </svg>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={image} alt="" />
-            <span>{label}</span>
+            <span className="home-category-strip__label">{label}</span>
           </Link>
         ))}
       </section>

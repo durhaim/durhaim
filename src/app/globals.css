@@ -664,375 +664,227 @@
   color: var(--store-muted);
 }
 
-/* PAGE 3 */
+/* PAGE 3 — REv campaign banners (Figma "REv", 1568x803 per banner) */
 .home-features {
-  min-height: 2515px;
-  padding: 64px var(--store-edge);
-  background:
-    linear-gradient(rgb(0 0 0 / 58%), rgb(0 0 0 / 78%)),
-    #0b0b0b url("/storefront/rev/topography.png") center / cover fixed no-repeat;
+  display: grid;
+  gap: clamp(8px, 1.148vw, 18px);
+  padding: clamp(8px, 1.148vw, 18px) 0;
+  background: #0b0b0b;
 }
 
 .home-feature {
-  display: grid;
-  grid-template-columns: minmax(0, 765px) minmax(390px, 1fr);
-  align-items: center;
-  gap: clamp(80px, 9.3vw, 179px);
-  max-width: none;
-  min-height: 765px;
-  margin: 0 auto;
-}
-
-.home-feature + .home-feature {
-  margin-top: 8px;
-}
-
-.home-feature--right {
-  grid-template-columns: minmax(390px, 1fr) minmax(0, 765px);
-}
-
-.home-feature--right .home-feature__image {
-  grid-column: 2;
-}
-
-.home-feature--right .home-feature__copy {
-  grid-column: 1;
-  grid-row: 1;
-  text-align: left;
-}
-.home-feature--left .home-feature__copy {
-  text-align: right;
-}
-
-.home-feature__image {
   position: relative;
-  width: min(100%, 765px);
-  aspect-ratio: 1;
-  overflow: hidden;
-  background: var(--store-black);
-  border-radius: var(--store-radius);
-}
-.home-feature__image span {
-  position: absolute;
-  inset: auto 0 0;
-  min-height: 116px;
-  display: flex;
-  align-items: center;
-  padding: 18px 24px;
-  background: linear-gradient(
-    90deg,
-    rgb(0 0 0 / 92%) 0%,
-    rgb(0 0 0 / 86%) 55%,
-    rgb(0 0 0 / 0%) 100%
-  );
-  color: var(--store-white);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1;
-  text-transform: uppercase;
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 240ms var(--store-ease), transform 240ms var(--store-ease);
-  z-index: 1;
-  border-bottom-left-radius: var(--store-radius);
-  border-bottom-right-radius: var(--store-radius);
-}
-
-.home-feature__image img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: var(--store-radius);
-  transition: transform 240ms var(--store-ease);
+  aspect-ratio: 1568 / 803;
+  overflow: hidden;
+  background: #101110;
+  color: inherit;
+  text-decoration: none;
 }
 
-.home-feature__image .home-feature__background {
+.home-feature__background {
   position: absolute;
   inset: 0;
   z-index: 0;
-  object-fit: cover;
-  filter: brightness(.5) saturate(.72);
-}
-
-.home-feature__image .home-feature__product {
-  position: absolute;
-  z-index: 1;
-  inset: 7% 8%;
-  width: 84%;
-  height: 86%;
-  object-fit: contain;
-  filter: drop-shadow(0 24px 28px rgb(0 0 0 / 60%));
-}
-
-.home-feature__image:hover img,
-.home-feature__image:focus-visible img {
-  transform: scale(1.015);
-}
-
-.home-feature__image:hover .home-feature__product,
-.home-feature__image:focus-visible .home-feature__product {
-  transform: scale(1.035);
-}
-
-.home-feature__image:hover span,
-.home-feature__image:focus-visible span {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.home-feature__image:focus-visible {
-  outline: 2px solid var(--store-white);
-  outline-offset: 4px;
-}
-
-.home-feature__copy h2 {
-  font-size: clamp(38px, 2.1vw, 40px);
-  font-weight: 700;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.home-feature__copy p {
-  margin-top: 12px;
-  font-size: clamp(18px, 1.3vw, 24.72px);
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.home-feature__copy .store-outline-button {
-  margin-top: 18px;
-  width: 361px;
-  min-height: 48px;
-  border-color: #777;
-  background: #777;
-  font-size: 30px;
-  border-radius: var(--store-radius-sm);
-}
-
-.home-feature__copy {
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 2px 16px rgb(0 0 0 / 80%);
-}
-
-.home-feature__copy h2 {
-  text-shadow: 2px 2px 0 #111;
-}
-
-/* Compact campaign card layout */
-.home-features {
-  min-height: 0;
-  display: grid;
-  gap: 14px;
-  padding: clamp(28px, 4vw, 76px) var(--store-edge);
-  background: #101110 url("/storefront/rev/topography.png") center / cover fixed no-repeat;
-}
-
-.home-feature,
-.home-feature--right {
-  position: relative;
-  display: block;
-  min-height: clamp(300px, 29vw, 540px);
-  margin: 0;
-}
-
-.home-feature + .home-feature {
-  margin-top: 0;
-}
-
-.home-feature__image,
-.home-feature--right .home-feature__image {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  aspect-ratio: auto;
-  border-radius: 0;
-  background: #121212;
-}
-
-.home-feature__image .home-feature__background {
-  filter: brightness(.56) saturate(.72);
-}
-
-.home-feature__image .home-feature__product {
-  inset: 10% auto 8% 8%;
-  width: 34%;
-  height: 82%;
-  object-fit: contain;
-}
-
-.home-feature__image span {
-  display: none;
-}
-
-.home-feature__copy,
-.home-feature--right .home-feature__copy,
-.home-feature--left .home-feature__copy {
-  position: absolute;
-  z-index: 2;
-  inset: 15% 8%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 0;
-  padding: 6% 7% 6% 46%;
-  border: 1px solid rgb(255 255 255 / 30%);
-  background:
-    linear-gradient(105deg, rgb(18 20 20 / 92%), rgb(23 24 24 / 80%)),
-    url("/storefront/rev/topography.png") center / cover;
-  box-shadow: 0 12px 38px rgb(0 0 0 / 32%);
-  text-align: left;
-}
-
-.home-feature__copy h2 {
-  font-size: clamp(24px, 2.35vw, 46px);
-  text-shadow: 2px 2px 0 #111;
-}
-
-.home-feature__copy p {
-  margin-top: 8px;
-  font-size: clamp(12px, 1.15vw, 23px);
-  letter-spacing: .09em;
-}
-
-.home-feature__copy .store-outline-button {
-  width: min(100%, 300px);
-  min-height: 42px;
-  margin-top: 15px;
-  border: 0;
-  background: #a6a6a6;
-  color: #fff;
-  font-size: clamp(15px, 1.4vw, 25px);
-}
-
-.home-category-strip {
-  min-height: 0;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(10px, 1.6vw, 28px);
-  padding: clamp(28px, 4vw, 70px) var(--store-edge);
-  background: #090909 url("/storefront/rev/topography.png") center / cover no-repeat;
-}
-
-.home-category-strip__card {
-  aspect-ratio: 1 / 1.14;
-  background: rgb(30 31 31 / 92%);
-}
-
-.home-category-strip img {
-  object-fit: contain;
-  padding: clamp(8px, 1.5vw, 24px);
-}
-
-@media (max-width: 900px) {
-  .home-features {
-    gap: 9px;
-    padding: 8px 10px 14px;
-    background-attachment: scroll;
-  }
-  .home-feature,
-  .home-feature--right {
-    min-height: 164px;
-  }
-  .home-feature__image .home-feature__product {
-    inset: 10% auto 9% 8%;
-    width: 32%;
-    height: 80%;
-  }
-  .home-feature__copy,
-  .home-feature--right .home-feature__copy,
-  .home-feature--left .home-feature__copy {
-    inset: 13% 6%;
-    padding: 5% 5% 5% 45%;
-  }
-  .home-feature__copy h2 { font-size: clamp(13px, 3.5vw, 24px); }
-  .home-feature__copy p { margin-top: 4px; font-size: clamp(8px, 1.7vw, 12px); }
-  .home-feature__copy .store-outline-button {
-    min-height: 24px;
-    margin-top: 6px;
-    padding: 4px 10px;
-    font-size: clamp(10px, 2.4vw, 15px);
-  }
-  .home-category-strip {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    max-width: none;
-    gap: 8px;
-    padding: 10px;
-  }
-  .home-category-strip__card { aspect-ratio: .78; }
-  .home-category-strip span { display: none; }
-  .home-category-strip img { padding: 5px; }
-}
-
-/* PAGE 4 */
-.home-category-strip {
-  width: 100%;
-  min-height: auto;
-  padding: clamp(48px, 5.5vw, 100px) var(--store-edge);
-  background: var(--store-black) url("/storefront/figma/homepage/page-4/bg-7.png") center / cover no-repeat;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 520px));
-  justify-content: center;
-  align-items: center;
-  gap: clamp(16px, 3.5vw, 64px);
-  overflow: hidden;
-}
-
-.home-category-strip__card {
-  position: relative;
-  min-width: 0;
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 1;
-  background: #000;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--store-radius);
-}
-
-.home-category-strip img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  border-radius: var(--store-radius);
+  object-position: center;
+  transition: transform 600ms var(--store-ease);
+}
+
+/* topography.png is the Figma panel asset itself: chamfered silhouette, 84%
+   translucent fill, contour texture and edge stroke are all baked in. Its
+   1752x819 aspect fixes the panel box at 4.46% / 8.4% insets. */
+.home-feature__panel {
+  position: absolute;
+  z-index: 1;
+  inset: 8.4% 4.46%;
+  background: url("/storefront/rev/topography.png") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+
+.home-feature__product {
+  position: absolute;
+  z-index: 2;
+  left: 21.7%;
+  top: 51%;
+  width: var(--product-width, 25.2%);
+  height: auto;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 24px 30px rgb(0 0 0 / 55%));
+  transition: transform 600ms var(--store-ease);
+}
+
+.home-feature__copy {
+  position: absolute;
+  z-index: 3;
+  left: 44%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52%;
+  text-align: left;
+}
+
+.home-feature__copy h2 {
+  margin: 0;
+  font-size: 2.05vw;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  text-shadow: 2px 2px 0 rgb(0 0 0 / 65%);
+}
+
+.home-feature__copy p {
+  margin: .35em 0 0;
+  font-size: 1.15vw;
+  line-height: 1.15;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--store-white);
+  text-shadow: 1px 1px 0 rgb(0 0 0 / 55%);
+}
+
+.home-feature__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50.8%;
+  min-width: 128px;
+  height: 3.25vw;
+  min-height: 26px;
+  margin-top: 3.2%;
+  background: rgb(255 255 255 / 42%);
+  color: var(--store-white);
+  font-size: 2.18vw;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  transition: background 240ms var(--store-ease);
+}
+
+.home-feature:hover .home-feature__background,
+.home-feature:focus-visible .home-feature__background {
+  transform: scale(1.02);
+}
+
+.home-feature:hover .home-feature__product,
+.home-feature:focus-visible .home-feature__product {
+  transform: translate(-50%, -50%) scale(1.03);
+}
+
+.home-feature:hover .home-feature__cta,
+.home-feature:focus-visible .home-feature__cta {
+  background: rgb(255 255 255 / 58%);
+}
+
+.home-feature:focus-visible {
+  outline: 2px solid var(--store-white);
+  outline-offset: -4px;
+}
+
+/* PAGE 4 — REv category line-up (Figma 1568x810) */
+.home-category-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 4.72%;
+  width: 100%;
+  padding: 11.16% 5.42%;
+  background: #090909 url("/storefront/rev/lineup-bg.jpg") center / cover no-repeat;
+}
+
+.home-category-strip__card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 300 / 460;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Card silhouette traced from the Figma card asset (209x293 source). */
+.home-category-strip__panel,
+.home-category-strip__outline {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* The card reuses the panel texture, cropped to an interior region so the
+   asset's own transparent corners stay outside the card. */
+.home-category-strip__panel {
+  background: url("/storefront/rev/topography.png") 35% 50% / 260% 260% no-repeat;
+  clip-path: polygon(
+    0% 0%,
+    94.26% 0%,
+    100% 5.12%,
+    100% 43.34%,
+    94.74% 47.78%,
+    94.74% 100%,
+    4.31% 100%,
+    4.31% 62.46%,
+    0% 58.02%
+  );
+}
+
+.home-category-strip__outline {
+  overflow: visible;
+}
+
+.home-category-strip__outline polygon {
+  fill: none;
+  stroke: rgb(255 255 255 / 22%);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.home-category-strip img {
+  position: absolute;
+  z-index: 1;
+  left: 12%;
+  top: 17%;
+  width: 76%;
+  height: 66%;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 14px 20px rgb(0 0 0 / 55%));
   transition: transform 300ms var(--store-ease);
 }
 
 .home-category-strip__card:hover img,
 .home-category-strip__card:focus-visible img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
-.home-category-strip span {
+.home-category-strip__label {
   position: absolute;
-  inset: auto 0 0;
-  min-height: 70px;
+  z-index: 2;
+  inset: auto 4.31% 0 4.31%;
   display: flex;
   align-items: center;
-  padding: 16px 20px;
-  background: linear-gradient(
-    90deg,
-    rgb(0 0 0 / 92%) 0%,
-    rgb(0 0 0 / 86%) 55%,
-    rgb(0 0 0 / 0%) 100%
-  );
+  justify-content: center;
+  padding: .7em .4em;
+  background: linear-gradient(rgb(0 0 0 / 0%), rgb(0 0 0 / 82%) 45%);
   color: var(--store-white);
-  font-size: clamp(20px, 1.8vw, 36px);
+  font-size: clamp(11px, 1.05vw, 20px);
   font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: .06em;
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(10px);
   transition: opacity 240ms var(--store-ease), transform 240ms var(--store-ease);
-  z-index: 1;
 }
 
-.home-category-strip__card:hover span,
-.home-category-strip__card:focus-visible span {
+.home-category-strip__card:hover .home-category-strip__label,
+.home-category-strip__card:focus-visible .home-category-strip__label {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1041,6 +893,20 @@
   outline: 2px solid var(--store-white);
   outline-offset: 4px;
 }
+
+@media (max-width: 900px) {
+  .home-features {
+    gap: 8px;
+    padding: 8px 0;
+  }
+  /* The Figma comp is desktop-only; keep its proportions but floor the type
+     so the banners stay readable on phones. */
+  .home-feature__copy h2 { font-size: max(13px, 3.4vw); }
+  .home-feature__copy p { font-size: max(8px, 1.8vw); letter-spacing: .06em; }
+  .home-feature__cta { font-size: max(10px, 2.9vw); width: 30%; }
+  .home-category-strip { padding: 8% 4%; gap: 3%; }
+}
+
 
 /* PAGE 5 */
 .home-battle {
@@ -2060,22 +1926,6 @@
 }
 
 /* Keep the homepage campaign layout compact on narrow screens. */
-@media (max-width: 900px) {
-  .home-category-strip {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    max-width: none;
-    margin: 0;
-    gap: 8px;
-    padding: 10px;
-  }
-  .home-category-strip__card {
-    width: 100%;
-    aspect-ratio: .78;
-  }
-  .home-category-strip span { display: none; }
-}
-
 @media (max-width: 560px) {
-  .home-features { padding-inline: 10px; }
-  .home-feature__copy .store-outline-button { width: auto; }
+  .home-category-strip__label { display: none; }
 }
