@@ -668,7 +668,9 @@
 .home-features {
   min-height: 2515px;
   padding: 64px var(--store-edge);
-  background: url("/storefront/figma/homepage/page-3/bg-6.png") center / cover no-repeat;
+  background:
+    linear-gradient(rgb(0 0 0 / 58%), rgb(0 0 0 / 78%)),
+    #0b0b0b url("/storefront/rev/topography.png") center / cover fixed no-repeat;
 }
 
 .home-feature {
@@ -746,9 +748,32 @@
   transition: transform 240ms var(--store-ease);
 }
 
+.home-feature__image .home-feature__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  object-fit: cover;
+  filter: brightness(.5) saturate(.72);
+}
+
+.home-feature__image .home-feature__product {
+  position: absolute;
+  z-index: 1;
+  inset: 7% 8%;
+  width: 84%;
+  height: 86%;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 28px rgb(0 0 0 / 60%));
+}
+
 .home-feature__image:hover img,
 .home-feature__image:focus-visible img {
   transform: scale(1.015);
+}
+
+.home-feature__image:hover .home-feature__product,
+.home-feature__image:focus-visible .home-feature__product {
+  transform: scale(1.035);
 }
 
 .home-feature__image:hover span,
@@ -784,6 +809,162 @@
   background: #777;
   font-size: 30px;
   border-radius: var(--store-radius-sm);
+}
+
+.home-feature__copy {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 16px rgb(0 0 0 / 80%);
+}
+
+.home-feature__copy h2 {
+  text-shadow: 2px 2px 0 #111;
+}
+
+/* Compact campaign card layout */
+.home-features {
+  min-height: 0;
+  display: grid;
+  gap: 14px;
+  padding: clamp(28px, 4vw, 76px) var(--store-edge);
+  background: #101110 url("/storefront/rev/topography.png") center / cover fixed no-repeat;
+}
+
+.home-feature,
+.home-feature--right {
+  position: relative;
+  display: block;
+  min-height: clamp(300px, 29vw, 540px);
+  margin: 0;
+}
+
+.home-feature + .home-feature {
+  margin-top: 0;
+}
+
+.home-feature__image,
+.home-feature--right .home-feature__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+  background: #121212;
+}
+
+.home-feature__image .home-feature__background {
+  filter: brightness(.56) saturate(.72);
+}
+
+.home-feature__image .home-feature__product {
+  inset: 10% auto 8% 8%;
+  width: 34%;
+  height: 82%;
+  object-fit: contain;
+}
+
+.home-feature__image span {
+  display: none;
+}
+
+.home-feature__copy,
+.home-feature--right .home-feature__copy,
+.home-feature--left .home-feature__copy {
+  position: absolute;
+  z-index: 2;
+  inset: 15% 8%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 0;
+  padding: 6% 7% 6% 46%;
+  border: 1px solid rgb(255 255 255 / 30%);
+  background:
+    linear-gradient(105deg, rgb(18 20 20 / 92%), rgb(23 24 24 / 80%)),
+    url("/storefront/rev/topography.png") center / cover;
+  box-shadow: 0 12px 38px rgb(0 0 0 / 32%);
+  text-align: left;
+}
+
+.home-feature__copy h2 {
+  font-size: clamp(24px, 2.35vw, 46px);
+  text-shadow: 2px 2px 0 #111;
+}
+
+.home-feature__copy p {
+  margin-top: 8px;
+  font-size: clamp(12px, 1.15vw, 23px);
+  letter-spacing: .09em;
+}
+
+.home-feature__copy .store-outline-button {
+  width: min(100%, 300px);
+  min-height: 42px;
+  margin-top: 15px;
+  border: 0;
+  background: #a6a6a6;
+  color: #fff;
+  font-size: clamp(15px, 1.4vw, 25px);
+}
+
+.home-category-strip {
+  min-height: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(10px, 1.6vw, 28px);
+  padding: clamp(28px, 4vw, 70px) var(--store-edge);
+  background: #090909 url("/storefront/rev/topography.png") center / cover no-repeat;
+}
+
+.home-category-strip__card {
+  aspect-ratio: 1 / 1.14;
+  background: rgb(30 31 31 / 92%);
+}
+
+.home-category-strip img {
+  object-fit: contain;
+  padding: clamp(8px, 1.5vw, 24px);
+}
+
+@media (max-width: 900px) {
+  .home-features {
+    gap: 9px;
+    padding: 8px 10px 14px;
+    background-attachment: scroll;
+  }
+  .home-feature,
+  .home-feature--right {
+    min-height: 164px;
+  }
+  .home-feature__image .home-feature__product {
+    inset: 10% auto 9% 8%;
+    width: 32%;
+    height: 80%;
+  }
+  .home-feature__copy,
+  .home-feature--right .home-feature__copy,
+  .home-feature--left .home-feature__copy {
+    inset: 13% 6%;
+    padding: 5% 5% 5% 45%;
+  }
+  .home-feature__copy h2 { font-size: clamp(13px, 3.5vw, 24px); }
+  .home-feature__copy p { margin-top: 4px; font-size: clamp(8px, 1.7vw, 12px); }
+  .home-feature__copy .store-outline-button {
+    min-height: 24px;
+    margin-top: 6px;
+    padding: 4px 10px;
+    font-size: clamp(10px, 2.4vw, 15px);
+  }
+  .home-category-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: none;
+    gap: 8px;
+    padding: 10px;
+  }
+  .home-category-strip__card { aspect-ratio: .78; }
+  .home-category-strip span { display: none; }
+  .home-category-strip img { padding: 5px; }
 }
 
 /* PAGE 4 */
@@ -1876,4 +2057,25 @@
     flex: 1;
     justify-content: center;
   }
+}
+
+/* Keep the homepage campaign layout compact on narrow screens. */
+@media (max-width: 900px) {
+  .home-category-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: none;
+    margin: 0;
+    gap: 8px;
+    padding: 10px;
+  }
+  .home-category-strip__card {
+    width: 100%;
+    aspect-ratio: .78;
+  }
+  .home-category-strip span { display: none; }
+}
+
+@media (max-width: 560px) {
+  .home-features { padding-inline: 10px; }
+  .home-feature__copy .store-outline-button { width: auto; }
 }

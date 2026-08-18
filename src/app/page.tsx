@@ -43,29 +43,41 @@ const features = [
     title: { en: "Bodyvest & Chestrig", id: "Bodyvest & Chestrig" },
     subtitle: { en: "Durability hard impact and modular", id: "Tahan Benturan Berat dan modular" },
     href: "/catalogue?category=vest",
-    image: "/storefront/custom/bodyvest-chestrig-raw.png",
+    background: "/storefront/rev/bodyvest-bg.jpg",
+    product: "/storefront/rev/bodyvest.png",
     align: "right",
   },
   {
     title: { en: "Pack & Pouch", id: "Pack & Pouch" },
     subtitle: { en: "Perfect for carrying your equipment", id: "Ideal untuk membawa Perlengkapan Anda" },
     href: "/catalogue?category=pack",
-    image: "/storefront/custom/pack-pouch-raw.png",
+    background: "/storefront/rev/pack-bg.jpg",
+    product: "/storefront/rev/pack.png",
     align: "left",
   },
   {
     title: { en: "Belt", id: "Belt" },
     subtitle: { en: "It’s all about the waist", id: "Semua bertumpu pada pinggang" },
     href: "/catalogue?category=belt",
-    image: "/storefront/custom/belt-raw.png",
+    background: "/storefront/rev/belt-bg.jpg",
+    product: "/storefront/rev/belt-rig.png",
     align: "right",
+  },
+  {
+    title: { en: "Pouch", id: "Pouch" },
+    subtitle: { en: "Organize. Access. Move. Repeat.", id: "Praktis, mudah diakses, dan siap bergerak." },
+    href: "/catalogue?category=pouch",
+    background: "/storefront/rev/pouch-bg.jpg",
+    product: "/storefront/rev/belt.png",
+    align: "left",
   },
 ] as const;
 
 const categoryStrip = [
-  ["Bodyvest Chestrig", "/catalogue?category=vest", "/storefront/custom/bodyvest-chestrig-raw.png"],
-  ["Pack & Pouch", "/catalogue?category=pack", "/storefront/custom/pack-pouch-raw.png"],
-  ["Belt", "/catalogue?category=belt", "/storefront/custom/belt-raw.png"],
+  ["Bodyvest Chestrig", "/catalogue?category=vest", "/storefront/rev/bodyvest.png"],
+  ["Pack & Pouch", "/catalogue?category=pack", "/storefront/rev/pack.png"],
+  ["Belt", "/catalogue?category=belt", "/storefront/rev/belt-rig.png"],
+  ["Pouch", "/catalogue?category=pouch", "/storefront/rev/belt.png"],
 ] as const;
 
 export default async function HomePage() {
@@ -133,7 +145,9 @@ export default async function HomePage() {
           <article className={`home-feature home-feature--${feature.align}`} key={feature.title.en}>
             <Link className="home-feature__image" href={feature.href}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={feature.image} alt="" />
+              <img className="home-feature__background" src={feature.background} alt="" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="home-feature__product" src={feature.product} alt="" />
               <span><LocalizedText en={feature.title.en} id={feature.title.id} /></span>
             </Link>
             <div className="home-feature__copy">
