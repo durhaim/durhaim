@@ -764,6 +764,7 @@
   line-height: 1;
   letter-spacing: .04em;
   text-transform: uppercase;
+  border-radius: var(--store-radius-sm);
   transition: background 240ms var(--store-ease);
 }
 
