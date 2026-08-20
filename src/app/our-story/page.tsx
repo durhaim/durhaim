@@ -1,287 +1,118 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
 import LocalizedText from '@/components/LocalizedText';
 
 export const metadata: Metadata = {
-  title: 'Our Story - DURHAIM',
-  description:
-    'The Durhaim story: tactical gear engineered around durability, hard impact, and modular field use. Handcrafted in Bandung, Indonesia.',
+  title: 'Our Story — DURHAIM Tactical Gear',
+  description: 'Built with purpose, crafted with precision, and engineered for durability, performance, confidence, and readiness in every mission.',
 };
-
-const values = [
-  {
-    icon: 'precision_manufacturing',
-    title: { en: 'Handcrafted Precision', id: 'Presisi Buatan Tangan' },
-    text: {
-      en: 'Every stitch is placed by experienced hands on industrial-grade machines. No shortcuts, no mass automation — just focused craftsmanship.',
-      id: 'Setiap jahitan ditempatkan oleh tangan berpengalaman pada mesin kelas industri. Tanpa jalan pintas, tanpa otomasi massal — hanya keahlian terfokus.',
-    },
-  },
-  {
-    icon: 'shield',
-    title: { en: 'Built for Hard Impact', id: 'Dibuat untuk Benturan Berat' },
-    text: {
-      en: 'Our gear is engineered to withstand repeated hard use in the field. Materials and construction methods are tested beyond standard requirements.',
-      id: 'Gear kami dirancang untuk bertahan dari penggunaan berat berulang di lapangan. Material dan metode konstruksi diuji melampaui standar.',
-    },
-  },
-  {
-    icon: 'view_module',
-    title: { en: 'Modular by Design', id: 'Modular Secara Desain' },
-    text: {
-      en: 'Every platform supports mission-specific configurations. Swap, attach, and reconfigure — your loadout adapts to you.',
-      id: 'Setiap platform mendukung konfigurasi sesuai misi. Tukar, pasang, dan konfigurasi ulang — loadout menyesuaikan kebutuhan Anda.',
-    },
-  },
-];
-
-const stats = [
-  { value: '2019', label: { en: 'Founded', id: 'Didirikan' } },
-  { value: '100%', label: { en: 'Handmade', id: 'Buatan Tangan' } },
-  { value: 'IDN', label: { en: 'Made in Indonesia', id: 'Buatan Indonesia' } },
-];
 
 export default function OurStoryPage() {
   return (
-    <main id="main-content" className="flex-grow flex flex-col relative w-full">
-      {/* ─── SECTION 1: Hero with dark texture background ─── */}
-      <section className="our-story-hero relative w-full overflow-hidden bg-tactical-black">
-        {/* Background: dark-texture image */}
-        <div className="absolute inset-0 w-full h-full">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="w-full h-full object-cover opacity-40"
-            alt=""
-            src="/storefront/our-story/dark-texture-bg.jpg"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-tactical-black/60 via-transparent to-tactical-black" />
-        </div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-margin-edge max-w-[1440px] mx-auto pt-40 pb-24 md:pt-52 md:pb-32">
-          <div
-            className="inline-block border border-signal-orange bg-tactical-black/80 px-4 py-2 mb-stack-lg backdrop-blur-sm rounded-md"
-            style={{ borderRadius: '6px' }}
-          >
-            <span className="font-data-mono text-data-mono text-signal-orange uppercase tracking-widest">
-              <LocalizedText en="Est. 2019 // Bandung" id="Est. 2019 // Bandung" />
-            </span>
-          </div>
-          <h1 className="font-display-xl text-headline-lg-mobile md:text-display-xl text-stark-white uppercase tracking-tighter mb-stack-md">
-            <LocalizedText en="Our Story" id="Cerita Kami" />
+    <main
+      id="main-content"
+      className="relative flex-grow flex flex-col w-full bg-[#050505] text-white overflow-hidden font-[family-name:var(--font-tactic-sans)]"
+      style={{
+        backgroundImage: "url('/storefront/our-story/dark-texture-bg.jpg')",
+        backgroundPosition: 'top center',
+        backgroundRepeat: 'repeat-y',
+        backgroundSize: '100% auto',
+      }}
+    >
+      {/* Top Hero Section */}
+      <section className="relative w-full pt-32 sm:pt-40 md:pt-48 pb-10 md:pb-14 px-5 sm:px-8 lg:px-14">
+        <div className="max-w-[1140px] mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold uppercase tracking-normal text-white mb-2 sm:mb-3">
+            OUR STORY
           </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-stack-lg">
+          <p className="text-white/95 text-xs sm:text-sm md:text-[15px] max-w-2xl font-normal leading-relaxed tracking-wide">
             <LocalizedText
-              en="From a small workshop in Bandung to equipping operators across Indonesia — DURHAIM builds tactical gear with hands that understand the field."
-              id="Dari bengkel kecil di Bandung hingga melengkapi operator di seluruh Indonesia — DURHAIM membangun tactical gear dengan tangan yang memahami lapangan."
+              en="&quot;Built with purpose, crafted with precision, and engineered for durability, performance,confidence, and readiness in every mission&quot;"
+              id="&quot;Built with purpose, crafted with precision, and engineered for durability, performance,confidence, and readiness in every mission&quot;"
             />
           </p>
-          {/* Scroll Indicator */}
-          <div className="mt-stack-lg flex flex-col items-center animate-bounce">
-            <span className="font-data-mono text-data-mono text-stark-white/50 mb-2 uppercase">
-              <LocalizedText en="Scroll" id="Gulir" />
-            </span>
-            <span className="material-symbols-outlined text-signal-orange">south</span>
-          </div>
         </div>
       </section>
 
-      {/* ─── SECTION 2: Workshop — Craftsmanship ─── */}
-      <section className="relative w-full py-section-gap px-margin-edge bg-tactical-black" id="craftsmanship">
-        <div className="max-w-[1440px] mx-auto">
-          {/* Phase header */}
-          <div className="flex items-center gap-2 mb-stack-md">
-            <div className="h-px w-8 bg-signal-orange" />
-            <span className="font-data-mono text-data-mono text-signal-orange uppercase">
-              <LocalizedText en="Phase 01 // Craftsmanship" id="Fase 01 // Keahlian" />
-            </span>
+      {/* Main 2-Column Interlocking Content Section */}
+      <section className="relative w-full pb-24 md:pb-36 px-5 sm:px-8 lg:px-14">
+        <div className="max-w-[1140px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-10 lg:gap-x-12 gap-y-10 lg:gap-y-12 items-start">
+          
+          {/* Top Left: History Text Block (Row 1, Col 1 on Desktop) */}
+          <div className="order-1 lg:order-1 flex flex-col space-y-5 text-white text-[13px] sm:text-[14px] md:text-[15px] leading-[1.65] tracking-normal font-normal">
+            <p>
+              <LocalizedText
+                en="Durhaim was officially established on March 1, 2016 in the city of Bandung. Initially, in 2016 we began producing gun bags for the requirements of an American firearms manufacturer and for weapon modernization needs across Indonesian Armed Forces (TNI) and National Police (POLRI) units. Durhaim itself stands for Durability, Hard Impact, and Modular. Where we want to create products that possess superior durability, resistance to hard impact, and modular versatility."
+                id="Durhaim berdiri secara resmi pada 1 maret tahun 2016 di Kota Bandung. Awalnya pada tahun 2016 kami memulai memproduksi gun bag untuk kebutuhan dari salah satu pabrikan senjata Amerika serta kebutuhan peremajaan senjata di kesatuan TNI/POLRI. Durhaim sendiri adalah singkatan dari Durability, Hard Impact, and Modular. Dimana kami ingin menciptakan produk yang memiliki durabilitas yang baik, memiliki ketahan terhadap hard impact, dan bersifat modular."
+              />
+            </p>
+            <p>
+              <LocalizedText
+                en="Over time, in early 2017, we began to develop several original proprietary products analyzed to possess strong market and tactical potential. One of these flagship products was the Plate Carrier / Body Vest, which we designated the Mamba Series Body Vest. The Mamba Series Body Vest consists of several mission color classifications: Black Mamba (Hitam), Green Mamba (Hijau), King Mamba (Loreng TNI), and Royal Mamba (Coyote Tan)."
+                id="Seiring waktu berjalan pada awal tahun 2017 kami memulai mencoba untuk mengembangkan beberapa produk original yang kami analisa memiliki peluang cukup baik untuk dikembangkan. Salah satu dari produk tersebut adalah Plate Carrier/Body Vest yang pada akhirnya kami namakan Mamba Series Body Vest. Mamba series Body Vest ini terdiri dari beberapa klasifikasi warna yaitu, Black Mamba (Hitam), Green Mamba (Hijau), King Mamba (Loreng TNI), dan Royal Mamba (Coyote Tan)."
+              />
+            </p>
+            <p>
+              <LocalizedText
+                en="Beyond the Mamba Series Bodyvest, in 2018 we developed several other Plate Carrier / Body Vest platforms such as the Tarantula Series and Viper Series. Alongside expanding our body armor systems, we currently engineer specialized combat belt gear led by the Trojan Warbelt."
+                id="Selain Mamba Series Bodyvest pada tahun 2018 kami mengembangkan beberapa jenis Plate Carrier/Body Vest lainnya seperti Tarantula Series, Viper Series. Selain mengembangkan Body vest saat ini kami memiliki satu produk combat Belt yang kami namakan Trojan Warbelt."
+              />
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-            {/* Text Content */}
-            <div className="lg:col-span-5 flex flex-col">
-              <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-stark-white uppercase tracking-tight mb-stack-lg leading-tight">
-                <LocalizedText en="Where Every Stitch Counts" id="Di Mana Setiap Jahitan Berarti" />
-              </h2>
-              <div className="space-y-stack-md text-on-surface-variant font-body-md border-l border-surface-container-highest pl-stack-md">
-                <p>
-                  <LocalizedText
-                    en="DURHAIM gear is not assembled on a production line. Each piece is handcrafted by skilled operators in our Bandung workshop, using heavy-duty industrial sewing machines built for reinforced materials."
-                    id="Gear DURHAIM tidak dirakit di lini produksi. Setiap produk dibuat secara handmade oleh operator terampil di bengkel kami di Bandung, menggunakan mesin jahit industri tugas berat yang dirancang untuk material diperkuat."
-                  />
-                </p>
-                <p>
-                  <LocalizedText
-                    en="From cutting patterns to final inspection, every step is done by hand. We work with 1000D Cordura nylon, reinforced webbing, and YKK hardware — materials chosen for real-world durability, not shelf appeal."
-                    id="Dari pemotongan pola hingga inspeksi akhir, setiap langkah dikerjakan secara manual. Kami menggunakan nilon Cordura 1000D, webbing diperkuat, dan hardware YKK — material yang dipilih untuk daya tahan dunia nyata, bukan penampilan di rak."
-                  />
-                </p>
-              </div>
-
-              {/* Stats row */}
-              <div className="mt-stack-lg grid grid-cols-3 gap-stack-md">
-                {stats.map((stat) => (
-                  <div
-                    key={stat.value}
-                    className="bg-charcoal-field border border-surface-container-highest p-stack-md flex flex-col items-center text-center rounded-xl"
-                    style={{ borderRadius: '12px' }}
-                  >
-                    <span className="font-headline-md text-headline-md text-signal-orange">{stat.value}</span>
-                    <span className="font-data-mono text-data-mono text-stark-white/70 uppercase mt-1">
-                      <LocalizedText en={stat.label.en} id={stat.label.id} />
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Image Grid */}
-            <div className="lg:col-span-7 grid grid-cols-2 gap-gutter mt-stack-lg lg:mt-0">
-              {/* Large image — sewing closeup */}
-              <div
-                className="col-span-2 relative w-full aspect-[4/3] bg-charcoal-field border border-surface-container-highest overflow-hidden group rounded-2xl"
-                style={{ borderRadius: '16px' }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  alt="Close-up of industrial sewing machine stitching tactical gear"
-                  className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
-                  style={{ borderRadius: '16px' }}
-                  src="/storefront/our-story/sewing-closeup.jpg"
-                />
-                {/* Overlay badge */}
-                <div
-                  className="absolute top-4 right-4 bg-tactical-black/80 border border-signal-orange px-3 py-1 backdrop-blur-sm rounded-md"
-                  style={{ borderRadius: '6px' }}
-                >
-                  <span className="font-data-mono text-data-mono text-signal-orange">
-                    <LocalizedText en="HANDMADE" id="BUATAN TANGAN" />
-                  </span>
-                </div>
-              </div>
-
-              {/* Workshop wide */}
-              <div
-                className="relative w-full aspect-[4/3] bg-charcoal-field border border-surface-container-highest overflow-hidden group rounded-2xl"
-                style={{ borderRadius: '16px' }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  alt="Overhead view of DURHAIM workshop with workers at sewing stations"
-                  className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
-                  style={{ borderRadius: '16px' }}
-                  src="/storefront/our-story/workshop-wide.jpg"
-                />
-              </div>
-
-              {/* Workers through glass */}
-              <div
-                className="relative w-full aspect-[4/3] bg-charcoal-field border border-surface-container-highest overflow-hidden group rounded-2xl"
-                style={{ borderRadius: '16px' }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  alt="Workers at sewing machines viewed through workshop glass"
-                  className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
-                  style={{ borderRadius: '16px' }}
-                  src="/storefront/our-story/workers-glass.jpg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SECTION 3: Values — What We Stand For ─── */}
-      <section className="w-full py-section-gap px-margin-edge bg-background border-t border-surface-container-highest topographic-pattern">
-        <div className="max-w-[1440px] mx-auto">
-          {/* Phase header */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-stack-lg gap-stack-md">
-            <div>
-              <div className="flex items-center gap-2 mb-stack-sm">
-                <div className="h-px w-8 bg-signal-orange" />
-                <span className="font-data-mono text-data-mono text-signal-orange uppercase">
-                  <LocalizedText en="Phase 02 // Principles" id="Fase 02 // Prinsip" />
-                </span>
-              </div>
-              <h2 className="font-headline-md text-headline-md text-stark-white uppercase tracking-tight">
-                <LocalizedText en="What We Stand For" id="Yang Kami Pegang" />
-              </h2>
-            </div>
-          </div>
-
-          {/* Value cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-            {values.map((value, index) => (
-              <div
-                key={value.title.en}
-                className="bg-charcoal-field border border-surface-container-highest p-stack-lg flex flex-col group hover:border-signal-orange transition-colors duration-300 rounded-2xl"
-                style={{ borderRadius: '16px' }}
-              >
-                <div className="flex justify-between items-start mb-stack-lg">
-                  <span
-                    className="material-symbols-outlined text-signal-orange text-3xl"
-                    style={{ fontVariationSettings: "'wght' 200" }}
-                  >
-                    {value.icon}
-                  </span>
-                  <span className="font-data-mono text-data-mono text-stark-white/40">0{index + 1}</span>
-                </div>
-                <h3 className="font-headline-md text-headline-md text-stark-white uppercase mb-stack-sm">
-                  <LocalizedText en={value.title.en} id={value.title.id} />
-                </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant mt-auto">
-                  <LocalizedText en={value.text.en} id={value.text.id} />
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SECTION 4: Quote / Brand Statement ─── */}
-      <section className="w-full py-section-gap px-margin-edge bg-tactical-black border-t border-surface-container-highest">
-        <div className="max-w-[1000px] mx-auto text-center">
-          <span
-            className="material-symbols-outlined text-signal-orange text-5xl mb-stack-lg inline-block"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            local_fire_department
-          </span>
-          <blockquote className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-stark-white uppercase tracking-tighter mb-stack-lg leading-tight">
-            <LocalizedText
-              en={'"We don\'t build gear to sit on shelves. We build it to survive the field."'}
-              id={'"Kami tidak membuat gear untuk dipajang di rak. Kami membuatnya untuk bertahan di lapangan."'}
+          {/* Top Right: 3 Workshop Images (Row 1, Col 2 on Desktop) */}
+          <div className="order-2 lg:order-2 flex flex-col space-y-4 sm:space-y-5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/storefront/our-story/workers-glass.jpg"
+              alt="Durhaim Workshop Craftsmen"
+              className="w-full h-auto object-cover"
             />
-          </blockquote>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-stack-lg">
-            <LocalizedText
-              en="DURHAIM — Durability, Hard Impact, Modular. Three pillars that define everything we create."
-              id="DURHAIM — Durability, Hard Impact, Modular. Tiga pilar yang mendefinisikan semua yang kami ciptakan."
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/storefront/our-story/workshop-wide.jpg"
+              alt="Durhaim Production Workshop"
+              className="w-full h-auto object-cover"
             />
-          </p>
-          <div className="flex flex-col sm:flex-row gap-stack-md justify-center">
-            <Link
-              className="inline-flex items-center justify-center bg-signal-orange text-tactical-black font-label-caps text-label-caps uppercase px-8 py-4 border border-signal-orange hover:bg-tactical-black hover:text-signal-orange transition-all duration-300 active:scale-95 group rounded-md"
-              style={{ borderRadius: '6px' }}
-              href="/catalogue"
-            >
-              <LocalizedText en="Explore Catalogue" id="Jelajahi Katalog" />
-              <span className="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">
-                chevron_right
-              </span>
-            </Link>
-            <Link
-              className="inline-flex items-center justify-center bg-transparent text-stark-white font-label-caps text-label-caps uppercase px-8 py-4 border border-surface-container-highest hover:border-signal-orange hover:text-signal-orange transition-all duration-300 active:scale-95 group rounded-md"
-              style={{ borderRadius: '6px' }}
-              href="/battle-proven"
-            >
-              <LocalizedText en="Battle Proven" id="Teruji Lapangan" />
-              <span className="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">
-                arrow_forward
-              </span>
-            </Link>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/storefront/our-story/sewing-closeup.jpg"
+              alt="Tactical Sewing Process"
+              className="w-full h-auto object-cover"
+            />
           </div>
+
+          {/* Bottom Left: 2 Office/Studio Images (Row 2, Col 1 on Desktop) */}
+          <div className="order-4 lg:order-3 flex flex-col space-y-4 sm:space-y-5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/storefront/our-story/office-desk.jpg"
+              alt="Durhaim Office Workspace"
+              className="w-full h-auto object-cover"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/storefront/our-story/photo-studio.jpg"
+              alt="Durhaim Photo Studio"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+          {/* Bottom Right: Vision & Mission Text Block (Row 2, Col 2 on Desktop) */}
+          <div className="order-3 lg:order-4 flex flex-col space-y-5 text-white text-[13px] sm:text-[14px] md:text-[15px] leading-[1.65] tracking-normal font-normal">
+            <p>
+              <LocalizedText
+                en="The Vision and Mission of Durhaim is to participate in enhancing the readiness and operational performance of TNI and POLRI personnel in their duties of service to the Unitary State of the Republic of Indonesia. Having observed that equipment utilized by our forces was often lagging compared to international personnel, we strive to engineer products meeting world-class quality standards that compete directly with leading manufacturers from America and Europe."
+                id="Visi dan Misi durhaim adalah untuk dapat ikut serta memperbaiki penampilan dari rekan-rekan Anggota TNI/POLRI dalam menunjang tugas pengabdian kepada Negara Kesatuan Indonesia. Karena yang selama ini kami amati mayoritas perlengkapan yang digunakan oleh rekan-rekan TNI/POLRI sedikit agak tertinggal jika dibandingkan dengan personel dari negara lain. Kami berusaha menciptakan produk yang memiliki standar kualitas yang mampu bersaing dengan produk-produk dari negara-negara lain seperti Amerika dan negara-negara Eropa."
+              />
+            </p>
+            <p>
+              <LocalizedText
+                en="Through dedication and hard work, we are fully confident that domestic manufacturing can deliver products of international excellence. We hope to contribute meaningfully toward the self-reliance and strength of the Indonesian nation."
+                id="Dengan usaha dan kerja keras kami sangat yakin bahwa kita mampu menciptakan produk lokal yang memiliki kualitas internasional. Kami berharap kami mampu memberikan sumbangsih terhadap kemandirian bangsa Indonesia kelak."
+              />
+            </p>
+          </div>
+
         </div>
       </section>
     </main>
