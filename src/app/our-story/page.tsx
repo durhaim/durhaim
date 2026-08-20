@@ -11,7 +11,7 @@ export default function OurStoryPage() {
   return (
     <main id="main-content" className="w-full bg-[#0d0d0d] text-stark-white min-h-screen relative overflow-hidden font-[family-name:var(--font-tactic-sans)]">
       {/* Background Technical Grid / Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,102,0,0.03)_0%,transparent_70%)]" />
+      <div className="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.02)_0%,transparent_70%)]" />
       <div
         className="fixed inset-0 pointer-events-none z-0 opacity-15"
         style={{
@@ -23,7 +23,7 @@ export default function OurStoryPage() {
       {/* Side Mission Timeline Indicator (Desktop) */}
       <aside aria-label="Mission Timeline" className="fixed left-6 xl:left-10 top-1/2 -translate-y-1/2 h-72 w-1 hidden xl:flex flex-col items-center z-40 pointer-events-none">
         <div className="w-px h-full bg-white/15 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1.5 h-1/4 bg-[#ff6600] rounded-full shadow-[0_0_10px_rgba(255,102,0,0.6)]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1.5 h-1/4 bg-[#777777] rounded-full shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-px bg-white/30" />
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-2 h-px bg-white/30" />
           <div className="absolute top-2/4 left-1/2 -translate-x-1/2 w-3 h-px bg-white/30" />
@@ -67,7 +67,7 @@ export default function OurStoryPage() {
         <div className="relative z-20 max-w-[1240px] mx-auto px-6 sm:px-10 md:px-14 text-center flex flex-col items-center">
           {/* Declassified Record Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-black/60 border border-white/20 mb-6 rounded-full backdrop-blur-md shadow-lg">
-            <span className="w-2 h-2 bg-[#ff6600] rounded-full animate-pulse shadow-[0_0_8px_rgba(255,102,0,0.8)]" />
+            <span className="w-2 h-2 bg-[#888888] rounded-full animate-pulse shadow-[0_0_8px_rgba(255,255,255,0.4)]" />
             <span className="text-white/80 tracking-[0.2em] text-[11px] font-bold uppercase">
               <LocalizedText en="DECLASSIFIED RECORD // EST. 2018" id="DOKUMEN RESMI // EST. 2018" />
             </span>
@@ -80,14 +80,14 @@ export default function OurStoryPage() {
             </span>
             <LocalizedText en="Our Story:" id="Kisah Kami:" />
             <br />
-            <span className="text-[#ff6600] relative inline-block">
+            <span className="text-[#b3b3b3] relative inline-block">
               <LocalizedText en="Built with Purpose" id="Dibangun Dengan Tujuan" />
               <span className="absolute -right-4 top-0 text-[12px] text-white/50 font-normal">®</span>
             </span>
           </h1>
 
           {/* Subtitle Quote */}
-          <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed border-l-2 border-[#ff6600] pl-6 text-left italic bg-black/40 p-5 rounded-xl backdrop-blur-md border border-white/10 shadow-2xl">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed border-l-2 border-[#777777] pl-6 text-left italic bg-black/40 p-5 rounded-xl backdrop-blur-md border border-white/10 shadow-2xl">
             <LocalizedText
               en="&quot;Crafted with precision, engineered for durability, and battle-proven in every mission.&quot;"
               id="&quot;Dibuat dengan presisi, dirancang untuk daya tahan, dan teruji di setiap medan misi.&quot;"
@@ -116,8 +116,8 @@ export default function OurStoryPage() {
               </div>
 
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 text-[#ff6600] text-xs font-bold uppercase tracking-[0.2em] mb-3">
-                  <span className="w-1.5 h-1.5 bg-[#ff6600] rounded-full" />
+                <div className="inline-flex items-center gap-2 text-[#b3b3b3] text-xs font-bold uppercase tracking-[0.2em] mb-3">
+                  <span className="w-1.5 h-1.5 bg-[#888888] rounded-full" />
                   <LocalizedText en="PHASE 01: INCEPTION" id="FASE 01: AWAL MULA" />
                 </div>
                 <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold uppercase tracking-tight text-white mb-6 leading-tight">
@@ -140,7 +140,7 @@ export default function OurStoryPage() {
 
                 {/* Location Badge */}
                 <div className="mt-8 flex items-center gap-4">
-                  <div className="w-12 h-12 border border-white/20 flex items-center justify-center bg-black/60 text-[#ff6600] group hover:border-[#ff6600] transition-colors rounded-xl shadow-lg">
+                  <div className="w-12 h-12 border border-white/20 flex items-center justify-center bg-black/60 text-[#b3b3b3] group hover:border-[#777777] transition-colors rounded-xl shadow-lg">
                     <span className="material-symbols-outlined text-[22px]">location_on</span>
                   </div>
                   <div className="flex flex-col justify-center">
@@ -156,10 +156,10 @@ export default function OurStoryPage() {
               {/* Outer Schematic Frame */}
               <div className="absolute -inset-3 sm:-inset-4 border border-white/10 z-0 translate-x-2 translate-y-2 sm:translate-x-3 sm:translate-y-3 pointer-events-none rounded-2xl">
                 <div className="w-full h-full border border-white/10 border-dashed rounded-xl" />
-                <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#ff6600] rounded-tl-md" />
-                <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#ff6600] rounded-tr-md" />
-                <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#ff6600] rounded-bl-md" />
-                <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#ff6600] rounded-br-md" />
+                <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#777777] rounded-tl-md" />
+                <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#777777] rounded-tr-md" />
+                <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#777777] rounded-bl-md" />
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#777777] rounded-br-md" />
               </div>
 
               {/* Main Image Container */}
@@ -173,7 +173,7 @@ export default function OurStoryPage() {
 
                 {/* Tech Overlay Data Tag */}
                 <div className="absolute bottom-4 left-4 bg-black/90 px-4 py-2 border border-white/20 flex flex-col gap-0.5 backdrop-blur-md rounded-lg shadow-xl">
-                  <span className="text-[10px] text-[#ff6600] font-bold uppercase tracking-wider">SPEC_TOLERANCE: 0.1MM</span>
+                  <span className="text-[10px] text-[#b3b3b3] font-bold uppercase tracking-wider">SPEC_TOLERANCE: 0.1MM</span>
                   <span className="text-[10px] text-white/70 font-semibold uppercase tracking-wider">HEAVY_DUTY_STITCHING_PROTOCOL</span>
                 </div>
               </div>
@@ -196,20 +196,20 @@ export default function OurStoryPage() {
         />
 
         <div className="max-w-[1240px] mx-auto px-6 sm:px-10 md:px-14 relative z-10 text-center">
-          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-[#ff6600] mb-12">
+          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-[#b3b3b3] mb-12">
             <LocalizedText en="THE CREED" id="PRINSIP UTAMA" />
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {/* Durability */}
-            <div className="bg-[#181818]/90 border border-white/15 p-8 sm:p-10 flex flex-col items-center hover:border-[#ff6600]/80 transition-all duration-300 group relative overflow-hidden backdrop-blur-md rounded-2xl shadow-xl hover:shadow-[0_8px_30px_rgba(255,102,0,0.15)] hover:-translate-y-1">
-              <div className="absolute -right-3 -top-3 text-7xl font-bold text-white/[0.03] group-hover:text-[#ff6600]/10 transition-colors select-none">
+            <div className="bg-[#181818]/90 border border-white/15 p-8 sm:p-10 flex flex-col items-center hover:border-[#777777] transition-all duration-300 group relative overflow-hidden backdrop-blur-md rounded-2xl shadow-xl hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] hover:-translate-y-1">
+              <div className="absolute -right-3 -top-3 text-7xl font-bold text-white/[0.03] group-hover:text-white/10 transition-colors select-none">
                 D
               </div>
-              <span className="material-symbols-outlined text-[44px] text-white/80 mb-5 group-hover:text-[#ff6600] group-hover:scale-110 transition-all duration-300">
+              <span className="material-symbols-outlined text-[44px] text-white/80 mb-5 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                 shield
               </span>
-              <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white mb-3 group-hover:text-[#ff6600] transition-colors">
+              <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white mb-3 group-hover:text-[#b3b3b3] transition-colors">
                 <LocalizedText en="DURABILITY" id="DAYA TAHAN" />
               </h3>
               <p className="text-white/70 text-sm text-center leading-relaxed">
@@ -221,14 +221,14 @@ export default function OurStoryPage() {
             </div>
 
             {/* Hard Impact */}
-            <div className="bg-[#181818]/90 border border-white/15 p-8 sm:p-10 flex flex-col items-center hover:border-[#ff6600]/80 transition-all duration-300 group relative overflow-hidden backdrop-blur-md rounded-2xl shadow-xl hover:shadow-[0_8px_30px_rgba(255,102,0,0.15)] hover:-translate-y-1">
-              <div className="absolute -right-3 -top-3 text-7xl font-bold text-white/[0.03] group-hover:text-[#ff6600]/10 transition-colors select-none">
+            <div className="bg-[#181818]/90 border border-white/15 p-8 sm:p-10 flex flex-col items-center hover:border-[#777777] transition-all duration-300 group relative overflow-hidden backdrop-blur-md rounded-2xl shadow-xl hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] hover:-translate-y-1">
+              <div className="absolute -right-3 -top-3 text-7xl font-bold text-white/[0.03] group-hover:text-white/10 transition-colors select-none">
                 H
               </div>
-              <span className="material-symbols-outlined text-[44px] text-white/80 mb-5 group-hover:text-[#ff6600] group-hover:scale-110 transition-all duration-300">
+              <span className="material-symbols-outlined text-[44px] text-white/80 mb-5 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                 bolt
               </span>
-              <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white mb-3 group-hover:text-[#ff6600] transition-colors">
+              <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white mb-3 group-hover:text-[#b3b3b3] transition-colors">
                 <LocalizedText en="HARD IMPACT" id="BENTURAN BERAT" />
               </h3>
               <p className="text-white/70 text-sm text-center leading-relaxed">
@@ -240,14 +240,14 @@ export default function OurStoryPage() {
             </div>
 
             {/* Modular */}
-            <div className="bg-[#181818]/90 border border-white/15 p-8 sm:p-10 flex flex-col items-center hover:border-[#ff6600]/80 transition-all duration-300 group relative overflow-hidden backdrop-blur-md rounded-2xl shadow-xl hover:shadow-[0_8px_30px_rgba(255,102,0,0.15)] hover:-translate-y-1">
-              <div className="absolute -right-3 -top-3 text-7xl font-bold text-white/[0.03] group-hover:text-[#ff6600]/10 transition-colors select-none">
+            <div className="bg-[#181818]/90 border border-white/15 p-8 sm:p-10 flex flex-col items-center hover:border-[#777777] transition-all duration-300 group relative overflow-hidden backdrop-blur-md rounded-2xl shadow-xl hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] hover:-translate-y-1">
+              <div className="absolute -right-3 -top-3 text-7xl font-bold text-white/[0.03] group-hover:text-white/10 transition-colors select-none">
                 M
               </div>
-              <span className="material-symbols-outlined text-[44px] text-white/80 mb-5 group-hover:text-[#ff6600] group-hover:scale-110 transition-all duration-300">
+              <span className="material-symbols-outlined text-[44px] text-white/80 mb-5 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                 view_module
               </span>
-              <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white mb-3 group-hover:text-[#ff6600] transition-colors">
+              <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white mb-3 group-hover:text-[#b3b3b3] transition-colors">
                 <LocalizedText en="MODULAR" id="MODULARITAS" />
               </h3>
               <p className="text-white/70 text-sm text-center leading-relaxed">
@@ -283,7 +283,7 @@ export default function OurStoryPage() {
 
                 {/* Assembly Line Overlay Tag */}
                 <div className="absolute top-4 right-4 bg-black/90 border border-white/20 p-3 shadow-xl z-20 flex items-center gap-3 backdrop-blur-md rounded-xl">
-                  <div className="w-8 h-8 rounded-full border-2 border-[#ff6600] flex items-center justify-center text-[#ff6600]">
+                  <div className="w-8 h-8 rounded-full border-2 border-[#777777] flex items-center justify-center text-[#b3b3b3]">
                     <span className="material-symbols-outlined text-[15px]">precision_manufacturing</span>
                   </div>
                   <div>
@@ -302,8 +302,8 @@ export default function OurStoryPage() {
               </div>
 
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 text-[#ff6600] text-xs font-bold uppercase tracking-[0.2em] mb-3">
-                  <span className="w-1.5 h-1.5 bg-[#ff6600] rounded-full" />
+                <div className="inline-flex items-center gap-2 text-[#b3b3b3] text-xs font-bold uppercase tracking-[0.2em] mb-3">
+                  <span className="w-1.5 h-1.5 bg-[#888888] rounded-full" />
                   <LocalizedText en="PHASE 02: EVOLUTION" id="FASE 02: EVOLUSI PRODUK" />
                 </div>
                 <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold uppercase tracking-tight text-white mb-6 leading-tight">
@@ -363,7 +363,7 @@ export default function OurStoryPage() {
             {/* Text Column */}
             <div className="lg:col-span-6 space-y-6 relative z-10 order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-black/60 border border-white/20 rounded-lg">
-                <span className="material-symbols-outlined text-[15px] text-[#ff6600]">flag</span>
+                <span className="material-symbols-outlined text-[15px] text-[#b3b3b3]">flag</span>
                 <span className="text-white text-[11px] font-bold uppercase tracking-widest">
                   <LocalizedText en="MISSION DIRECTIVE" id="ARAHAN MISI" />
                 </span>
@@ -373,7 +373,7 @@ export default function OurStoryPage() {
                 <LocalizedText en="Vision & Self-Reliance" id="Visi & Kemandirian" />
               </h2>
 
-              <div className="space-y-4 text-white/80 text-[15px] sm:text-[16px] leading-relaxed border-l-2 border-[#ff6600]/80 pl-6">
+              <div className="space-y-4 text-white/80 text-[15px] sm:text-[16px] leading-relaxed border-l-2 border-[#777777] pl-6">
                 <p>
                   <LocalizedText
                     en="The Vision and Mission of Durhaim is to participate directly in enhancing the gear, readiness, and performance of our comrades in the TNI and POLRI in supporting their duties of service to the Unitary State of the Republic of Indonesia."
@@ -412,7 +412,7 @@ export default function OurStoryPage() {
 
                 {/* R&D Overlay Tag */}
                 <div className="absolute top-5 left-5 bg-black/90 border border-white/20 p-3 backdrop-blur-md rounded-xl shadow-xl">
-                  <div className="flex items-center gap-2 text-[#ff6600] mb-1">
+                  <div className="flex items-center gap-2 text-[#b3b3b3] mb-1">
                     <span className="material-symbols-outlined text-[15px] animate-spin" style={{ animationDuration: '6s' }}>
                       settings
                     </span>
