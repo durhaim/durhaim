@@ -2,146 +2,125 @@ import type { Metadata } from 'next';
 import LocalizedText from '@/components/LocalizedText';
 
 export const metadata: Metadata = {
-  title: 'Our Story - DURHAIM Tactical Gear',
-  description:
-    'Durhaim berdiri resmi pada 1 Maret 2018 di Kota Bandung. Durability, Hard Impact, and Modular tactical gear engineered for frontline deployment.',
+  title: 'Our Story — DURHAIM Tactical Gear',
+  description: 'Built with purpose, crafted with precision, and engineered for durability, performance, confidence, and readiness in every mission.',
 };
 
 export default function OurStoryPage() {
   return (
-    <main id="main-content" className="flex-grow w-full bg-[#0a0a0a] text-stark-white">
-      {/* Hero Section with Dedicated Tactical Hero Banner */}
-      <section
-        className="relative w-full min-h-[340px] sm:min-h-[400px] md:min-h-[460px] lg:min-h-[520px] flex items-end justify-start bg-[#0a0a0a] overflow-hidden"
-        style={{
-          backgroundImage: "url('/storefront/figma/our-story/hero-bg.jpg')",
-          backgroundPosition: 'center center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        {/* Hero Content (Aligned Left with Zero Gradient Overlay on Image) */}
-        <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 pb-10 sm:pb-14 md:pb-16 pt-20">
-          <h1 className="font-display-xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-stark-white mb-2 sm:mb-3 text-left">
-            <LocalizedText en="OUR STORY" id="OUR STORY" />
-          </h1>
-          <p className="font-body-md text-sm sm:text-base md:text-lg lg:text-xl text-stark-white max-w-2xl text-left leading-snug sm:leading-relaxed">
-            <LocalizedText
-              en="“Built with purpose, crafted with precision, and engineered for durability, performance,confidence, and readiness in every mission”"
-              id="“Built with purpose, crafted with precision, and engineered for durability, performance,confidence, and readiness in every mission”"
-            />
-          </p>
+    <main
+      id="main-content"
+      className="relative flex-grow flex flex-col w-full bg-[#080808] text-white overflow-hidden font-[family-name:var(--font-tactic-sans)]"
+      style={{
+        backgroundImage: "url('/storefront/our-story/dark-texture-bg.jpg')",
+        backgroundPosition: 'top center',
+        backgroundRepeat: 'repeat-y',
+        backgroundSize: '100% auto',
+      }}
+    >
+      {/* Top Hero Section */}
+      <section className="relative w-full overflow-hidden">
+        <div className="relative w-full min-h-[360px] sm:min-h-[420px] md:min-h-[480px] lg:min-h-[520px] flex flex-col justify-end pb-8 sm:pb-10 md:pb-12 px-5 sm:px-8 lg:px-14">
+          <div className="max-w-[1140px] w-full mx-auto relative z-10">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold uppercase tracking-normal text-white mb-2 sm:mb-3">
+              OUR STORY
+            </h1>
+            <p className="text-white/95 text-xs sm:text-sm md:text-[15px] max-w-2xl font-normal leading-relaxed tracking-wide">
+              <LocalizedText
+                en="&quot;Built with purpose, crafted with precision, and engineered for durability, performance,confidence, and readiness in every mission&quot;"
+                id="&quot;Built with purpose, crafted with precision, and engineered for durability, performance,confidence, and readiness in every mission&quot;"
+              />
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Main Content Body with Camouflage Pattern Texture */}
-      <div
-        className="relative w-full"
-        style={{
-          backgroundImage: "url('/storefront/figma/our-story/camo-pattern.jpg')",
-          backgroundPosition: 'top center',
-          backgroundSize: '100% auto',
-          backgroundRepeat: 'repeat-y',
-        }}
-      >
-        {/* Top smooth fade from the hero section */}
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0a] to-transparent pointer-events-none" />
-
-        {/* Subtle Darkening Overlay to ensure comfortable reading */}
-        <div className="absolute inset-0 bg-[#0a0a0a]/60 pointer-events-none" />
-
-        <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-16 py-16 md:py-24 lg:py-32">
-          {/* Section 1: Origin & Workshop Craftsmanship */}
-          <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start mb-20 md:mb-28 lg:mb-36">
-            {/* Left Column: Brand History Text */}
-            <div className="lg:col-span-6 flex flex-col justify-center space-y-6 text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] leading-[1.8] text-stark-white/95 font-body-md text-left">
+      {/* Narrative & Photography Content */}
+      <div className="relative w-full pb-24 md:pb-36 px-5 sm:px-8 lg:px-14 flex flex-col space-y-10 sm:space-y-12 lg:space-y-14">
+        <div className="max-w-[1140px] w-full mx-auto flex flex-col space-y-10 sm:space-y-12 lg:space-y-14">
+          
+          {/* BLOCK 1: History Narrative (Left) & 3 Workshop Photos (Right) */}
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Left: History Narrative */}
+            <div className="flex flex-col justify-between space-y-4 sm:space-y-5 text-white text-[13px] sm:text-[14px] md:text-[15px] leading-[1.65] tracking-normal font-normal">
               <p>
                 <LocalizedText
-                  id="Durhaim berdiri secara resmi pada 1 maret tahun 2018 di Kota Bandung. Awalnya pada tahun 2016 kami memulai memproduksi gun bag untuk kebutuhan dari salah satu pabrikan senjata Amerika serta kebutuhan peremajaan senjata di kesatuan TNI/POLRI. Durhaim sendiri adalah singkatan dari Durability, Hard Impact, and Modular. Dimana kami ingin menciptakan produk yang memiliki durabilitas yang baik, memiliki ketahan terhadap hard impact, dan bersifat modular."
-                  en="Durhaim was officially established on March 1, 2018 in the city of Bandung. Initially in 2016, we began manufacturing gun bags to meet the requirements of an American firearms manufacturer as well as weapon modernization needs within the TNI/POLRI units. The name Durhaim itself stands for Durability, Hard Impact, and Modular—representing our commitment to creating products that deliver superior durability, withstand hard impact, and provide modular adaptability."
+                  en="Durhaim was officially established on March 1, 2016 in the city of Bandung. Initially, in 2016 we began producing gun bags for the requirements of an American firearms manufacturer and for weapon modernization needs across Indonesian Armed Forces (TNI) and National Police (POLRI) units. Durhaim itself stands for Durability, Hard Impact, and Modular. Where we want to create products that possess superior durability, resistance to hard impact, and modular versatility."
+                  id="Durhaim berdiri secara resmi pada 1 maret tahun 2016 di Kota Bandung. Awalnya pada tahun 2016 kami memulai memproduksi gun bag untuk kebutuhan dari salah satu pabrikan senjata Amerika serta kebutuhan peremajaan senjata di kesatuan TNI/POLRI. Durhaim sendiri adalah singkatan dari Durability, Hard Impact, and Modular. Dimana kami ingin menciptakan produk yang memiliki durabilitas yang baik, memiliki ketahan terhadap hard impact, dan bersifat modular."
                 />
               </p>
               <p>
                 <LocalizedText
+                  en="Over time, in early 2017, we began to develop several original proprietary products analyzed to possess strong market and tactical potential. One of these flagship products was the Plate Carrier / Body Vest, which we designated the Mamba Series Body Vest. The Mamba Series Body Vest consists of several mission color classifications: Black Mamba (Hitam), Green Mamba (Hijau), King Mamba (Loreng TNI), and Royal Mamba (Coyote Tan)."
                   id="Seiring waktu berjalan pada awal tahun 2017 kami memulai mencoba untuk mengembangkan beberapa produk original yang kami analisa memiliki peluang cukup baik untuk dikembangkan. Salah satu dari produk tersebut adalah Plate Carrier/Body Vest yang pada akhirnya kami namakan Mamba Series Body Vest. Mamba series Body Vest ini terdiri dari beberapa klasifikasi warna yaitu, Black Mamba (Hitam), Green Mamba (Hijau), King Mamba (Loreng TNI), dan Royal Mamba (Coyote Tan)."
-                  en="Over time in early 2017, we began developing several original products that showed strong potential. One of these was our Plate Carrier/Body Vest, which we named the Mamba Series Body Vest. The Mamba series Body Vest was released in several colorways: Black Mamba (Black), Green Mamba (Green), King Mamba (TNI Camouflage), and Royal Mamba (Coyote Tan)."
                 />
               </p>
               <p>
                 <LocalizedText
+                  en="Beyond the Mamba Series Bodyvest, in 2018 we developed several other Plate Carrier / Body Vest platforms such as the Tarantula Series and Viper Series. Alongside expanding our body armor systems, we currently engineer specialized combat belt gear led by the Trojan Warbelt."
                   id="Selain Mamba Series Bodyvest pada tahun 2018 kami mengembangkan beberapa jenis Plate Carrier/Body Vest lainnya seperti Tarantula Series, Viper Series. Selain mengembangkan Body vest saat ini kami memiliki satu produk combat Belt yang kami namakan Trojan Warbelt."
-                  en="In addition to the Mamba Series Bodyvest, in 2018 we developed several other Plate Carrier/Body Vest systems such as the Tarantula Series and Viper Series. Alongside our body vest line, we also produce a specialized combat belt known as the Trojan Warbelt."
                 />
               </p>
             </div>
 
-            {/* Right Column: 3 Workshop Images */}
-            <div className="lg:col-span-6 flex flex-col space-y-5 sm:space-y-6">
-              <div className="overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/storefront/figma/our-story/workshop-1.jpg"
-                  alt="Durhaim tactical production workshop and sewing line"
-                  className="w-full h-auto aspect-[16/10] object-cover transition-transform duration-500 hover:scale-[1.02]"
-                />
-              </div>
-              <div className="overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/storefront/figma/our-story/workshop-2.jpg"
-                  alt="Tactical gear craftsmen assembling body vest panels"
-                  className="w-full h-auto aspect-[16/10] object-cover transition-transform duration-500 hover:scale-[1.02]"
-                />
-              </div>
-              <div className="overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/storefront/figma/our-story/workshop-3.jpg"
-                  alt="Precision stitching on heavy duty tactical webbing"
-                  className="w-full h-auto aspect-[16/10] object-cover transition-transform duration-500 hover:scale-[1.02]"
-                />
-              </div>
+            {/* Right: 3 Stacked Workshop Photos */}
+            <div className="flex flex-col space-y-3 sm:space-y-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/storefront/our-story/workers-glass.jpg"
+                alt="Durhaim Workshop Craftsmen"
+                className="w-full aspect-[3/2] object-cover"
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/storefront/our-story/workshop-wide.jpg"
+                alt="Durhaim Production Workshop"
+                className="w-full aspect-[3/2] object-cover"
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/storefront/our-story/sewing-closeup.jpg"
+                alt="Tactical Sewing Process"
+                className="w-full aspect-[3/2] object-cover"
+              />
             </div>
           </section>
 
-          {/* Section 2: Studio & Vision/Mission */}
-          <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start">
-            {/* Left Column: 2 Images (R&D Desk + Studio Lighting) */}
-            <div className="lg:col-span-6 flex flex-col space-y-5 sm:space-y-6">
-              <div className="overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/storefront/figma/our-story/rd-office.jpg"
-                  alt="Durhaim design and tactical R&D office workstation"
-                  className="w-full h-auto aspect-[16/10] object-cover transition-transform duration-500 hover:scale-[1.02]"
-                />
-              </div>
-              <div className="overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/storefront/figma/our-story/studio-setup.jpg"
-                  alt="Studio product turntable and softbox lighting setup"
-                  className="w-full h-auto max-h-[480px] object-cover transition-transform duration-500 hover:scale-[1.02]"
-                />
-              </div>
+          {/* BLOCK 2: 2 Office/Studio Photos (Left) & Vision & Mission (Right) */}
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Left: 2 Office/Studio Photos */}
+            <div className="flex flex-col space-y-3 sm:space-y-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/storefront/our-story/office-desk.jpg"
+                alt="Durhaim Office Workspace"
+                className="w-full aspect-[3/2] object-cover"
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/storefront/our-story/photo-studio.jpg"
+                alt="Durhaim Photo Studio"
+                className="w-full aspect-[3/2] object-cover"
+              />
             </div>
 
-            {/* Right Column: Vision & Mission Text */}
-            <div className="lg:col-span-6 flex flex-col justify-center space-y-6 text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] leading-[1.8] text-stark-white/95 font-body-md text-left">
+            {/* Right: Vision & Mission Narrative */}
+            <div className="flex flex-col justify-between space-y-4 sm:space-y-5 text-white text-[13px] sm:text-[14px] md:text-[15px] leading-[1.65] tracking-normal font-normal">
               <p>
                 <LocalizedText
-                  id="Visi dan Misi durhaim adalah untuk dapat ikut serta memperbaiki penampilan dari rekan-rekan Anggota TNI/POLRI dalam menunjang tugas pengabdian kepada Negara Kesatuan Indonesia. Karena yang selama ini kami amati mayoritas perlengkapan yang digunakan oleh rekan-rekan TNI/POLRI sedikit agak tertinggal jika dibandingkan dengan personel dari negara lain."
-                  en="Durhaim's Vision and Mission is to participate directly in improving the gear and appearance of our comrades in the TNI/POLRI to support their duties of service to the Unitary State of the Republic of Indonesia. Over the years, we observed that much of the tactical equipment used by TNI/POLRI personnel lagged somewhat behind personnel from other nations."
+                  en="The Vision and Mission of Durhaim is to participate in enhancing the readiness and operational performance of TNI and POLRI personnel in their duties of service to the Unitary State of the Republic of Indonesia. Having observed that equipment utilized by our forces was often lagging compared to international personnel, we strive to engineer products meeting world-class quality standards that compete directly with leading manufacturers from America and Europe."
+                  id="Visi dan Misi durhaim adalah untuk dapat ikut serta memperbaiki penampilan dari rekan-rekan Anggota TNI/POLRI dalam menunjang tugas pengabdian kepada Negara Kesatuan Indonesia. Karena yang selama ini kami amati mayoritas perlengkapan yang digunakan oleh rekan-rekan TNI/POLRI sedikit agak tertinggal jika dibandingkan dengan personel dari negara lain. Kami berusaha menciptakan produk yang memiliki standar kualitas yang mampu bersaing dengan produk-produk dari negara-negara lain seperti Amerika dan negara-negara Eropa."
                 />
               </p>
               <p>
                 <LocalizedText
-                  id="Kami berusaha menciptakan produk yang memiliki standar kualitas yang mampu bersaing dengan produk-produk dari negara-negara lain seperti Amerika dan negara-negara Eropa. Dengan usaha dan kerja keras kami sangat yakin bahwa kita mampu menciptakan produk lokal yang memiliki kualitas internasional. Kami berharap kami mampu memberikan sumbangsih terhadap kemandirian bangsa Indonesia kelak."
-                  en="We strive to create products with uncompromising quality standards capable of competing with leading products from countries such as the United States and European nations. Through dedication and hard work, we are firmly convinced that we can produce Indonesian-made gear of world-class excellence. We hope to make a lasting contribution to the self-reliance and sovereignty of the Indonesian nation."
+                  en="Through dedication and hard work, we are fully confident that domestic manufacturing can deliver products of international excellence. We hope to contribute meaningfully toward the self-reliance and strength of the Indonesian nation."
+                  id="Dengan usaha dan kerja keras kami sangat yakin bahwa kita mampu menciptakan produk lokal yang memiliki kualitas internasional. Kami berharap kami mampu memberikan sumbangsih terhadap kemandirian bangsa Indonesia kelak."
                 />
               </p>
             </div>
           </section>
+
         </div>
       </div>
     </main>
