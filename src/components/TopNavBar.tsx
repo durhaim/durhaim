@@ -37,9 +37,8 @@ export default function TopNavBar() {
     <header className="store-header" data-hydrated={hydrated}>
       <div className="store-header__inner">
         <Link className="store-header__brand" href="/" aria-label="DURHAIM home">
-          {/* Exported Figma asset; its intrinsic whitespace is part of the desktop composition. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/storefront/figma/homepage/page-1/logo-1.png" alt="DURHAIM" />
+          <img src="/storefront/durhaim-logo.png" alt="DURHAIM" />
         </Link>
 
         <nav className="store-header__nav" aria-label="Primary navigation">

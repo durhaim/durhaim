@@ -40,32 +40,36 @@ const homeFaqs = [
 
 const features = [
   {
+    tag: "SYS_01 // ARMOR",
     title: { en: "Bodyvest & Chestrig", id: "Bodyvest & Chestrig" },
-    subtitle: { en: "Durability hard impact and modular", id: "Tahan Benturan Berat dan modular" },
+    subtitle: { en: "Durability hard impact and modular", id: "Tahan Benturan Berat dan Modular" },
     href: "/catalogue?category=vest",
     background: "/storefront/rev/bodyvest-bg.jpg",
     product: "/storefront/rev/bodyvest.png",
     productWidth: "25.2%",
   },
   {
+    tag: "SYS_02 // LOADOUT",
     title: { en: "Pack & Pouch", id: "Pack & Pouch" },
-    subtitle: { en: "Perfect for carrying your equipment", id: "Ideal untuk membawa Perlengkapan Anda" },
+    subtitle: { en: "Perfect for carrying your equipment", id: "Ideal untuk Membawa Perlengkapan Anda" },
     href: "/catalogue?category=pack",
     background: "/storefront/rev/pack-bg.jpg",
     product: "/storefront/rev/pack.png",
     productWidth: "24.1%",
   },
   {
+    tag: "SYS_03 // TACTICAL_BELT",
     title: { en: "Belt", id: "Belt" },
-    subtitle: { en: "It’s all about the waist", id: "Semua bertumpu pada pinggang" },
+    subtitle: { en: "It’s all about the waist", id: "Semua Bertumpu pada Pinggang" },
     href: "/catalogue?category=belt",
     background: "/storefront/rev/belt-bg.jpg",
     product: "/storefront/rev/belt-rig.png",
     productWidth: "27.4%",
   },
   {
+    tag: "SYS_04 // UTILITY",
     title: { en: "Pouch", id: "Pouch" },
-    subtitle: { en: "Organize. Access. Move. Repeat.", id: "Praktis, mudah diakses, dan siap bergerak." },
+    subtitle: { en: "Organize. Access. Move. Repeat.", id: "Praktis, Mudah Diakses, dan Siap Bergerak" },
     href: "/catalogue?category=pouch",
     background: "/storefront/rev/pouch-bg.jpg",
     product: "/storefront/rev/belt.png",
@@ -74,10 +78,10 @@ const features = [
 ] as const;
 
 const categoryStrip = [
-  ["Bodyvest Chestrig", "/catalogue?category=vest", "/storefront/rev/bodyvest.png"],
-  ["Pack & Pouch", "/catalogue?category=pack", "/storefront/rev/pack.png"],
-  ["Belt", "/catalogue?category=belt", "/storefront/rev/belt-rig.png"],
-  ["Pouch", "/catalogue?category=pouch", "/storefront/rev/belt.png"],
+  { label: "Bodyvest Chestrig", href: "/catalogue?category=vest", image: "/storefront/rev/bodyvest.png" },
+  { label: "Pack & Pouch", href: "/catalogue?category=pack", image: "/storefront/rev/pack.png" },
+  { label: "Belt", href: "/catalogue?category=belt", image: "/storefront/rev/belt-rig.png" },
+  { label: "Pouch", href: "/catalogue?category=pouch", image: "/storefront/rev/belt.png" },
 ] as const;
 
 export default async function HomePage() {
@@ -154,6 +158,7 @@ export default async function HomePage() {
               alt=""
             />
             <div className="home-feature__copy">
+              <span className="home-feature__tag" aria-hidden="true">{feature.tag}</span>
               <h2><LocalizedText en={feature.title.en} id={feature.title.id} /></h2>
               <p><LocalizedText en={feature.subtitle.en} id={feature.subtitle.id} /></p>
               <span className="home-feature__cta">
@@ -165,15 +170,12 @@ export default async function HomePage() {
       </section>
 
       <section className="home-category-strip" data-figma-node="29:79" aria-label="Browse categories">
-        {categoryStrip.map(([label, href, image]) => (
-          <Link className="home-category-strip__card" href={href} key={label}>
+        {categoryStrip.map((item) => (
+          <Link className="home-category-strip__card" href={item.href} key={item.label}>
             <span className="home-category-strip__panel" aria-hidden="true" />
-            <svg className="home-category-strip__outline" viewBox="0 0 209 293" preserveAspectRatio="none" aria-hidden="true">
-              <polygon points="0,0 197,0 209,15 209,127 198,140 198,293 9,293 9,183 0,170" />
-            </svg>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image} alt="" />
-            <span className="home-category-strip__label">{label}</span>
+            <img src={item.image} alt="" />
+            <span className="home-category-strip__label">{item.label}</span>
           </Link>
         ))}
       </section>
