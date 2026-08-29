@@ -77,14 +77,20 @@ export default async function ContactPage() {
               {siteSettings.support_email}
             </div>
           </a>
-          <section className="border border-surface-container-highest bg-charcoal-field p-stack-lg rounded-2xl" style={{ borderRadius: '16px' }}>
+          <a
+            href="https://maps.app.goo.gl/5ZGFDFrcwBkdfwW97"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-surface-container-highest bg-charcoal-field p-stack-lg hover:border-signal-orange rounded-2xl transition-colors block"
+            style={{ borderRadius: '16px' }}
+          >
             <div className="font-data-mono text-signal-orange">
               <LocalizedText en="LOCATION" id="LOKASI" />
             </div>
             <div className="mt-2 font-body-md text-stark-white">
               {siteSettings.location}
             </div>
-          </section>
+          </a>
         </div>
       </div>
     </main>

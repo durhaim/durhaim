@@ -49,7 +49,13 @@ export default function Footer() {
         <section>
           <h2>{t.footer.contacts}</h2>
           <address>
-            <span>{siteSettings.location}</span>
+            <a
+              href="https://maps.app.goo.gl/5ZGFDFrcwBkdfwW97"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {siteSettings.location}
+            </a>
             <a href={`mailto:${siteSettings.support_email}`}>{siteSettings.support_email}</a>
             <a href={buildWhatsAppUrl(siteSettings)} target="_blank" rel="noopener noreferrer">
               {siteSettings.whatsapp_contact}
