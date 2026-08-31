@@ -276,8 +276,8 @@ export default function OurStoryPage() {
               <div className="relative z-10 bg-[#161616] overflow-hidden border border-white/20 shadow-2xl group rounded-xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  alt="Durhaim Craftsmen in Tactical Workshop"
-                  src="/storefront/our-story/workers-glass.jpg"
+                  alt="Durhaim Laser Cutting & Tactical Gear Fabrication"
+                  src="/storefront/our-story/laser-cutting.jpg"
                   className="w-full aspect-[16/10] object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 rounded-xl"
                 />
 
@@ -405,8 +405,8 @@ export default function OurStoryPage() {
               <div className="relative z-10 bg-[#141414] border border-white/20 p-2 shadow-2xl group overflow-hidden rounded-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  alt="Durhaim R&D and Operations Office"
-                  src="/storefront/our-story/office-desk.jpg"
+                  alt="Durhaim Precision Tactical Craftsmanship & Prototyping"
+                  src="/storefront/our-story/craftsman-sewing.jpg"
                   className="w-full aspect-[16/11] object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 rounded-xl"
                 />
 
