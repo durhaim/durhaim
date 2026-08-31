@@ -205,25 +205,40 @@ export default async function VerifyPage({ params }: PageProps) {
               </div>
 
               <div className="grid gap-gutter lg:grid-cols-[220px_minmax(0,1fr)]">
-                <div className="border border-surface-container-highest bg-tactical-black p-stack-md rounded-2xl">
-                  <div className="flex aspect-square items-center justify-center bg-surface-container-lowest rounded-xl overflow-hidden">
-                    {productImage ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                    <img src={productImage} alt={productName ?? 'Produk Durhaim'} className="h-full w-full object-contain p-4" />
-                    ) : (
-                      <div className="flex h-32 w-32 items-center justify-center border border-signal-orange/40 text-signal-orange rounded-xl">
-                        <span className="material-symbols-outlined text-[56px]">military_tech</span>
-                      </div>
-                    )}
+                <div className="border border-surface-container-highest bg-tactical-black p-stack-md rounded-2xl flex flex-col justify-between h-full">
+                  <div>
+                    <div className="flex aspect-square items-center justify-center bg-surface-container-lowest rounded-xl overflow-hidden">
+                      {productImage ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                      <img src={productImage} alt={productName ?? 'Produk Durhaim'} className="h-full w-full object-contain p-4" />
+                      ) : (
+                        <div className="flex h-32 w-32 items-center justify-center border border-signal-orange/40 text-signal-orange rounded-xl">
+                          <span className="material-symbols-outlined text-[56px]">military_tech</span>
+                        </div>
+                      )}
+                    </div>
+                    <div className="mt-stack-md border-t border-surface-container-highest pt-stack-sm text-center font-data-mono text-data-mono uppercase text-on-surface-variant">
+                      {isAuthentic
+                        ? <LocalizedText en="Official Registry" id="Registri Resmi" />
+                        : status === 'REVOKED'
+                          // A revoked serial was in the registry; it is the certificate that
+                          // was withdrawn. Saying "not in registry" would misstate that.
+                          ? <LocalizedText en="Withdrawn from registry" id="Ditarik dari registri" />
+                          : <LocalizedText en="Not in registry" id="Tidak ada di registri" />}
+                    </div>
                   </div>
-                  <div className="mt-stack-md border-t border-surface-container-highest pt-stack-sm text-center font-data-mono text-data-mono uppercase text-on-surface-variant">
-                    {isAuthentic
-                      ? <LocalizedText en="Official Registry" id="Registri Resmi" />
-                      : status === 'REVOKED'
-                        // A revoked serial was in the registry; it is the certificate that
-                        // was withdrawn. Saying "not in registry" would misstate that.
-                        ? <LocalizedText en="Withdrawn from registry" id="Ditarik dari registri" />
-                        : <LocalizedText en="Not in registry" id="Tidak ada di registri" />}
+
+                  {/* Brand Seal / Logo in Registry Card */}
+                  <div className="mt-8 pt-6 border-t border-surface-container-highest/60 flex flex-col items-center justify-center gap-2 pb-2">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/storefront/durhaim-logo.png"
+                      alt="DURHAIM"
+                      className="w-full max-w-[150px] h-auto object-contain opacity-85 hover:opacity-100 transition-opacity"
+                    />
+                    <div className="font-data-mono text-[9px] uppercase tracking-widest text-on-surface-variant/70 text-center">
+                      AUTHENTICITY SYSTEM
+                    </div>
                   </div>
                 </div>
 
