@@ -100,9 +100,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function VerifyPage({ params }: PageProps) {
   const { serial: rawSerial } = await params;
+  let decodedSerial = rawSerial;
+  try {
+    decodedSerial = decodeURIComponent(rawSerial);
+  } catch {
+    decodedSerial = rawSerial;
+  }
   const siteSettings = await getSiteSettings();
-  const data = await getSerialVerification(rawSerial);
-  const serial = rawSerial.toUpperCase();
+  const data = await getSerialVerification(decodedSerial);
+  const serial = decodedSerial.toUpperCase();
   const verificationCount = data?.verificationCount ?? undefined;
   const status = !data ? 'UNVERIFIED' : data.status === 'REVOKED' ? 'REVOKED' : 'AUTHENTIC';
   const productName = data?.productName ?? null;
@@ -176,10 +182,10 @@ export default async function VerifyPage({ params }: PageProps) {
   return (
     <main id="main-content" className="flex-grow bg-texture min-h-screen">
       <div className="mx-auto max-w-[1180px] px-margin-edge py-section-gap">
-        <section className="relative overflow-hidden border border-surface-container-highest bg-charcoal-field/95 shadow-2xl">
+        <section className="relative overflow-hidden border border-surface-container-highest bg-charcoal-field/95 shadow-2xl rounded-2xl md:rounded-3xl">
           <div className="absolute inset-x-0 top-0 h-1 bg-signal-orange" />
-          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 border border-signal-orange/20" />
-          <div className="pointer-events-none absolute -bottom-28 -left-28 h-80 w-80 border border-surface-container-highest/70" />
+          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 border border-signal-orange/20 rounded-full" />
+          <div className="pointer-events-none absolute -bottom-28 -left-28 h-80 w-80 border border-surface-container-highest/70 rounded-full" />
 
           <div className="grid gap-0 lg:grid-cols-[minmax(0,1fr)_360px]">
             <div className="relative p-6 md:p-10 lg:p-12">
@@ -192,20 +198,20 @@ export default async function VerifyPage({ params }: PageProps) {
                       : <LocalizedText en="Verification Result" id="Hasil Verifikasi" />}
                   </div>
                 </div>
-                <div className={`inline-flex items-center gap-2 self-start border px-4 py-3 font-label-caps text-label-caps uppercase ${statusStyles.panel}`}>
+                <div className={`inline-flex items-center gap-2 self-start border px-4 py-3 font-label-caps text-label-caps uppercase rounded-xl ${statusStyles.panel}`}>
                   <span className="material-symbols-outlined text-[20px]">{statusStyles.icon}</span>
                   <LocalizedText en={statusStyles.label.en} id={statusStyles.label.id} />
                 </div>
               </div>
 
               <div className="grid gap-gutter lg:grid-cols-[220px_minmax(0,1fr)]">
-                <div className="border border-surface-container-highest bg-tactical-black p-stack-md">
-                  <div className="flex aspect-square items-center justify-center bg-surface-container-lowest">
+                <div className="border border-surface-container-highest bg-tactical-black p-stack-md rounded-2xl">
+                  <div className="flex aspect-square items-center justify-center bg-surface-container-lowest rounded-xl overflow-hidden">
                     {productImage ? (
                       // eslint-disable-next-line @next/next/no-img-element
                     <img src={productImage} alt={productName ?? 'Produk Durhaim'} className="h-full w-full object-contain p-4" />
                     ) : (
-                      <div className="flex h-32 w-32 items-center justify-center border border-signal-orange/40 text-signal-orange">
+                      <div className="flex h-32 w-32 items-center justify-center border border-signal-orange/40 text-signal-orange rounded-xl">
                         <span className="material-symbols-outlined text-[56px]">military_tech</span>
                       </div>
                     )}
@@ -227,7 +233,7 @@ export default async function VerifyPage({ params }: PageProps) {
                       ? <LocalizedText en="Certified product" id="Produk tersertifikasi" />
                       : <LocalizedText en="Checked serial" id="Serial diperiksa" />}
                   </div>
-                  <h1 className="font-display-xl text-headline-lg-mobile uppercase tracking-tighter text-stark-white md:text-display-xl">
+                  <h1 className="font-display-xl text-headline-lg-mobile uppercase tracking-tighter text-stark-white md:text-display-xl break-words">
                     {/* An unregistered serial has no product, so the generic "Durhaim Product"
                         fallback would headline the page with a product that does not exist. */}
                     {productName ?? (status === 'UNVERIFIED'
@@ -235,7 +241,7 @@ export default async function VerifyPage({ params }: PageProps) {
                       : <LocalizedText en="Durhaim Product" id="Produk Durhaim" />)}
                   </h1>
 
-                  <div className={`mt-stack-lg border p-stack-md ${statusStyles.panel}`}>
+                  <div className={`mt-stack-lg border p-stack-md rounded-2xl ${statusStyles.panel}`}>
                     <div className="mb-2 flex items-center gap-2 font-headline-md text-headline-md uppercase">
                       <span className="material-symbols-outlined">{statusStyles.icon}</span>
                       <LocalizedText en={statusStyles.headline.en} id={statusStyles.headline.id} />
@@ -245,11 +251,11 @@ export default async function VerifyPage({ params }: PageProps) {
                     </p>
                   </div>
 
-                  <div className="mt-stack-lg border border-surface-container-highest bg-tactical-black p-stack-md">
+                  <div className="mt-stack-lg border border-surface-container-highest bg-tactical-black p-stack-md rounded-2xl">
                     <div className="mb-2 font-data-mono text-data-mono uppercase text-on-surface-variant">
                       <LocalizedText en="Serial Number" id="Nomor Serial" />
                     </div>
-                    <div className="break-all font-data-mono text-[28px] font-bold uppercase tracking-widest text-stark-white md:text-[34px]">
+                    <div className="break-all font-data-mono text-[24px] sm:text-[28px] font-bold uppercase tracking-widest text-stark-white md:text-[32px]">
                       {serial}
                     </div>
                   </div>
@@ -258,7 +264,7 @@ export default async function VerifyPage({ params }: PageProps) {
 
               <div className="mt-stack-lg grid gap-stack-sm md:grid-cols-3">
                 {certificateFacts.map((fact) => (
-                  <div key={fact.label.en} className="border border-surface-container-highest bg-surface-container/50 p-stack-md">
+                  <div key={fact.label.en} className="border border-surface-container-highest bg-surface-container/50 p-stack-md rounded-xl">
                     <div className="mb-1 font-data-mono text-data-mono uppercase text-on-surface-variant">
                       <LocalizedText en={fact.label.en} id={fact.label.id} />
                     </div>
@@ -272,7 +278,7 @@ export default async function VerifyPage({ params }: PageProps) {
               {/* The seal is an assertion of authenticity, so it is shown only when the
                   serial actually verifies. Revoked and unregistered serials get the neutral
                   status mark instead. */}
-              <div className={`mx-auto flex h-36 w-36 items-center justify-center border-2 text-center ${isAuthentic ? 'border-signal-orange' : 'border-surface-container-highest'}`}>
+              <div className={`mx-auto flex h-36 w-36 items-center justify-center border-2 text-center rounded-2xl ${isAuthentic ? 'border-signal-orange' : 'border-surface-container-highest'}`}>
                 <div>
                   <div className={`font-display-xl text-headline-md uppercase tracking-tighter ${isAuthentic ? 'text-stark-white' : 'text-on-surface-variant'}`}>DRH</div>
                   <div className={`mt-1 font-data-mono text-[10px] uppercase ${isAuthentic ? 'text-signal-orange' : 'text-on-surface-variant'}`}>
@@ -287,14 +293,14 @@ export default async function VerifyPage({ params }: PageProps) {
 
               <div className="mt-stack-lg space-y-stack-md">
                 {isAuthentic && (
-                  <div className="border border-surface-container-highest p-stack-md">
+                  <div className="border border-surface-container-highest p-stack-md rounded-xl">
                     <div className="font-data-mono text-data-mono uppercase text-on-surface-variant">
                       <LocalizedText en="Issued" id="Diterbitkan" />
                     </div>
                     <div className="mt-1 font-data-mono text-data-mono uppercase text-stark-white">{issuedDate}</div>
                   </div>
                 )}
-                <div className="border border-surface-container-highest p-stack-md">
+                <div className="border border-surface-container-highest p-stack-md rounded-xl">
                   <div className="font-data-mono text-data-mono uppercase text-on-surface-variant">
                     <LocalizedText en="Authority" id="Otoritas" />
                   </div>
@@ -316,14 +322,14 @@ export default async function VerifyPage({ params }: PageProps) {
                   href={buildWhatsAppUrl(siteSettings, `Saya ingin memverifikasi produk Durhaim dengan serial number: ${serial}`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 border border-surface-container-highest px-6 py-3 font-label-caps text-label-caps text-stark-white transition-colors hover:border-signal-orange hover:text-signal-orange"
+                  className="inline-flex items-center justify-center gap-2 border border-surface-container-highest px-6 py-3 font-label-caps text-label-caps text-stark-white transition-colors hover:border-signal-orange hover:text-signal-orange rounded-xl"
                 >
                   <span className="material-symbols-outlined text-[18px]">chat</span>
                   <LocalizedText en="Contact Support" id="Hubungi Bantuan" />
                 </a>
                 <Link
                   href="/"
-                  className="inline-flex items-center justify-center gap-2 bg-signal-orange px-6 py-3 font-label-caps text-label-caps text-tactical-black transition-colors hover:bg-stark-white"
+                  className="inline-flex items-center justify-center gap-2 bg-signal-orange px-6 py-3 font-label-caps text-label-caps text-tactical-black transition-colors hover:bg-stark-white rounded-xl"
                 >
                   <span className="material-symbols-outlined text-[18px]">home</span>
                   <LocalizedText en="Back to Home" id="Kembali ke Beranda" />
@@ -336,7 +342,7 @@ export default async function VerifyPage({ params }: PageProps) {
         <div className="mt-stack-lg text-center">
           <Link
             href="/verify"
-            className="font-data-mono text-data-mono uppercase text-on-surface-variant transition-colors hover:text-signal-orange"
+            className="font-data-mono text-data-mono uppercase text-on-surface-variant transition-colors hover:text-signal-orange inline-flex items-center gap-2 px-4 py-2 border border-transparent hover:border-surface-container-highest rounded-lg"
           >
             <LocalizedText en="Verify another serial number" id="Verifikasi nomor serial lain" />
           </Link>
