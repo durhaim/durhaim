@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { headers } from "next/headers";
+import Script from "next/script";
 import "./globals.css";
 import TopNavBar from "@/components/TopNavBar";
 import Footer from "@/components/Footer";
@@ -149,6 +149,19 @@ export default async function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XG5JGEW4GC"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-XG5JGEW4GC');
+          `}
+        </Script>
       </head>
       <body className="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
         <JsonLd data={organizationSchema} />
