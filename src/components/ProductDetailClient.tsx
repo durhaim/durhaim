@@ -14,14 +14,12 @@ function formatSpecification(item: string) {
 }
 
 export default function ProductDetailClient({ product }: { product: CatalogueProduct }) {
-  const { language, region, formatPrice, t } = useCommerce();
+  const { language, t } = useCommerce();
   const siteSettings = useSiteSettings();
   const [selectedImage, setSelectedImage] = useState(product.images[0] ?? "");
   const [hydrated, setHydrated] = useState(false);
   const categoryName = localizeCategoryName(product.category.slug, product.category.name, language);
   const description = localizeProductDescription(product.description, language);
-  const regionalPrice = product.regional_prices[region];
-  const hasPrice = product.price !== null || typeof regionalPrice === "number";
 
   useEffect(() => setHydrated(true), []);
 
@@ -77,12 +75,6 @@ export default function ProductDetailClient({ product }: { product: CataloguePro
       <section className="store-product-utility" aria-label="Purchase and navigation">
         <div>
           <span>{categoryName}</span>
-          {hasPrice && (
-            <>
-              <strong>{formatPrice(product.price ?? regionalPrice ?? 0, product.regional_prices)}</strong>
-              <small>{t.common.priceRegion}: {region}</small>
-            </>
-          )}
         </div>
         <div>
           <a
