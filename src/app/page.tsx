@@ -72,7 +72,7 @@ const features = [
     subtitle: { en: "Organize. Access. Move. Repeat.", id: "Praktis, Mudah Diakses, dan Siap Bergerak" },
     href: "/catalogue?category=pouch",
     background: "/storefront/rev/pouch-bg.jpg",
-    product: "/storefront/rev/belt.png",
+    product: "/storefront/rev/pouch.png",
     productWidth: "21.1%",
   },
 ] as const;
@@ -81,7 +81,7 @@ const categoryStrip = [
   { label: "Bodyvest Chestrig", href: "/catalogue?category=vest", image: "/storefront/rev/bodyvest.png" },
   { label: "Pack & Pouch", href: "/catalogue?category=pack", image: "/storefront/rev/pack.png" },
   { label: "Belt", href: "/catalogue?category=belt", image: "/storefront/rev/belt-rig.png" },
-  { label: "Pouch", href: "/catalogue?category=pouch", image: "/storefront/rev/belt.png" },
+  { label: "Pouch", href: "/catalogue?category=pouch", image: "/storefront/rev/pouch.png" },
 ] as const;
 
 export default async function HomePage() {
