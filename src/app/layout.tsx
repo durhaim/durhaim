@@ -149,6 +149,8 @@ export default async function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
+      </head>
+      <body className="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XG5JGEW4GC"
           strategy="afterInteractive"
@@ -162,8 +164,6 @@ export default async function RootLayout({
             gtag('config', 'G-XG5JGEW4GC');
           `}
         </Script>
-      </head>
-      <body className="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
         <JsonLd data={organizationSchema} />
         <SiteSettingsProvider initialSettings={siteSettings}>
           <CommerceProvider
