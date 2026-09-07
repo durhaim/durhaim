@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { headers } from "next/headers";
-import Script from "next/script";
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import TopNavBar from "@/components/TopNavBar";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
@@ -151,19 +151,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XG5JGEW4GC"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-XG5JGEW4GC');
-          `}
-        </Script>
+        <GoogleAnalytics />
         <JsonLd data={organizationSchema} />
         <SiteSettingsProvider initialSettings={siteSettings}>
           <CommerceProvider
