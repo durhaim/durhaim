@@ -5,6 +5,8 @@ const scriptSrc = [
   "'unsafe-inline'",
   ...(isDevelopment ? ["'unsafe-eval'"] : []),
   'https://vercel.live',
+  'https://www.googletagmanager.com',
+  'https://*.googletagmanager.com',
 ].join(' ');
 
 const nextConfig = {
@@ -40,11 +42,11 @@ const nextConfig = {
           "object-src 'none'",
           "frame-ancestors 'none'",
           "form-action 'self'",
-          "img-src 'self' data: blob: https:",
+          "img-src 'self' data: blob: https: https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com",
           "font-src 'self' https://fonts.gstatic.com https://vercel.live https://assets.vercel.com data:",
           "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://vercel.live",
           `script-src ${scriptSrc}`,
-          "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://vercel.live wss://ws-us3.pusher.com",
+          "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://vercel.live wss://ws-us3.pusher.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
           "frame-src https://vercel.live",
           ...(isDevelopment ? [] : ["upgrade-insecure-requests"]),
         ].join('; '),
