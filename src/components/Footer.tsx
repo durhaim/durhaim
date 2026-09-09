@@ -6,6 +6,7 @@ import { ArrowUp } from "lucide-react";
 import { useCommerce } from "@/components/CommerceProvider";
 import { useSiteSettings } from "@/components/SiteSettingsProvider";
 import { buildWhatsAppUrl } from "@/lib/site-settings";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const socialLinks = [
   ["FB", "https://www.facebook.com/durhaimarmygear/"],
@@ -95,6 +96,7 @@ export default function Footer() {
         </section>
       </div>
       <div className="store-footer__legal">© 2026 DURHAIM TACTICAL. {t.footer.alwaysForward}.</div>
+      <GoogleAnalytics />
     </footer>
   );
 }
