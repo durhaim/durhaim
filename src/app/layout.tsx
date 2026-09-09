@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { headers } from "next/headers";
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import TopNavBar from "@/components/TopNavBar";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
@@ -150,6 +151,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+        <GoogleAnalytics />
         <JsonLd data={organizationSchema} />
         <SiteSettingsProvider initialSettings={siteSettings}>
           <CommerceProvider
