@@ -237,7 +237,7 @@ export default function CataloguePage() {
                     {expanded && (
                       <div className="store-product-grid" id={`series-${seriesGroup.key}`}>
                         {seriesGroup.products.map((product) => {
-                          const enquiry = t.product.enquiry(product.name, product.slug);
+                          const enquiry = t.product.enquiry(product.name, product.slug, siteSettings.public_domain);
                           return (
                             <article className="store-product-card" key={product.slug}>
                               <div className="store-product-card__image">

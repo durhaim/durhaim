@@ -78,7 +78,7 @@ export default function ProductDetailClient({ product }: { product: CataloguePro
         </div>
         <div>
           <a
-            href={buildWhatsAppUrl(siteSettings, t.product.enquiry(product.name, product.slug))}
+            href={buildWhatsAppUrl(siteSettings, t.product.enquiry(product.name, product.slug, siteSettings.public_domain))}
             target="_blank"
             rel="noopener noreferrer"
           >

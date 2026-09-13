@@ -66,7 +66,7 @@ type Dictionary = {
     back: string;
     specification: string;
     gallery: string;
-    enquiry: (name: string, slug: string) => string;
+    enquiry: (name: string, slug: string, domain?: string) => string;
   };
   serialChecker: {
     loading: string;
@@ -201,7 +201,7 @@ export const dictionaries: Record<Language, Dictionary> = {
       back: 'Back to Catalogue',
       specification: 'Specification',
       gallery: 'Product gallery',
-      enquiry: (name, slug) => `Hi Durhaim, I would like to ask about ${name}. Product URL: /catalogue/${slug}`,
+      enquiry: (name, slug, domain = 'www.durhaim.com') => `Hi Durhaim, I would like to ask about ${name}. Product URL: ${domain.replace(/^https?:\/\//i, '').replace(/\/+$/, '')}/catalogue/${slug}`,
     },
     serialChecker: {
       loading: '...loading...',
@@ -334,7 +334,7 @@ export const dictionaries: Record<Language, Dictionary> = {
       back: 'Kembali ke Katalog',
       specification: 'Spesifikasi',
       gallery: 'Galeri produk',
-      enquiry: (name, slug) => `Halo Durhaim, saya ingin bertanya tentang ${name}. URL produk: /catalogue/${slug}`,
+      enquiry: (name, slug, domain = 'www.durhaim.com') => `Halo Durhaim, saya ingin bertanya tentang ${name}. URL produk: ${domain.replace(/^https?:\/\//i, '').replace(/\/+$/, '')}/catalogue/${slug}`,
     },
     serialChecker: {
       loading: '...memuat...',
