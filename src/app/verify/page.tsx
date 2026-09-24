@@ -52,7 +52,7 @@ export default function VerificationPage() {
       <section
         className="relative py-section-gap px-margin-edge border-b border-surface-container-highest flex-grow flex flex-col justify-center items-center"
         style={{
-          backgroundImage: "url('/storefront/figma/homepage/page-1/bg-1.jpg')",
+          backgroundImage: "url('/storefront/figma/homepage/page-1/bg-1.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

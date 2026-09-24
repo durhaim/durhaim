@@ -38,7 +38,7 @@ export default function TopNavBar() {
       <div className="store-header__inner">
         <Link className="store-header__brand" href="/" aria-label="DURHAIM home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/storefront/durhaim-logo.png" alt="DURHAIM" />
+          <img src="/storefront/durhaim-logo.webp" alt="DURHAIM" />
         </Link>
 
         <nav className="store-header__nav" aria-label="Primary navigation">

@@ -44,8 +44,8 @@ const features = [
     title: { en: "Bodyvest & Chestrig", id: "Bodyvest & Chestrig" },
     subtitle: { en: "Durability hard impact and modular", id: "Tahan Benturan Berat dan Modular" },
     href: "/catalogue?category=vest",
-    background: "/storefront/rev/bodyvest-bg.jpg",
-    product: "/storefront/rev/bodyvest.png",
+    background: "/storefront/rev/bodyvest-bg.webp",
+    product: "/storefront/rev/bodyvest.webp",
     productWidth: "25.2%",
   },
   {
@@ -53,8 +53,8 @@ const features = [
     title: { en: "Pack & Pouch", id: "Pack & Pouch" },
     subtitle: { en: "Perfect for carrying your equipment", id: "Ideal untuk Membawa Perlengkapan Anda" },
     href: "/catalogue?category=pack",
-    background: "/storefront/rev/pack-bg.jpg",
-    product: "/storefront/rev/pack.png",
+    background: "/storefront/rev/pack-bg.webp",
+    product: "/storefront/rev/pack.webp",
     productWidth: "24.1%",
   },
   {
@@ -62,8 +62,8 @@ const features = [
     title: { en: "Belt", id: "Belt" },
     subtitle: { en: "It’s all about the waist", id: "Semua Bertumpu pada Pinggang" },
     href: "/catalogue?category=belt",
-    background: "/storefront/rev/belt-bg.jpg",
-    product: "/storefront/rev/belt-rig.png",
+    background: "/storefront/rev/belt-bg.webp",
+    product: "/storefront/rev/belt-rig.webp",
     productWidth: "27.4%",
   },
   {
@@ -71,17 +71,17 @@ const features = [
     title: { en: "Pouch", id: "Pouch" },
     subtitle: { en: "Organize. Access. Move. Repeat.", id: "Praktis, Mudah Diakses, dan Siap Bergerak" },
     href: "/catalogue?category=pouch",
-    background: "/storefront/rev/pouch-bg.jpg",
-    product: "/storefront/rev/pouch.png",
+    background: "/storefront/rev/pouch-bg.webp",
+    product: "/storefront/rev/pouch.webp",
     productWidth: "21.1%",
   },
 ] as const;
 
 const categoryStrip = [
-  { label: "Bodyvest Chestrig", href: "/catalogue?category=vest", image: "/storefront/rev/bodyvest.png" },
-  { label: "Pack & Pouch", href: "/catalogue?category=pack", image: "/storefront/rev/pack.png" },
-  { label: "Belt", href: "/catalogue?category=belt", image: "/storefront/rev/belt-rig.png" },
-  { label: "Pouch", href: "/catalogue?category=pouch", image: "/storefront/rev/pouch.png" },
+  { label: "Bodyvest Chestrig", href: "/catalogue?category=vest", image: "/storefront/rev/bodyvest.webp" },
+  { label: "Pack & Pouch", href: "/catalogue?category=pack", image: "/storefront/rev/pack.webp" },
+  { label: "Belt", href: "/catalogue?category=belt", image: "/storefront/rev/belt-rig.webp" },
+  { label: "Pouch", href: "/catalogue?category=pouch", image: "/storefront/rev/pouch.webp" },
 ] as const;
 
 export default async function HomePage() {

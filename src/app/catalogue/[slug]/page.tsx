@@ -166,8 +166,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
     ],
   };
   const background = product.slug === "green-chitto-mark-2"
-    ? "/storefront/figma/product/chitto-green/main-background-3.jpg"
-    : "/storefront/figma/product/chitto-black/main-background-3.jpg";
+    ? "/storefront/figma/product/chitto-green/main-background-3.webp"
+    : "/storefront/figma/product/chitto-black/main-background-3.webp";
 
   return (
     <main

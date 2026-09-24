@@ -30,7 +30,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 1,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-008231.png"
+      "/storefront/figma/catalogue/open/gjh-008231.webp"
     ]
   },
   {
@@ -48,7 +48,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 2,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-008391.png"
+      "/storefront/figma/catalogue/open/gjh-008391.webp"
     ]
   },
   {
@@ -66,7 +66,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 3,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-099341.png"
+      "/storefront/figma/catalogue/open/gjh-099341.webp"
     ]
   },
   {
@@ -84,7 +84,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 4,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-056111.png"
+      "/storefront/figma/catalogue/open/gjh-056111.webp"
     ]
   },
   {
@@ -102,7 +102,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 5,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-004311.png"
+      "/storefront/figma/catalogue/open/gjh-004311.webp"
     ]
   },
   {
@@ -120,7 +120,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 6,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-003471.png"
+      "/storefront/figma/catalogue/open/gjh-003471.webp"
     ]
   },
   {
@@ -138,7 +138,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 7,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/multicam-tropic-1.png"
+      "/storefront/figma/catalogue/open/multicam-tropic-1.webp"
     ]
   },
   {
@@ -156,7 +156,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 8,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-000161.png"
+      "/storefront/figma/catalogue/open/gjh-000161.webp"
     ]
   },
   {
@@ -174,7 +174,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 9,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-005611.png"
+      "/storefront/figma/catalogue/open/gjh-005611.webp"
     ]
   },
   {
@@ -206,11 +206,11 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
       "Compatible With Sapi Plate Size M"
     ],
     "images": [
-      "/storefront/figma/product/chitto-black/dsc-089012.png",
-      "/storefront/figma/product/chitto-black/dsc-089032.png",
-      "/storefront/figma/product/chitto-black/dsc-089081.png",
-      "/storefront/figma/product/chitto-black/dsc-089131.png",
-      "/storefront/figma/product/chitto-black/dsc-089171.png"
+      "/storefront/figma/product/chitto-black/dsc-089012.webp",
+      "/storefront/figma/product/chitto-black/dsc-089032.webp",
+      "/storefront/figma/product/chitto-black/dsc-089081.webp",
+      "/storefront/figma/product/chitto-black/dsc-089131.webp",
+      "/storefront/figma/product/chitto-black/dsc-089171.webp"
     ]
   },
   {
@@ -228,7 +228,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 11,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-096541.png"
+      "/storefront/figma/catalogue/open/gjh-096541.webp"
     ]
   },
   {
@@ -260,11 +260,11 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
       "Compatible With Sapi Plate Size M"
     ],
     "images": [
-      "/storefront/figma/product/chitto-green/gjh-064871.png",
-      "/storefront/figma/product/chitto-green/gjh-064842.png",
-      "/storefront/figma/product/chitto-green/gjh-064851.png",
-      "/storefront/figma/product/chitto-green/gjh-064881.png",
-      "/storefront/figma/product/chitto-green/gjh-064891.png"
+      "/storefront/figma/product/chitto-green/gjh-064871.webp",
+      "/storefront/figma/product/chitto-green/gjh-064842.webp",
+      "/storefront/figma/product/chitto-green/gjh-064851.webp",
+      "/storefront/figma/product/chitto-green/gjh-064881.webp",
+      "/storefront/figma/product/chitto-green/gjh-064891.webp"
     ]
   },
   {
@@ -282,7 +282,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 13,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/mamba-mk-2-mcb-21.png"
+      "/storefront/figma/catalogue/open/mamba-mk-2-mcb-21.webp"
     ]
   },
   {
@@ -300,7 +300,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 14,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-004951.png"
+      "/storefront/figma/catalogue/open/gjh-004951.webp"
     ]
   },
   {
@@ -318,7 +318,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 15,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-098221.png"
+      "/storefront/figma/catalogue/open/gjh-098221.webp"
     ]
   },
   {
@@ -336,7 +336,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 16,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-088871.png"
+      "/storefront/figma/catalogue/open/dsc-088871.webp"
     ]
   },
   {
@@ -354,7 +354,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 17,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-006241.png"
+      "/storefront/figma/catalogue/open/gjh-006241.webp"
     ]
   },
   {
@@ -372,9 +372,9 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 18,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-076041.png",
-      "/storefront/figma/catalogue/open/dsc-065231.png",
-      "/storefront/figma/catalogue/open/dpn-1.png"
+      "/storefront/figma/catalogue/open/dsc-076041.webp",
+      "/storefront/figma/catalogue/open/dsc-065231.webp",
+      "/storefront/figma/catalogue/open/dpn-1.webp"
     ]
   },
   {
@@ -392,7 +392,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 20,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-007961.png"
+      "/storefront/figma/catalogue/open/gjh-007961.webp"
     ]
   },
   {
@@ -410,7 +410,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 21,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-06553-edit-1.png"
+      "/storefront/figma/catalogue/open/gjh-06553-edit-1.webp"
     ]
   },
   {
@@ -428,7 +428,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 22,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-09708-edit-1.png"
+      "/storefront/figma/catalogue/open/gjh-09708-edit-1.webp"
     ]
   },
   {
@@ -446,7 +446,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 24,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-002301.png"
+      "/storefront/figma/catalogue/open/gjh-002301.webp"
     ]
   },
   {
@@ -464,7 +464,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 25,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-089011.png"
+      "/storefront/figma/catalogue/open/dsc-089011.webp"
     ]
   },
   {
@@ -482,7 +482,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 26,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-064841.png"
+      "/storefront/figma/catalogue/open/gjh-064841.webp"
     ]
   },
   {
@@ -500,7 +500,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 27,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-096591.png"
+      "/storefront/figma/catalogue/open/gjh-096591.webp"
     ]
   },
   {
@@ -518,7 +518,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 28,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-095211.png"
+      "/storefront/figma/catalogue/open/gjh-095211.webp"
     ]
   },
   {
@@ -536,7 +536,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 29,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-008541.png"
+      "/storefront/figma/catalogue/open/gjh-008541.webp"
     ]
   },
   {
@@ -554,7 +554,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 30,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-063701.png"
+      "/storefront/figma/catalogue/open/dsc-063701.webp"
     ]
   },
   {
@@ -572,7 +572,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 31,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-073711.png"
+      "/storefront/figma/catalogue/open/dsc-073711.webp"
     ]
   },
   {
@@ -590,7 +590,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 32,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-09483-x-1.png"
+      "/storefront/figma/catalogue/open/gjh-09483-x-1.webp"
     ]
   },
   {
@@ -608,7 +608,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 33,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-007971.png"
+      "/storefront/figma/catalogue/open/gjh-007971.webp"
     ]
   },
   {
@@ -626,7 +626,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 34,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-09470-x-1.png"
+      "/storefront/figma/catalogue/open/gjh-09470-x-1.webp"
     ]
   },
   {
@@ -644,7 +644,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 35,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-005461.png"
+      "/storefront/figma/catalogue/open/gjh-005461.webp"
     ]
   },
   {
@@ -662,7 +662,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 36,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-006031.png"
+      "/storefront/figma/catalogue/open/gjh-006031.webp"
     ]
   },
   {
@@ -680,7 +680,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 37,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-076341.png"
+      "/storefront/figma/catalogue/open/dsc-076341.webp"
     ]
   },
   {
@@ -698,7 +698,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 38,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-096261.png"
+      "/storefront/figma/catalogue/open/gjh-096261.webp"
     ]
   },
   {
@@ -716,7 +716,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 39,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-000301.png"
+      "/storefront/figma/catalogue/open/gjh-000301.webp"
     ]
   },
   {
@@ -734,7 +734,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 40,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-097811.png"
+      "/storefront/figma/catalogue/open/gjh-097811.webp"
     ]
   },
   {
@@ -752,7 +752,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 41,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-004461.png"
+      "/storefront/figma/catalogue/open/gjh-004461.webp"
     ]
   },
   {
@@ -770,7 +770,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 42,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-097921.png"
+      "/storefront/figma/catalogue/open/gjh-097921.webp"
     ]
   },
   {
@@ -788,7 +788,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 43,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-059531.png"
+      "/storefront/figma/catalogue/open/gjh-059531.webp"
     ]
   },
   {
@@ -806,7 +806,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 44,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-099621.png"
+      "/storefront/figma/catalogue/open/gjh-099621.webp"
     ]
   },
   {
@@ -824,7 +824,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 45,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-0746821.png"
+      "/storefront/figma/catalogue/open/dsc-0746821.webp"
     ]
   },
   {
@@ -842,7 +842,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 46,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-097461.png"
+      "/storefront/figma/catalogue/open/gjh-097461.webp"
     ]
   },
   {
@@ -860,7 +860,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 47,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-065241.png"
+      "/storefront/figma/catalogue/open/gjh-065241.webp"
     ]
   },
   {
@@ -878,7 +878,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 48,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-065171.png"
+      "/storefront/figma/catalogue/open/gjh-065171.webp"
     ]
   },
   {
@@ -896,7 +896,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 49,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-099741.png"
+      "/storefront/figma/catalogue/open/gjh-099741.webp"
     ]
   },
   {
@@ -914,7 +914,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 50,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-087031.png"
+      "/storefront/figma/catalogue/open/gjh-087031.webp"
     ]
   },
   {
@@ -932,7 +932,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 51,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-096201.png"
+      "/storefront/figma/catalogue/open/dsc-096201.webp"
     ]
   },
   {
@@ -950,7 +950,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 52,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-065261.png"
+      "/storefront/figma/catalogue/open/gjh-065261.webp"
     ]
   },
   {
@@ -968,7 +968,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 53,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-087601.png"
+      "/storefront/figma/catalogue/open/dsc-087601.webp"
     ]
   },
   {
@@ -986,7 +986,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 54,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-088891.png"
+      "/storefront/figma/catalogue/open/dsc-088891.webp"
     ]
   },
   {
@@ -1004,7 +1004,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 55,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-089381.png"
+      "/storefront/figma/catalogue/open/dsc-089381.webp"
     ]
   },
   {
@@ -1022,7 +1022,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 56,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-089591.png"
+      "/storefront/figma/catalogue/open/dsc-089591.webp"
     ]
   },
   {
@@ -1040,7 +1040,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 57,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-089611.png"
+      "/storefront/figma/catalogue/open/dsc-089611.webp"
     ]
   },
   {
@@ -1058,7 +1058,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 58,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-059951.png"
+      "/storefront/figma/catalogue/open/gjh-059951.webp"
     ]
   },
   {
@@ -1076,7 +1076,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 59,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-059821.png"
+      "/storefront/figma/catalogue/open/gjh-059821.webp"
     ]
   },
   {
@@ -1094,7 +1094,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 60,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-060291.png"
+      "/storefront/figma/catalogue/open/gjh-060291.webp"
     ]
   },
   {
@@ -1112,7 +1112,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 61,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-099931.png"
+      "/storefront/figma/catalogue/open/gjh-099931.webp"
     ]
   },
   {
@@ -1130,7 +1130,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 62,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-060101.png"
+      "/storefront/figma/catalogue/open/gjh-060101.webp"
     ]
   },
   {
@@ -1148,7 +1148,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 63,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-099811.png"
+      "/storefront/figma/catalogue/open/gjh-099811.webp"
     ]
   },
   {
@@ -1166,7 +1166,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 64,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-060381.png"
+      "/storefront/figma/catalogue/open/gjh-060381.webp"
     ]
   },
   {
@@ -1184,8 +1184,8 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 65,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-060681.png",
-      "/storefront/figma/catalogue/open/gjh-060511.png"
+      "/storefront/figma/catalogue/open/gjh-060681.webp",
+      "/storefront/figma/catalogue/open/gjh-060511.webp"
     ]
   },
   {
@@ -1203,7 +1203,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 67,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-060831.png"
+      "/storefront/figma/catalogue/open/gjh-060831.webp"
     ]
   },
   {
@@ -1221,7 +1221,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 68,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-099891.png"
+      "/storefront/figma/catalogue/open/gjh-099891.webp"
     ]
   },
   {
@@ -1239,7 +1239,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 69,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-099761.png"
+      "/storefront/figma/catalogue/open/gjh-099761.webp"
     ]
   },
   {
@@ -1257,7 +1257,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 70,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-078841.png"
+      "/storefront/figma/catalogue/open/dsc-078841.webp"
     ]
   },
   {
@@ -1275,7 +1275,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 71,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-003981.png"
+      "/storefront/figma/catalogue/open/gjh-003981.webp"
     ]
   },
   {
@@ -1293,7 +1293,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 72,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-090721.png"
+      "/storefront/figma/catalogue/open/dsc-090721.webp"
     ]
   },
   {
@@ -1311,7 +1311,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 73,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-096321.png"
+      "/storefront/figma/catalogue/open/gjh-096321.webp"
     ]
   },
   {
@@ -1329,7 +1329,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 74,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-096381.png"
+      "/storefront/figma/catalogue/open/gjh-096381.webp"
     ]
   },
   {
@@ -1347,7 +1347,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 75,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-095841.png"
+      "/storefront/figma/catalogue/open/gjh-095841.webp"
     ]
   },
   {
@@ -1365,7 +1365,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 76,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-055901.png"
+      "/storefront/figma/catalogue/open/gjh-055901.webp"
     ]
   },
   {
@@ -1383,7 +1383,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 77,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-087311.png"
+      "/storefront/figma/catalogue/open/gjh-087311.webp"
     ]
   },
   {
@@ -1401,7 +1401,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 78,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-097351.png"
+      "/storefront/figma/catalogue/open/gjh-097351.webp"
     ]
   },
   {
@@ -1419,7 +1419,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 79,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-065791.png"
+      "/storefront/figma/catalogue/open/dsc-065791.webp"
     ]
   },
   {
@@ -1437,7 +1437,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 80,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/dsc-086121.png"
+      "/storefront/figma/catalogue/open/dsc-086121.webp"
     ]
   }
 ];

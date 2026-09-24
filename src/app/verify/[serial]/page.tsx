@@ -232,7 +232,7 @@ export default async function VerifyPage({ params }: PageProps) {
                   <div className="mt-8 pt-6 border-t border-surface-container-highest/60 flex flex-col items-center justify-center gap-2 pb-2">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/storefront/durhaim-logo.png"
+                      src="/storefront/durhaim-logo.webp"
                       alt="DURHAIM"
                       className="w-full max-w-[150px] h-auto object-contain opacity-85 hover:opacity-100 transition-opacity"
                     />

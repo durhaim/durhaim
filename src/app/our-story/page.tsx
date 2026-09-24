@@ -46,7 +46,7 @@ export default function OurStoryPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt="Durhaim Photo Studio Documentation"
-              src="/storefront/our-story/photo-studio.jpg"
+              src="/storefront/our-story/photo-studio.webp"
               className="w-full h-full object-cover grayscale opacity-30 mix-blend-luminosity"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-[#0a0a0a] z-10" />
@@ -56,7 +56,7 @@ export default function OurStoryPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt="Durhaim Tactical Workshop Floor"
-              src="/storefront/our-story/workshop-wide.jpg"
+              src="/storefront/our-story/workshop-wide.webp"
               className="w-full h-full object-cover grayscale opacity-30 mix-blend-luminosity"
             />
             <div className="absolute inset-0 bg-gradient-to-l from-[#0a0a0a] via-transparent to-[#0a0a0a] z-10" />
@@ -167,7 +167,7 @@ export default function OurStoryPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   alt="Precision sewing on tactical gear"
-                  src="/storefront/our-story/sewing-closeup.jpg"
+                  src="/storefront/our-story/sewing-closeup.webp"
                   className="w-full aspect-[16/10] object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 rounded-xl"
                 />
 
@@ -277,7 +277,7 @@ export default function OurStoryPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   alt="Durhaim Laser Cutting & Tactical Gear Fabrication"
-                  src="/storefront/our-story/laser-cutting.jpg"
+                  src="/storefront/our-story/laser-cutting.webp"
                   className="w-full aspect-[16/10] object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 rounded-xl"
                 />
 
@@ -406,7 +406,7 @@ export default function OurStoryPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   alt="Durhaim Precision Tactical Craftsmanship & Prototyping"
-                  src="/storefront/our-story/craftsman-sewing.jpg"
+                  src="/storefront/our-story/craftsman-sewing.webp"
                   className="w-full aspect-[16/11] object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 rounded-xl"
                 />
 
