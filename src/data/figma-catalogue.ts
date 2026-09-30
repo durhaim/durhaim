@@ -16,24 +16,6 @@ export type FigmaCatalogueSeed = {
 
 export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
   {
-    "name": "Black Mamba Mark 2",
-    "slug": "black-mamba-mark-2",
-    "description": "Mamba Series / Black",
-    "price": null,
-    "regional_prices": {},
-    "category": "vest",
-    "series": {
-      "name": "Mamba Series",
-      "slug": "mamba-series"
-    },
-    "colorway": "Black",
-    "display_order": 1,
-    "specifications": [],
-    "images": [
-      "/storefront/figma/catalogue/open/gjh-008231.webp"
-    ]
-  },
-  {
     "name": "Multicam Black Mamba Mark 2",
     "slug": "multicam-black-mamba-mark-2",
     "description": "Mamba Series / Multicam Black",
@@ -1329,7 +1311,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "display_order": 74,
     "specifications": [],
     "images": [
-      "/storefront/figma/catalogue/open/gjh-096381.webp"
+      "/storefront/figma/catalogue/open/gjh-008231.webp"
     ]
   },
   {
