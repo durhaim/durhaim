@@ -96,8 +96,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/multicam-tropic-bite-bee',
-        destination: '/catalogue/black-cobra',
+        source: '/catalogue/green-fabric-holster',
+        destination: '/catalogue/green-fabric-holster-2',
         permanent: true,
       },
       {

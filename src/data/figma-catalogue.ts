@@ -738,17 +738,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Fabric Holster",
-    "slug": "green-fabric-holster",
-    "description": "Fabric Holster / Green",
+    "name": "Multicam Tropic Bite Bee",
+    "slug": "multicam-tropic-bite-bee",
+    "description": "Bite Bee Handbag / Multicam Tropic",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "pack",
     "series": {
-      "name": "Fabric Holster",
-      "slug": "fabric-holster"
+      "name": "Bite Bee Handbag",
+      "slug": "bite-bee-handbag"
     },
-    "colorway": "Green",
+    "colorway": "Multicam Tropic",
     "display_order": 42,
     "specifications": [],
     "images": [
