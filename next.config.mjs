@@ -51,6 +51,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/royale-mamba-mark-2',
+        destination: '/catalogue/black-mamba-mark-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/black-cobra',
         destination: '/catalogue/cobra-tiger-stripe-camo-2',
         permanent: true,

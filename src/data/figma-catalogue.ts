@@ -124,9 +124,9 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Royale Mamba Mark 2",
-    "slug": "royale-mamba-mark-2",
-    "description": "Mamba Series / Royale",
+    "name": "Black Mamba Mark 2",
+    "slug": "black-mamba-mark-2",
+    "description": "Mamba Series / Black",
     "price": null,
     "regional_prices": {},
     "category": "vest",
@@ -134,7 +134,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
       "name": "Mamba Series",
       "slug": "mamba-series"
     },
-    "colorway": "Royale",
+    "colorway": "Black",
     "display_order": 8,
     "specifications": [],
     "images": [
