@@ -106,8 +106,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/king-cobra',
-        destination: '/catalogue/black-wolven-messenger-bag-2',
+        source: '/catalogue/black-cobra-backpack',
+        destination: '/catalogue/king-cobra',
         permanent: true,
       },
       {

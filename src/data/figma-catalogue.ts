@@ -378,17 +378,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Cobra Backpack",
-    "slug": "black-cobra-backpack",
-    "description": "Cobra Backpack / Black",
+    "name": "King Cobra",
+    "slug": "king-cobra",
+    "description": "Cobra Series / King",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "vest",
     "series": {
-      "name": "Cobra Backpack",
-      "slug": "cobra-backpack"
+      "name": "Cobra Series",
+      "slug": "cobra-series"
     },
-    "colorway": "Black",
+    "colorway": "King",
     "display_order": 21,
     "specifications": [],
     "images": [
