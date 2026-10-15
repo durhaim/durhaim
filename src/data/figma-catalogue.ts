@@ -972,9 +972,9 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Tropic Fabric Holster",
-    "slug": "multicam-tropic-fabric-holster",
-    "description": "Fabric Holster / Multicam Tropic",
+    "name": "Multicam Black Fabric Holster",
+    "slug": "multicam-black-fabric-holster-2",
+    "description": "Fabric Holster / Multicam Black",
     "price": null,
     "regional_prices": {},
     "category": "accessories",
@@ -982,7 +982,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
       "name": "Fabric Holster",
       "slug": "fabric-holster"
     },
-    "colorway": "Multicam Tropic",
+    "colorway": "Multicam Black",
     "display_order": 55,
     "specifications": [],
     "images": [

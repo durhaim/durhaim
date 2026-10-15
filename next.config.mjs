@@ -186,6 +186,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/multicam-tropic-fabric-holster',
+        destination: '/catalogue/multicam-tropic-fabric-holster-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/royale-snake-head-sling-bag',
         destination: '/catalogue/royale-snake-head-sling-bag-2',
         permanent: true,
