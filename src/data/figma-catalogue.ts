@@ -70,15 +70,15 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Royale Mamba Modular",
-    "slug": "royale-mamba-modular",
-    "description": "Mamba Series / Royale",
+    "name": "Royale Anaconda",
+    "slug": "royale-anaconda",
+    "description": "Anaconda Backpack / Royale",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "pack",
     "series": {
-      "name": "Mamba Series",
-      "slug": "mamba-series"
+      "name": "Anaconda Backpack",
+      "slug": "anaconda"
     },
     "colorway": "Royale",
     "display_order": 5,
