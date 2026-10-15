@@ -648,17 +648,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam HG Double Mag Pouch",
-    "slug": "multicam-hg-double-mag-pouch",
-    "description": "Handgun Double Mag Pouch / Multicam",
+    "name": "Black Anaconda",
+    "slug": "black-anaconda",
+    "description": "Anaconda Backpack / Black",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "pack",
     "series": {
-      "name": "Handgun Double Mag Pouch",
-      "slug": "handgun-double-mag-pouch"
+      "name": "Anaconda Backpack",
+      "slug": "anaconda"
     },
-    "colorway": "Multicam",
+    "colorway": "Black",
     "display_order": 37,
     "specifications": [],
     "images": [
