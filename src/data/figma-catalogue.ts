@@ -396,17 +396,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Dregon Head Backpack",
-    "slug": "black-dregon-head-backpack",
-    "description": "Dregon Head Backpack / Black",
+    "name": "Cobra Multicam Black",
+    "slug": "cobra-multicam-black",
+    "description": "Cobra Series / Multicam Black",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "vest",
     "series": {
-      "name": "Dregon Head Backpack",
-      "slug": "dregon-head-backpack"
+      "name": "Cobra Series",
+      "slug": "cobra-series"
     },
-    "colorway": "Black",
+    "colorway": "Multicam Black",
     "display_order": 22,
     "specifications": [],
     "images": [

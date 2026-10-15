@@ -136,8 +136,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/cobra-multicam-black',
-        destination: '/catalogue/green-trojan-pro-warbelt-2',
+        source: '/catalogue/black-dregon-head-backpack',
+        destination: '/catalogue/cobra-multicam-black',
         permanent: true,
       },
       {
