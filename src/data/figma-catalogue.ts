@@ -522,17 +522,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Dump Pouch",
-    "slug": "multicam-dump-pouch",
-    "description": "Dump Pouch / Multicam",
+    "name": "Black Viper Kangguru",
+    "slug": "black-viper-kangguru",
+    "description": "Viper Series / Black",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "vest",
     "series": {
-      "name": "Dump Pouch",
-      "slug": "dump-pouch"
+      "name": "Viper Series",
+      "slug": "viper-series"
     },
-    "colorway": "Multicam",
+    "colorway": "Black",
     "display_order": 30,
     "specifications": [],
     "images": [

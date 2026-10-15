@@ -81,8 +81,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/black-viper-kangguru',
-        destination: '/catalogue/multicam-hg-double-mag-pouch-2',
+        source: '/catalogue/multicam-dump-pouch',
+        destination: '/catalogue/multicam-dump-pouch-2',
         permanent: true,
       },
       {
