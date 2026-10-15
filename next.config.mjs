@@ -31,6 +31,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/multicam-black-aim-vortex',
+        destination: '/catalogue/royale-rifle-mag-pouch',
+        permanent: true,
+      },
+      {
         source: '/catalogue/black-mamba-modular',
         destination: '/catalogue/king-chitto-mark-2',
         permanent: true,

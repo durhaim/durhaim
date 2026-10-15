@@ -1152,17 +1152,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Aim Vortex",
-    "slug": "multicam-black-aim-vortex",
-    "description": "Aim Vortex Rifle Bag / Multicam Black",
+    "name": "Royale Rifle Mag Pouch",
+    "slug": "royale-rifle-mag-pouch",
+    "description": "Rifle Mag Pouch / Royale",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "accessories",
     "series": {
-      "name": "Aim Vortex Rifle Bag",
-      "slug": "aim-vortex-rifle-bag"
+      "name": "Rifle Mag Pouch",
+      "slug": "rifle-mag-pouch"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Royale",
     "display_order": 65,
     "specifications": [],
     "images": [
