@@ -46,8 +46,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/black-thunder',
-        destination: '/catalogue/royale-mamba-modular',
+        source: '/catalogue/black-fabric-holster',
+        destination: '/catalogue/black-fabric-holster-2',
         permanent: true,
       },
       {

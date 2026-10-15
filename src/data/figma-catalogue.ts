@@ -558,15 +558,15 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Fabric Holster",
-    "slug": "black-fabric-holster",
-    "description": "Fabric Holster / Black",
+    "name": "Black Thunder",
+    "slug": "black-thunder",
+    "description": "Thunder Chestrig Series / Black",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "vest",
     "series": {
-      "name": "Fabric Holster",
-      "slug": "fabric-holster"
+      "name": "Thunder Chestrig Series",
+      "slug": "thunder-chestrig-series"
     },
     "colorway": "Black",
     "display_order": 32,
