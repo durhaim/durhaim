@@ -116,6 +116,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/black-bite-bee',
+        destination: '/catalogue/black-chitto-mark-2-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/cobra-tiger-stripe-camo',
         destination: '/catalogue/black-trojan-pro-warbelt-2',
         permanent: true,

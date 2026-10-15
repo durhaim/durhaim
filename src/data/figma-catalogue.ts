@@ -432,15 +432,15 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Bite Bee",
-    "slug": "black-bite-bee",
-    "description": "Bite Bee Handbag / Black",
+    "name": "Black Chitto Mark 2",
+    "slug": "black-chitto-mark-2-2",
+    "description": "Chitto Series / Black",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "vest",
     "series": {
-      "name": "Bite Bee Handbag",
-      "slug": "bite-bee-handbag"
+      "name": "Chitto Series",
+      "slug": "chitto-series"
     },
     "colorway": "Black",
     "display_order": 25,
