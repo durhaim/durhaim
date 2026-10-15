@@ -16,17 +16,17 @@ export type FigmaCatalogueSeed = {
 
 export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
   {
-    "name": "Multicam Black Mamba Mark 2",
-    "slug": "multicam-black-mamba-mark-2",
-    "description": "Mamba Series / Multicam Black",
+    "name": "Green Cobra",
+    "slug": "green-cobra",
+    "description": "Cobra Series / Green",
     "price": null,
     "regional_prices": {},
     "category": "vest",
     "series": {
-      "name": "Mamba Series",
-      "slug": "mamba-series"
+      "name": "Cobra Series",
+      "slug": "cobra-series"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Green",
     "display_order": 2,
     "specifications": [],
     "images": [

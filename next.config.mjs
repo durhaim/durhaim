@@ -46,8 +46,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/green-cobra',
-        destination: '/catalogue/multicam-black-wolven-messenger-bag-2',
+        source: '/catalogue/multicam-black-mamba-mark-2',
+        destination: '/catalogue/green-cobra',
         permanent: true,
       },
       {
