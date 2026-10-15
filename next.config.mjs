@@ -111,8 +111,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/multicam-black-bite-bee',
-        destination: '/catalogue/cobra-desert-night-camo',
+        source: '/catalogue/green-rifle-mag-pouch',
+        destination: '/catalogue/green-rifle-mag-pouch-2',
         permanent: true,
       },
       {
