@@ -101,8 +101,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/green-viper-mark-2',
-        destination: '/catalogue/multicam-black-mamba-mark-2',
+        source: '/catalogue/multicam-tropic-dump-pouch',
+        destination: '/catalogue/multicam-tropic-dump-pouch-2',
         permanent: true,
       },
       {

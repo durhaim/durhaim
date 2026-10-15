@@ -504,17 +504,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Tropic Dump Pouch",
-    "slug": "multicam-tropic-dump-pouch",
-    "description": "Dump Pouch / Multicam Tropic",
+    "name": "Green Viper Mark 2",
+    "slug": "green-viper-mark-2",
+    "description": "Viper Series / Green",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "vest",
     "series": {
-      "name": "Dump Pouch",
-      "slug": "dump-pouch"
+      "name": "Viper Series",
+      "slug": "viper-series"
     },
-    "colorway": "Multicam Tropic",
+    "colorway": "Green",
     "display_order": 29,
     "specifications": [],
     "images": [
