@@ -450,17 +450,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Dump Pouch",
-    "slug": "black-dump-pouch",
-    "description": "Dump Pouch / Black",
+    "name": "Green Chitto Mark 2",
+    "slug": "green-chitto-mark-2-2",
+    "description": "Chitto Series / Green",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "vest",
     "series": {
-      "name": "Dump Pouch",
-      "slug": "dump-pouch"
+      "name": "Chitto Series",
+      "slug": "chitto-series"
     },
-    "colorway": "Black",
+    "colorway": "Green",
     "display_order": 26,
     "specifications": [],
     "images": [
