@@ -61,8 +61,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/royale-mamba-mark-2',
-        destination: '/catalogue/black-mamba-mark-2',
+        source: '/catalogue/black-viper-mark-2',
+        destination: '/catalogue/royale-mamba-mark-2',
         permanent: true,
       },
       {

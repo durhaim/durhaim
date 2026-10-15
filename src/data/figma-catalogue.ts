@@ -196,17 +196,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Viper Mark 2",
-    "slug": "black-viper-mark-2",
-    "description": "Viper Series / Black",
+    "name": "Royale Mamba Mark 2",
+    "slug": "royale-mamba-mark-2",
+    "description": "Mamba Series / Royale",
     "price": null,
     "regional_prices": {},
     "category": "vest",
     "series": {
-      "name": "Viper Series",
-      "slug": "viper-series"
+      "name": "Mamba Series",
+      "slug": "mamba-series"
     },
-    "colorway": "Black",
+    "colorway": "Royale",
     "display_order": 11,
     "specifications": [],
     "images": [
