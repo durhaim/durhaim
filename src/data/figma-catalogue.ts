@@ -612,17 +612,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Royale HG Double Mag Pouch",
-    "slug": "royale-hg-double-mag-pouch",
-    "description": "Handgun Double Mag Pouch / Royale",
+    "name": "Black Aim Vortex",
+    "slug": "black-aim-vortex",
+    "description": "Aim Vortex Rifle Bag / Black",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "pack",
     "series": {
-      "name": "Handgun Double Mag Pouch",
-      "slug": "handgun-double-mag-pouch"
+      "name": "Aim Vortex Rifle Bag",
+      "slug": "aim-vortex-rifle-bag"
     },
-    "colorway": "Royale",
+    "colorway": "Black",
     "display_order": 35,
     "specifications": [],
     "images": [

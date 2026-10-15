@@ -91,8 +91,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/black-aim-vortex',
-        destination: '/catalogue/green-viper-kangguru',
+        source: '/catalogue/royale-hg-double-mag-pouch',
+        destination: '/catalogue/royale-hg-double-mag-pouch-2',
         permanent: true,
       },
       {
