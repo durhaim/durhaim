@@ -86,6 +86,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/green-viper-kangguru',
+        destination: '/catalogue/multicam-black-snake-head-sling-bag-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/black-cobra',
         destination: '/catalogue/cobra-tiger-stripe-camo-2',
         permanent: true,

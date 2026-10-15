@@ -1261,17 +1261,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Viper Kangguru",
-    "slug": "green-viper-kangguru",
-    "description": "Viper Series / Green",
+    "name": "Multicam Black Snake Head Sling Bag",
+    "slug": "multicam-black-snake-head-sling-bag-2",
+    "description": "Snake Head Sling Bag / Multicam Black",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "pack",
     "series": {
-      "name": "Viper Series",
-      "slug": "viper-series"
+      "name": "Snake Head Sling Bag",
+      "slug": "snake-head-sling-bag"
     },
-    "colorway": "Green",
+    "colorway": "Multicam Black",
     "display_order": 72,
     "specifications": [],
     "images": [
