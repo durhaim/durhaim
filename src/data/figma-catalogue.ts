@@ -828,17 +828,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Wolven Messenger Bag",
-    "slug": "multicam-black-wolven-messenger-bag",
-    "description": "Wolven Messenger Bag / Multicam Black",
+    "name": "Black Dump Pouch",
+    "slug": "black-dump-pouch-2",
+    "description": "Dump Pouch / Black",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "accessories",
     "series": {
-      "name": "Wolven Messenger Bag",
-      "slug": "wolven-messenger-bag"
+      "name": "Dump Pouch",
+      "slug": "dump-pouch"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Black",
     "display_order": 47,
     "specifications": [],
     "images": [
