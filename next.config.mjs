@@ -71,6 +71,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/black-viper-kangguru',
+        destination: '/catalogue/multicam-hg-double-mag-pouch-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/black-cobra',
         destination: '/catalogue/cobra-tiger-stripe-camo-2',
         permanent: true,

@@ -1116,17 +1116,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Viper Kangguru",
-    "slug": "black-viper-kangguru",
-    "description": "Viper Series / Black",
+    "name": "Multicam HG Double Mag Pouch",
+    "slug": "multicam-hg-double-mag-pouch-2",
+    "description": "Handgun Double Mag Pouch / Multicam",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "accessories",
     "series": {
-      "name": "Viper Series",
-      "slug": "viper-series"
+      "name": "Handgun Double Mag Pouch",
+      "slug": "handgun-double-mag-pouch"
     },
-    "colorway": "Black",
+    "colorway": "Multicam",
     "display_order": 63,
     "specifications": [],
     "images": [
