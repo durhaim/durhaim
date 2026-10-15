@@ -1171,17 +1171,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Royale Bite Bee",
-    "slug": "royale-bite-bee",
-    "description": "Bite Bee Handbag / Royale",
+    "name": "Multicam Black Rifle Mag Pouch",
+    "slug": "multicam-black-rifle-mag-pouch-2",
+    "description": "Rifle Mag Pouch / Multicam Black",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "accessories",
     "series": {
-      "name": "Bite Bee Handbag",
-      "slug": "bite-bee-handbag"
+      "name": "Rifle Mag Pouch",
+      "slug": "rifle-mag-pouch"
     },
-    "colorway": "Royale",
+    "colorway": "Multicam Black",
     "display_order": 67,
     "specifications": [],
     "images": [

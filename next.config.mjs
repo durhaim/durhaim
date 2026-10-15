@@ -121,6 +121,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/royale-bite-bee',
+        destination: '/catalogue/multicam-black-rifle-mag-pouch-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/cobra-tiger-stripe-camo',
         destination: '/catalogue/black-trojan-pro-warbelt-2',
         permanent: true,
