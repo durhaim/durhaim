@@ -66,6 +66,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/multicam-black-viper-mark-2',
+        destination: '/catalogue/green-fabric-holster-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/black-cobra',
         destination: '/catalogue/cobra-tiger-stripe-camo-2',
         permanent: true,

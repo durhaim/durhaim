@@ -304,17 +304,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Viper Mark 2",
-    "slug": "multicam-black-viper-mark-2",
-    "description": "Viper Series / Multicam Black",
+    "name": "Green Fabric Holster",
+    "slug": "green-fabric-holster-2",
+    "description": "Fabric Holster / Green",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "accessories",
     "series": {
-      "name": "Viper Series",
-      "slug": "viper-series"
+      "name": "Fabric Holster",
+      "slug": "fabric-holster"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Green",
     "display_order": 16,
     "specifications": [],
     "images": [
