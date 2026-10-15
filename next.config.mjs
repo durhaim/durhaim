@@ -86,8 +86,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/multicam-black-viper-kangguru',
-        destination: '/catalogue/black-snake-head-sling-bag-2',
+        source: '/catalogue/multicam-black-dump-pouch',
+        destination: '/catalogue/multicam-black-dump-pouch-2',
         permanent: true,
       },
       {
