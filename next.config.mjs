@@ -116,8 +116,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/black-bite-bee',
-        destination: '/catalogue/black-chitto-mark-2-2',
+        source: '/catalogue/black-rifle-mag-pouch',
+        destination: '/catalogue/black-rifle-mag-pouch-2',
         permanent: true,
       },
       {
