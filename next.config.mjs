@@ -166,6 +166,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/multicam-black-trojan-pro-warbelt',
+        destination: '/catalogue/multicam-black-trojan-pro-warbelt-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/cobra-tiger-stripe-camo',
         destination: '/catalogue/black-trojan-pro-warbelt-2',
         permanent: true,
