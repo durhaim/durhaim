@@ -31,8 +31,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/multicam-black-aim-vortex',
-        destination: '/catalogue/royale-rifle-mag-pouch',
+        source: '/catalogue/multicam-black-hg-double-mag-pouch',
+        destination: '/catalogue/multicam-black-hg-double-mag-pouch-2',
         permanent: true,
       },
       {

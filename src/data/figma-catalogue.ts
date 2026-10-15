@@ -630,15 +630,15 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black HG Double Mag Pouch",
-    "slug": "multicam-black-hg-double-mag-pouch",
-    "description": "Handgun Double Mag Pouch / Multicam Black",
+    "name": "Multicam Black Aim Vortex",
+    "slug": "multicam-black-aim-vortex",
+    "description": "Aim Vortex Rifle Bag / Multicam Black",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "pack",
     "series": {
-      "name": "Handgun Double Mag Pouch",
-      "slug": "handgun-double-mag-pouch"
+      "name": "Aim Vortex Rifle Bag",
+      "slug": "aim-vortex-rifle-bag"
     },
     "colorway": "Multicam Black",
     "display_order": 36,
