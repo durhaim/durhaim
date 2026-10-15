@@ -106,8 +106,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/black-cobra-backpack',
-        destination: '/catalogue/king-cobra',
+        source: '/catalogue/black-snake-head-sling-bag',
+        destination: '/catalogue/black-snake-head-sling-bag-2',
         permanent: true,
       },
       {

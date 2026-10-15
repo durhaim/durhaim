@@ -756,15 +756,15 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Snake Head Sling Bag",
-    "slug": "black-snake-head-sling-bag",
-    "description": "Snake Head Sling Bag / Black",
+    "name": "Black Cobra Backpack",
+    "slug": "black-cobra-backpack",
+    "description": "Cobra Backpack / Black",
     "price": null,
     "regional_prices": {},
     "category": "pack",
     "series": {
-      "name": "Snake Head Sling Bag",
-      "slug": "snake-head-sling-bag"
+      "name": "Cobra Backpack",
+      "slug": "cobra-backpack"
     },
     "colorway": "Black",
     "display_order": 43,
