@@ -810,17 +810,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Royale Snake Head Sling Bag",
-    "slug": "royale-snake-head-sling-bag",
-    "description": "Snake Head Sling Bag / Royale",
+    "name": "Multicam Black Dregon Head Backpack",
+    "slug": "multicam-black-dregon-head-backpack",
+    "description": "Dregon Head Backpack / Multicam Black",
     "price": null,
     "regional_prices": {},
     "category": "pack",
     "series": {
-      "name": "Snake Head Sling Bag",
-      "slug": "snake-head-sling-bag"
+      "name": "Dregon Head Backpack",
+      "slug": "dregon-head-backpack"
     },
-    "colorway": "Royale",
+    "colorway": "Multicam Black",
     "display_order": 46,
     "specifications": [],
     "images": [
