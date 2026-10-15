@@ -106,17 +106,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "King Mamba Mark 2",
-    "slug": "king-mamba-mark-2",
-    "description": "Mamba Series / King",
+    "name": "Cobra Multicam Tropic",
+    "slug": "cobra-multicam-tropic",
+    "description": "Cobra Series / Multicam Tropic",
     "price": null,
     "regional_prices": {},
     "category": "vest",
     "series": {
-      "name": "Mamba Series",
-      "slug": "mamba-series"
+      "name": "Cobra Series",
+      "slug": "cobra-series"
     },
-    "colorway": "King",
+    "colorway": "Multicam Tropic",
     "display_order": 7,
     "specifications": [],
     "images": [

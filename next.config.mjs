@@ -81,8 +81,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/cobra-multicam-tropic',
-        destination: '/catalogue/multicam-black-trojan-pro-warbelt-2',
+        source: '/catalogue/king-mamba-mark-2',
+        destination: '/catalogue/cobra-multicam-tropic',
         permanent: true,
       },
       {
