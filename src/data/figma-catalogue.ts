@@ -792,17 +792,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Royale Fabric Holster",
-    "slug": "royale-fabric-holster",
-    "description": "Fabric Holster / Royale",
+    "name": "Black Dregon Head Backpack",
+    "slug": "black-dregon-head-backpack",
+    "description": "Dregon Head Backpack / Black",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "pack",
     "series": {
-      "name": "Fabric Holster",
-      "slug": "fabric-holster"
+      "name": "Dregon Head Backpack",
+      "slug": "dregon-head-backpack"
     },
-    "colorway": "Royale",
+    "colorway": "Black",
     "display_order": 45,
     "specifications": [],
     "images": [

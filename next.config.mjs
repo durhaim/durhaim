@@ -181,8 +181,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/black-dregon-head-backpack',
-        destination: '/catalogue/cobra-multicam-black',
+        source: '/catalogue/royale-fabric-holster',
+        destination: '/catalogue/royale-fabric-holster-2',
         permanent: true,
       },
       {
