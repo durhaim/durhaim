@@ -954,17 +954,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Rattle Belt",
-    "slug": "multicam-black-rattle-belt",
-    "description": "Rattle Belt / Multicam Black",
+    "name": "Royale Fabric Holster",
+    "slug": "royale-fabric-holster-2",
+    "description": "Fabric Holster / Royale",
     "price": null,
     "regional_prices": {},
-    "category": "belt",
+    "category": "accessories",
     "series": {
-      "name": "Rattle Belt",
-      "slug": "rattle-belt"
+      "name": "Fabric Holster",
+      "slug": "fabric-holster"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Royale",
     "display_order": 54,
     "specifications": [],
     "images": [
