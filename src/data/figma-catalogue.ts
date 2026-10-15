@@ -268,17 +268,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Thunder",
-    "slug": "black-thunder",
-    "description": "Thunder Chestrig Series / Black",
+    "name": "Royale Mamba Modular",
+    "slug": "royale-mamba-modular",
+    "description": "Mamba Series / Royale",
     "price": null,
     "regional_prices": {},
     "category": "vest",
     "series": {
-      "name": "Thunder Chestrig Series",
-      "slug": "thunder-chestrig-series"
+      "name": "Mamba Series",
+      "slug": "mamba-series"
     },
-    "colorway": "Black",
+    "colorway": "Royale",
     "display_order": 14,
     "specifications": [],
     "images": [

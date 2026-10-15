@@ -41,8 +41,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/royale-mamba-modular',
-        destination: '/catalogue/royale-anaconda',
+        source: '/catalogue/black-thunder',
+        destination: '/catalogue/royale-mamba-modular',
         permanent: true,
       },
       {
