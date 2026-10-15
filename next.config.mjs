@@ -141,6 +141,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/multicam-black-dregon-head-backpack',
+        destination: '/catalogue/multicam-rifle-mag-pouch-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/king-mamba-mark-2',
         destination: '/catalogue/cobra-multicam-tropic',
         permanent: true,

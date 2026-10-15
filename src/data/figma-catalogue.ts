@@ -1207,17 +1207,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Dregon Head Backpack",
-    "slug": "multicam-black-dregon-head-backpack",
-    "description": "Dregon Head Backpack / Multicam Black",
+    "name": "Multicam Rifle Mag Pouch",
+    "slug": "multicam-rifle-mag-pouch-2",
+    "description": "Rifle Mag Pouch / Multicam",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "accessories",
     "series": {
-      "name": "Dregon Head Backpack",
-      "slug": "dregon-head-backpack"
+      "name": "Rifle Mag Pouch",
+      "slug": "rifle-mag-pouch"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Multicam",
     "display_order": 69,
     "specifications": [],
     "images": [
