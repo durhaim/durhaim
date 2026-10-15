@@ -990,15 +990,15 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Tropic Rifle Mag Pouch",
-    "slug": "multicam-tropic-rifle-mag-pouch",
-    "description": "Rifle Mag Pouch / Multicam Tropic",
+    "name": "Multicam Tropic Fabric Holster",
+    "slug": "multicam-tropic-fabric-holster-2",
+    "description": "Fabric Holster / Multicam Tropic",
     "price": null,
     "regional_prices": {},
     "category": "accessories",
     "series": {
-      "name": "Rifle Mag Pouch",
-      "slug": "rifle-mag-pouch"
+      "name": "Fabric Holster",
+      "slug": "fabric-holster"
     },
     "colorway": "Multicam Tropic",
     "display_order": 56,
