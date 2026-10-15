@@ -88,17 +88,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Mamba Mark 2",
-    "slug": "green-mamba-mark-2",
-    "description": "Mamba Series / Green",
+    "name": "Multicam Black Chitto Mark 2",
+    "slug": "multicam-black-chitto-mark-2",
+    "description": "Chitto Series / Multicam Black",
     "price": null,
     "regional_prices": {},
     "category": "vest",
     "series": {
-      "name": "Mamba Series",
-      "slug": "mamba-series"
+      "name": "Chitto Series",
+      "slug": "chitto-series"
     },
-    "colorway": "Green",
+    "colorway": "Multicam Black",
     "display_order": 6,
     "specifications": [],
     "images": [
