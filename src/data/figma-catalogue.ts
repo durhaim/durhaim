@@ -142,9 +142,9 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Cobra",
-    "slug": "black-cobra",
-    "description": "Cobra Series / Black",
+    "name": "Cobra Tiger Stripe Camo",
+    "slug": "cobra-tiger-stripe-camo-2",
+    "description": "Cobra Series / Tiger Stripe Camo",
     "price": null,
     "regional_prices": {},
     "category": "vest",
@@ -152,7 +152,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
       "name": "Cobra Series",
       "slug": "cobra-series"
     },
-    "colorway": "Black",
+    "colorway": "Tiger Stripe Camo",
     "display_order": 9,
     "specifications": [],
     "images": [
@@ -286,17 +286,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "King Chitto Mark 2",
-    "slug": "king-chitto-mark-2",
-    "description": "Chitto Series / King",
+    "name": "Green Mamba Modular",
+    "slug": "green-mamba-modular-2",
+    "description": "Mamba Series / Green",
     "price": null,
     "regional_prices": {},
     "category": "vest",
     "series": {
-      "name": "Chitto Series",
-      "slug": "chitto-series"
+      "name": "Mamba Series",
+      "slug": "mamba-series"
     },
-    "colorway": "King",
+    "colorway": "Green",
     "display_order": 15,
     "specifications": [],
     "images": [
@@ -1098,17 +1098,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Chitto Mark 2",
-    "slug": "multicam-black-chitto-mark-2",
-    "description": "Chitto Series / Multicam Black",
+    "name": "Royale HG Double Mag Pouch",
+    "slug": "royale-hg-double-mag-pouch-2",
+    "description": "Handgun Double Mag Pouch / Royale",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "accessories",
     "series": {
-      "name": "Chitto Series",
-      "slug": "chitto-series"
+      "name": "Handgun Double Mag Pouch",
+      "slug": "handgun-double-mag-pouch"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Royale",
     "display_order": 62,
     "specifications": [],
     "images": [
@@ -1279,17 +1279,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Cobra",
-    "slug": "green-cobra",
-    "description": "Cobra Series / Green",
+    "name": "Multicam Black Wolven Messenger Bag",
+    "slug": "multicam-black-wolven-messenger-bag-2",
+    "description": "Wolven Messenger Bag / Multicam Black",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "pack",
     "series": {
-      "name": "Cobra Series",
-      "slug": "cobra-series"
+      "name": "Wolven Messenger Bag",
+      "slug": "wolven-messenger-bag"
     },
-    "colorway": "Green",
+    "colorway": "Multicam Black",
     "display_order": 73,
     "specifications": [],
     "images": [
@@ -1315,17 +1315,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "King Cobra",
-    "slug": "king-cobra",
-    "description": "Cobra Series / King",
+    "name": "Black Wolven Messenger Bag",
+    "slug": "black-wolven-messenger-bag-2",
+    "description": "Wolven Messenger Bag / Black",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "pack",
     "series": {
-      "name": "Cobra Series",
-      "slug": "cobra-series"
+      "name": "Wolven Messenger Bag",
+      "slug": "wolven-messenger-bag"
     },
-    "colorway": "King",
+    "colorway": "Black",
     "display_order": 75,
     "specifications": [],
     "images": [
@@ -1333,17 +1333,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Cobra Desert Night Camo",
-    "slug": "cobra-desert-night-camo",
-    "description": "Cobra Series / Desert Night Camo",
+    "name": "Black Rattle Belt",
+    "slug": "black-rattle-belt-2",
+    "description": "Rattle Belt / Black",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "belt",
     "series": {
-      "name": "Cobra Series",
-      "slug": "cobra-series"
+      "name": "Rattle Belt",
+      "slug": "rattle-belt"
     },
-    "colorway": "Desert Night Camo",
+    "colorway": "Black",
     "display_order": 76,
     "specifications": [],
     "images": [
@@ -1351,17 +1351,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Cobra Tiger Stripe Camo",
-    "slug": "cobra-tiger-stripe-camo",
-    "description": "Cobra Series / Tiger Stripe Camo",
+    "name": "Black Trojan Pro Warbelt",
+    "slug": "black-trojan-pro-warbelt-2",
+    "description": "Trojan Pro Warbelt / Black",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "belt",
     "series": {
-      "name": "Cobra Series",
-      "slug": "cobra-series"
+      "name": "Trojan Pro Warbelt",
+      "slug": "trojan-pro-warbelt"
     },
-    "colorway": "Tiger Stripe Camo",
+    "colorway": "Black",
     "display_order": 77,
     "specifications": [],
     "images": [
@@ -1369,17 +1369,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Cobra Multicam Black",
-    "slug": "cobra-multicam-black",
-    "description": "Cobra Series / Multicam Black",
+    "name": "Green Trojan Pro Warbelt",
+    "slug": "green-trojan-pro-warbelt-2",
+    "description": "Trojan Pro Warbelt / Green",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "belt",
     "series": {
-      "name": "Cobra Series",
-      "slug": "cobra-series"
+      "name": "Trojan Pro Warbelt",
+      "slug": "trojan-pro-warbelt"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Green",
     "display_order": 78,
     "specifications": [],
     "images": [
@@ -1387,17 +1387,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Cobra Multicam Tropic",
-    "slug": "cobra-multicam-tropic",
-    "description": "Cobra Series / Multicam Tropic",
+    "name": "Multicam Black Trojan Pro Warbelt",
+    "slug": "multicam-black-trojan-pro-warbelt-2",
+    "description": "Trojan Pro Warbelt / Multicam Black",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "belt",
     "series": {
-      "name": "Cobra Series",
-      "slug": "cobra-series"
+      "name": "Trojan Pro Warbelt",
+      "slug": "trojan-pro-warbelt"
     },
-    "colorway": "Multicam Tropic",
+    "colorway": "Multicam Black",
     "display_order": 79,
     "specifications": [],
     "images": [
@@ -1405,17 +1405,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Cobra Multicam",
-    "slug": "cobra-multicam",
-    "description": "Cobra Series / Multicam",
+    "name": "Royale Trojan Pro Warbelt",
+    "slug": "royale-trojan-pro-warbelt-2",
+    "description": "Trojan Pro Warbelt / Royale",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "belt",
     "series": {
-      "name": "Cobra Series",
-      "slug": "cobra-series"
+      "name": "Trojan Pro Warbelt",
+      "slug": "trojan-pro-warbelt"
     },
-    "colorway": "Multicam",
+    "colorway": "Royale",
     "display_order": 80,
     "specifications": [],
     "images": [

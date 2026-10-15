@@ -30,6 +30,56 @@ const nextConfig = {
         destination: '/catalogue/multicam-black-aim-vortex',
         permanent: true,
       },
+      {
+        source: '/catalogue/king-chitto-mark-2',
+        destination: '/catalogue/green-mamba-modular-2',
+        permanent: true,
+      },
+      {
+        source: '/catalogue/multicam-black-chitto-mark-2',
+        destination: '/catalogue/royale-hg-double-mag-pouch-2',
+        permanent: true,
+      },
+      {
+        source: '/catalogue/black-cobra',
+        destination: '/catalogue/cobra-tiger-stripe-camo-2',
+        permanent: true,
+      },
+      {
+        source: '/catalogue/green-cobra',
+        destination: '/catalogue/multicam-black-wolven-messenger-bag-2',
+        permanent: true,
+      },
+      {
+        source: '/catalogue/king-cobra',
+        destination: '/catalogue/black-wolven-messenger-bag-2',
+        permanent: true,
+      },
+      {
+        source: '/catalogue/cobra-desert-night-camo',
+        destination: '/catalogue/black-rattle-belt-2',
+        permanent: true,
+      },
+      {
+        source: '/catalogue/cobra-tiger-stripe-camo',
+        destination: '/catalogue/black-trojan-pro-warbelt-2',
+        permanent: true,
+      },
+      {
+        source: '/catalogue/cobra-multicam-black',
+        destination: '/catalogue/green-trojan-pro-warbelt-2',
+        permanent: true,
+      },
+      {
+        source: '/catalogue/cobra-multicam-tropic',
+        destination: '/catalogue/multicam-black-trojan-pro-warbelt-2',
+        permanent: true,
+      },
+      {
+        source: '/catalogue/cobra-multicam',
+        destination: '/catalogue/royale-trojan-pro-warbelt-2',
+        permanent: true,
+      },
     ];
   },
   async headers() {
