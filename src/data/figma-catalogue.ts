@@ -340,17 +340,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Aim Vortex",
-    "slug": "black-aim-vortex",
-    "description": "Aim Vortex Rifle Bag / Black",
+    "name": "Green Viper Kangguru",
+    "slug": "green-viper-kangguru",
+    "description": "Viper Series / Green",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "vest",
     "series": {
-      "name": "Aim Vortex Rifle Bag",
-      "slug": "aim-vortex-rifle-bag"
+      "name": "Viper Series",
+      "slug": "viper-series"
     },
-    "colorway": "Black",
+    "colorway": "Green",
     "display_order": 18,
     "specifications": [],
     "images": [
