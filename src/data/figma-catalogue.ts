@@ -774,17 +774,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Wolven Messenger Bag",
-    "slug": "black-wolven-messenger-bag",
-    "description": "Wolven Messenger Bag / Black",
+    "name": "Green Cobra Backpack",
+    "slug": "green-cobra-backpack",
+    "description": "Cobra Backpack / Green",
     "price": null,
     "regional_prices": {},
     "category": "pack",
     "series": {
-      "name": "Wolven Messenger Bag",
-      "slug": "wolven-messenger-bag"
+      "name": "Cobra Backpack",
+      "slug": "cobra-backpack"
     },
-    "colorway": "Black",
+    "colorway": "Green",
     "display_order": 44,
     "specifications": [],
     "images": [

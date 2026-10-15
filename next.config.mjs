@@ -126,8 +126,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/green-cobra-backpack',
-        destination: '/catalogue/multicam-tropic-rifle-mag-pouch-2',
+        source: '/catalogue/black-wolven-messenger-bag',
+        destination: '/catalogue/black-wolven-messenger-bag-2',
         permanent: true,
       },
       {
