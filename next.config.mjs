@@ -76,8 +76,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/multicam-black-viper-mark-2',
-        destination: '/catalogue/green-fabric-holster-2',
+        source: '/catalogue/royale-dump-pouch',
+        destination: '/catalogue/royale-dump-pouch-2',
         permanent: true,
       },
       {
