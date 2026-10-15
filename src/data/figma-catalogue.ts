@@ -900,15 +900,15 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Royale Trojan Pro Warbelt",
-    "slug": "royale-trojan-pro-warbelt",
-    "description": "Trojan Pro Warbelt / Royale",
+    "name": "Royale Dump Pouch",
+    "slug": "royale-dump-pouch-2",
+    "description": "Dump Pouch / Royale",
     "price": null,
     "regional_prices": {},
-    "category": "belt",
+    "category": "accessories",
     "series": {
-      "name": "Trojan Pro Warbelt",
-      "slug": "trojan-pro-warbelt"
+      "name": "Dump Pouch",
+      "slug": "dump-pouch"
     },
     "colorway": "Royale",
     "display_order": 51,
