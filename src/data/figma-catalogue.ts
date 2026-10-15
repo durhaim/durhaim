@@ -846,17 +846,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Rattle Belt",
-    "slug": "black-rattle-belt",
-    "description": "Rattle Belt / Black",
+    "name": "Green Dump Pouch",
+    "slug": "green-dump-pouch-2",
+    "description": "Dump Pouch / Green",
     "price": null,
     "regional_prices": {},
-    "category": "belt",
+    "category": "accessories",
     "series": {
-      "name": "Rattle Belt",
-      "slug": "rattle-belt"
+      "name": "Dump Pouch",
+      "slug": "dump-pouch"
     },
-    "colorway": "Black",
+    "colorway": "Green",
     "display_order": 48,
     "specifications": [],
     "images": [
