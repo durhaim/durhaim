@@ -1189,17 +1189,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Cobra Backpack",
-    "slug": "green-cobra-backpack",
-    "description": "Cobra Backpack / Green",
+    "name": "Multicam Tropic Rifle Mag Pouch",
+    "slug": "multicam-tropic-rifle-mag-pouch-2",
+    "description": "Rifle Mag Pouch / Multicam Tropic",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "accessories",
     "series": {
-      "name": "Cobra Backpack",
-      "slug": "cobra-backpack"
+      "name": "Rifle Mag Pouch",
+      "slug": "rifle-mag-pouch"
     },
-    "colorway": "Green",
+    "colorway": "Multicam Tropic",
     "display_order": 68,
     "specifications": [],
     "images": [
