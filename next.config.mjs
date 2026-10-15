@@ -71,8 +71,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/multicam-black-mamba-mark-2',
-        destination: '/catalogue/green-cobra',
+        source: '/catalogue/green-viper-mark-2',
+        destination: '/catalogue/multicam-black-mamba-mark-2',
         permanent: true,
       },
       {
