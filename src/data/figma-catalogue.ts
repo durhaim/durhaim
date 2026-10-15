@@ -322,17 +322,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Thunder",
-    "slug": "green-thunder",
-    "description": "Thunder Chestrig Series / Green",
+    "name": "King Viper Kangguru",
+    "slug": "king-viper-kangguru-2",
+    "description": "Viper Series / King",
     "price": null,
     "regional_prices": {},
     "category": "vest",
     "series": {
-      "name": "Thunder Chestrig Series",
-      "slug": "thunder-chestrig-series"
+      "name": "Viper Series",
+      "slug": "viper-series"
     },
-    "colorway": "Green",
+    "colorway": "King",
     "display_order": 17,
     "specifications": [],
     "images": [

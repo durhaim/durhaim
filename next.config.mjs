@@ -46,6 +46,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/green-thunder',
+        destination: '/catalogue/king-viper-kangguru-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/green-mamba-mark-2',
         destination: '/catalogue/multicam-black-chitto-mark-2',
         permanent: true,
