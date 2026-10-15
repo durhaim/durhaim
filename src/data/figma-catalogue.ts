@@ -882,17 +882,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Trojan Pro Warbelt",
-    "slug": "green-trojan-pro-warbelt",
-    "description": "Trojan Pro Warbelt / Green",
+    "name": "Multicam Dump Pouch",
+    "slug": "multicam-dump-pouch-2",
+    "description": "Dump Pouch / Multicam",
     "price": null,
     "regional_prices": {},
-    "category": "belt",
+    "category": "accessories",
     "series": {
-      "name": "Trojan Pro Warbelt",
-      "slug": "trojan-pro-warbelt"
+      "name": "Dump Pouch",
+      "slug": "dump-pouch"
     },
-    "colorway": "Green",
+    "colorway": "Multicam",
     "display_order": 50,
     "specifications": [],
     "images": [
