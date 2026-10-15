@@ -61,8 +61,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/multicam-black-thunder',
-        destination: '/catalogue/black-rifle-mag-pouch-2',
+        source: '/catalogue/green-hg-double-mag-pouch',
+        destination: '/catalogue/green-hg-double-mag-pouch-2',
         permanent: true,
       },
       {
