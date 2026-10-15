@@ -111,8 +111,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/cobra-desert-night-camo',
-        destination: '/catalogue/black-rattle-belt-2',
+        source: '/catalogue/multicam-black-bite-bee',
+        destination: '/catalogue/cobra-desert-night-camo',
         permanent: true,
       },
       {

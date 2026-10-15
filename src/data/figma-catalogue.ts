@@ -414,17 +414,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Bite Bee",
-    "slug": "multicam-black-bite-bee",
-    "description": "Bite Bee Handbag / Multicam Black",
+    "name": "Cobra Desert Night Camo",
+    "slug": "cobra-desert-night-camo",
+    "description": "Cobra Series / Desert Night Camo",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "vest",
     "series": {
-      "name": "Bite Bee Handbag",
-      "slug": "bite-bee-handbag"
+      "name": "Cobra Series",
+      "slug": "cobra-series"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Desert Night Camo",
     "display_order": 24,
     "specifications": [],
     "images": [
