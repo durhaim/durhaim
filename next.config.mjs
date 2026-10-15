@@ -71,8 +71,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/black-viper-mark-2',
-        destination: '/catalogue/royale-mamba-mark-2',
+        source: '/catalogue/green-dump-pouch',
+        destination: '/catalogue/green-dump-pouch-2',
         permanent: true,
       },
       {

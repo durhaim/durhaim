@@ -468,17 +468,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Dump Pouch",
-    "slug": "green-dump-pouch",
-    "description": "Dump Pouch / Green",
+    "name": "Black Viper Mark 2",
+    "slug": "black-viper-mark-2",
+    "description": "Viper Series / Black",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "vest",
     "series": {
-      "name": "Dump Pouch",
-      "slug": "dump-pouch"
+      "name": "Viper Series",
+      "slug": "viper-series"
     },
-    "colorway": "Green",
+    "colorway": "Black",
     "display_order": 27,
     "specifications": [],
     "images": [
