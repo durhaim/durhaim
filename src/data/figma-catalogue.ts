@@ -1044,17 +1044,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Fabric Holster",
-    "slug": "multicam-black-fabric-holster",
-    "description": "Fabric Holster / Multicam Black",
+    "name": "Green HG Double Mag Pouch",
+    "slug": "green-hg-double-mag-pouch-2",
+    "description": "Handgun Double Mag Pouch / Green",
     "price": null,
     "regional_prices": {},
     "category": "accessories",
     "series": {
-      "name": "Fabric Holster",
-      "slug": "fabric-holster"
+      "name": "Handgun Double Mag Pouch",
+      "slug": "handgun-double-mag-pouch"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Green",
     "display_order": 59,
     "specifications": [],
     "images": [
