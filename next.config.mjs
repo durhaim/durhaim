@@ -136,6 +136,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/tiger-stripe-camo-wolven-messenger-bag',
+        destination: '/catalogue/black-fabric-holster-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/cobra-tiger-stripe-camo',
         destination: '/catalogue/black-trojan-pro-warbelt-2',
         permanent: true,

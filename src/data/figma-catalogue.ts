@@ -936,17 +936,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Tiger Stripe Camo Wolven Messenger Bag",
-    "slug": "tiger-stripe-camo-wolven-messenger-bag",
-    "description": "Wolven Messenger Bag / Tiger Stripe Camo",
+    "name": "Black Fabric Holster",
+    "slug": "black-fabric-holster-2",
+    "description": "Fabric Holster / Black",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "accessories",
     "series": {
-      "name": "Wolven Messenger Bag",
-      "slug": "wolven-messenger-bag"
+      "name": "Fabric Holster",
+      "slug": "fabric-holster"
     },
-    "colorway": "Tiger Stripe Camo",
+    "colorway": "Black",
     "display_order": 53,
     "specifications": [],
     "images": [
