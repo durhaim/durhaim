@@ -211,6 +211,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/multicam-rifle-mag-pouch',
+        destination: '/catalogue/multicam-rifle-mag-pouch-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/royale-snake-head-sling-bag',
         destination: '/catalogue/royale-snake-head-sling-bag-2',
         permanent: true,

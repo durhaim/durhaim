@@ -1026,17 +1026,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Rifle Mag Pouch",
-    "slug": "multicam-rifle-mag-pouch",
-    "description": "Rifle Mag Pouch / Multicam",
+    "name": "Black HG Double Mag Pouch",
+    "slug": "black-hg-double-mag-pouch-2",
+    "description": "Handgun Double Mag Pouch / Black",
     "price": null,
     "regional_prices": {},
     "category": "accessories",
     "series": {
-      "name": "Rifle Mag Pouch",
-      "slug": "rifle-mag-pouch"
+      "name": "Handgun Double Mag Pouch",
+      "slug": "handgun-double-mag-pouch"
     },
-    "colorway": "Multicam",
+    "colorway": "Black",
     "display_order": 58,
     "specifications": [],
     "images": [
