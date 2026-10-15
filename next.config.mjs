@@ -51,6 +51,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/multicam-black-thunder',
+        destination: '/catalogue/black-rifle-mag-pouch-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/green-mamba-mark-2',
         destination: '/catalogue/multicam-black-chitto-mark-2',
         permanent: true,

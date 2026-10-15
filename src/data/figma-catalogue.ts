@@ -1134,17 +1134,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Thunder",
-    "slug": "multicam-black-thunder",
-    "description": "Thunder Chestrig Series / Multicam Black",
+    "name": "Black Rifle Mag Pouch",
+    "slug": "black-rifle-mag-pouch-2",
+    "description": "Rifle Mag Pouch / Black",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "accessories",
     "series": {
-      "name": "Thunder Chestrig Series",
-      "slug": "thunder-chestrig-series"
+      "name": "Rifle Mag Pouch",
+      "slug": "rifle-mag-pouch"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Black",
     "display_order": 64,
     "specifications": [],
     "images": [
