@@ -1080,17 +1080,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Black Snake Head Sling Bag",
-    "slug": "multicam-black-snake-head-sling-bag",
-    "description": "Snake Head Sling Bag / Multicam Black",
+    "name": "Multicam Tropic HG Double Mag Pouch",
+    "slug": "multicam-tropic-hg-double-mag-pouch-2",
+    "description": "Handgun Double Mag Pouch / Multicam Tropic",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "accessories",
     "series": {
-      "name": "Snake Head Sling Bag",
-      "slug": "snake-head-sling-bag"
+      "name": "Handgun Double Mag Pouch",
+      "slug": "handgun-double-mag-pouch"
     },
-    "colorway": "Multicam Black",
+    "colorway": "Multicam Tropic",
     "display_order": 61,
     "specifications": [],
     "images": [

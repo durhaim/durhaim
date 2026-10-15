@@ -146,6 +146,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/multicam-black-snake-head-sling-bag',
+        destination: '/catalogue/multicam-black-snake-head-sling-bag-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/king-mamba-mark-2',
         destination: '/catalogue/cobra-multicam-tropic',
         permanent: true,
