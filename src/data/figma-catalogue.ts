@@ -1243,17 +1243,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "King Viper Kangguru",
-    "slug": "king-viper-kangguru",
-    "description": "Viper Series / King",
+    "name": "Royale Snake Head Sling Bag",
+    "slug": "royale-snake-head-sling-bag-2",
+    "description": "Snake Head Sling Bag / Royale",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "pack",
     "series": {
-      "name": "Viper Series",
-      "slug": "viper-series"
+      "name": "Snake Head Sling Bag",
+      "slug": "snake-head-sling-bag"
     },
-    "colorway": "King",
+    "colorway": "Royale",
     "display_order": 71,
     "specifications": [],
     "images": [

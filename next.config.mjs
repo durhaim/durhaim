@@ -51,6 +51,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/king-viper-kangguru',
+        destination: '/catalogue/king-viper-kangguru-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/multicam-black-thunder',
         destination: '/catalogue/black-rifle-mag-pouch-2',
         permanent: true,
