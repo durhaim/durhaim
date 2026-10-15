@@ -121,8 +121,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/royale-bite-bee',
-        destination: '/catalogue/multicam-black-rifle-mag-pouch-2',
+        source: '/catalogue/black-mag-pouch',
+        destination: '/catalogue/black-mag-pouch-2',
         permanent: true,
       },
       {
