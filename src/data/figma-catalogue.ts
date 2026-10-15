@@ -360,17 +360,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Multicam Tropic Bite Bee",
-    "slug": "multicam-tropic-bite-bee",
-    "description": "Bite Bee Handbag / Multicam Tropic",
+    "name": "Black Cobra",
+    "slug": "black-cobra",
+    "description": "Cobra Series / Black",
     "price": null,
     "regional_prices": {},
-    "category": "pack",
+    "category": "vest",
     "series": {
-      "name": "Bite Bee Handbag",
-      "slug": "bite-bee-handbag"
+      "name": "Cobra Series",
+      "slug": "cobra-series"
     },
-    "colorway": "Multicam Tropic",
+    "colorway": "Black",
     "display_order": 20,
     "specifications": [],
     "images": [

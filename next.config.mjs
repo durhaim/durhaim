@@ -96,8 +96,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/black-cobra',
-        destination: '/catalogue/cobra-tiger-stripe-camo-2',
+        source: '/catalogue/multicam-tropic-bite-bee',
+        destination: '/catalogue/black-cobra',
         permanent: true,
       },
       {
