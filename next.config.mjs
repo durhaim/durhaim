@@ -36,6 +36,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/catalogue/green-mamba-modular',
+        destination: '/catalogue/green-mamba-modular-2',
+        permanent: true,
+      },
+      {
         source: '/catalogue/multicam-black-chitto-mark-2',
         destination: '/catalogue/royale-hg-double-mag-pouch-2',
         permanent: true,

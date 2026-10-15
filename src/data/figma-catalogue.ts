@@ -52,17 +52,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Mamba Modular",
-    "slug": "green-mamba-modular",
-    "description": "Mamba Series / Green",
+    "name": "Multicam Black Rattle Belt",
+    "slug": "multicam-black-rattle-belt-2",
+    "description": "Rattle Belt / Multicam Black",
     "price": null,
     "regional_prices": {},
-    "category": "vest",
+    "category": "belt",
     "series": {
-      "name": "Mamba Series",
-      "slug": "mamba-series"
+      "name": "Rattle Belt",
+      "slug": "rattle-belt"
     },
-    "colorway": "Green",
+    "colorway": "Multicam Black",
     "display_order": 4,
     "specifications": [],
     "images": [
