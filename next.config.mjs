@@ -51,8 +51,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/green-thunder',
-        destination: '/catalogue/king-viper-kangguru-2',
+        source: '/catalogue/black-hg-double-mag-pouch',
+        destination: '/catalogue/black-hg-double-mag-pouch-2',
         permanent: true,
       },
       {

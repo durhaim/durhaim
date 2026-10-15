@@ -576,17 +576,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black HG Double Mag Pouch",
-    "slug": "black-hg-double-mag-pouch",
-    "description": "Handgun Double Mag Pouch / Black",
+    "name": "Green Thunder",
+    "slug": "green-thunder",
+    "description": "Thunder Chestrig Series / Green",
     "price": null,
     "regional_prices": {},
-    "category": "accessories",
+    "category": "vest",
     "series": {
-      "name": "Handgun Double Mag Pouch",
-      "slug": "handgun-double-mag-pouch"
+      "name": "Thunder Chestrig Series",
+      "slug": "thunder-chestrig-series"
     },
-    "colorway": "Black",
+    "colorway": "Green",
     "display_order": 33,
     "specifications": [],
     "images": [
