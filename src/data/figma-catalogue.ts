@@ -34,17 +34,17 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Black Mamba Modular",
-    "slug": "black-mamba-modular",
-    "description": "Mamba Series / Black",
+    "name": "King Chitto Mark 2",
+    "slug": "king-chitto-mark-2",
+    "description": "Chitto Series / King",
     "price": null,
     "regional_prices": {},
     "category": "vest",
     "series": {
-      "name": "Mamba Series",
-      "slug": "mamba-series"
+      "name": "Chitto Series",
+      "slug": "chitto-series"
     },
-    "colorway": "Black",
+    "colorway": "King",
     "display_order": 3,
     "specifications": [],
     "images": [

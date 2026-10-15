@@ -31,8 +31,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/catalogue/king-chitto-mark-2',
-        destination: '/catalogue/green-mamba-modular-2',
+        source: '/catalogue/black-mamba-modular',
+        destination: '/catalogue/king-chitto-mark-2',
         permanent: true,
       },
       {
