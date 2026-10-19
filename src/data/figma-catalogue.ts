@@ -450,24 +450,6 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     ]
   },
   {
-    "name": "Green Chitto Mark 2",
-    "slug": "green-chitto-mark-2-2",
-    "description": "Chitto Series / Green",
-    "price": null,
-    "regional_prices": {},
-    "category": "vest",
-    "series": {
-      "name": "Chitto Series",
-      "slug": "chitto-series"
-    },
-    "colorway": "Green",
-    "display_order": 26,
-    "specifications": [],
-    "images": [
-      "/storefront/figma/catalogue/open/gjh-064841.webp"
-    ]
-  },
-  {
     "name": "Black Viper Mark 2",
     "slug": "black-viper-mark-2",
     "description": "Viper Series / Black",
