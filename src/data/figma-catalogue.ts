@@ -213,42 +213,7 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
       "/storefront/figma/catalogue/open/gjh-096541.webp"
     ]
   },
-  {
-    "name": "Green Chitto Mark 2",
-    "slug": "green-chitto-mark-2",
-    "description": "Chitto Series / Green",
-    "price": null,
-    "regional_prices": {},
-    "category": "vest",
-    "series": {
-      "name": "Chitto Series",
-      "slug": "chitto-series"
-    },
-    "colorway": "Green",
-    "display_order": 12,
-    "specifications": [
-      "Green Color",
-      "Laser Cut Design",
-      "Fabric 1000 D Triple Coating (Milspec)",
-      "Triple Magazine Rifle Modular Pouch (Placard)",
-      "Shoulder Quick Release",
-      "Cummerbund Quick Release",
-      "Laser Cut Molle",
-      "Velcro Patch Area",
-      "2 Medic/Utility Pouch",
-      "Abdomen Pouch",
-      "Waterbag/Utility Bag",
-      "Weight 2.8 kg",
-      "Compatible With Sapi Plate Size M"
-    ],
-    "images": [
-      "/storefront/figma/product/chitto-green/gjh-064871.webp",
-      "/storefront/figma/product/chitto-green/gjh-064842.webp",
-      "/storefront/figma/product/chitto-green/gjh-064851.webp",
-      "/storefront/figma/product/chitto-green/gjh-064881.webp",
-      "/storefront/figma/product/chitto-green/gjh-064891.webp"
-    ]
-  },
+
   {
     "name": "Multicam Black Mamba Mark 2",
     "slug": "multicam-black-mamba-mark-2",
@@ -447,6 +412,43 @@ export const figmaCatalogueSeeds: FigmaCatalogueSeed[] = [
     "specifications": [],
     "images": [
       "/storefront/figma/catalogue/open/dsc-089011.webp"
+    ]
+  },
+  {
+    "name": "Green Chitto Mark 2",
+    "slug": "green-chitto-mark-2",
+    "description": "Chitto Series / Green",
+    "price": null,
+    "regional_prices": {},
+    "category": "vest",
+    "series": {
+      "name": "Chitto Series",
+      "slug": "chitto-series"
+    },
+    "colorway": "Green",
+    "display_order": 26,
+    "specifications": [
+      "Green Color",
+      "Laser Cut Design",
+      "Fabric 1000 D Triple Coating (Milspec)",
+      "Triple Magazine Rifle Modular Pouch (Placard)",
+      "Shoulder Quick Release",
+      "Cummerbund Quick Release",
+      "Laser Cut Molle",
+      "Velcro Patch Area",
+      "2 Medic/Utility Pouch",
+      "Abdomen Pouch",
+      "Waterbag/Utility Bag",
+      "Weight 2.8 kg",
+      "Compatible With Sapi Plate Size M"
+    ],
+    "images": [
+      "/storefront/figma/catalogue/open/gjh-064841.webp",
+      "/storefront/figma/product/chitto-green/gjh-064871.webp",
+      "/storefront/figma/product/chitto-green/gjh-064842.webp",
+      "/storefront/figma/product/chitto-green/gjh-064851.webp",
+      "/storefront/figma/product/chitto-green/gjh-064881.webp",
+      "/storefront/figma/product/chitto-green/gjh-064891.webp"
     ]
   },
   {
