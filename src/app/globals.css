@@ -1614,11 +1614,19 @@
   aspect-ratio: 1 / 1.35;
   overflow: hidden;
   border-radius: var(--store-radius-sm);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .store-product-card__image > img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  object-position: center;
   border-radius: var(--store-radius-sm);
 }
 .store-product-card__utility {
@@ -1724,24 +1732,24 @@
 }
 .store-product-stage__image {
   height: 850px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   border: 1px solid var(--store-divider);
   background: rgb(40 40 40 / 62%);
-  padding: 30px;
+  padding: clamp(24px, 3.5vw, 44px);
   border-radius: var(--store-radius);
+  box-sizing: border-box;
 }
 .store-product-stage__image img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  object-position: center;
   border-radius: var(--store-radius-sm);
-}
-.store-product-stage__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 .store-product-stage__copy {
   padding-top: 0;
@@ -1815,6 +1823,11 @@
   background: rgb(40 40 40 / 62%);
   opacity: .82;
   border-radius: var(--store-radius-sm);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   transition: opacity 180ms var(--store-ease), border-color 180ms var(--store-ease);
 }
 .store-product-gallery button[aria-pressed="true"] {
@@ -1822,9 +1835,12 @@
   opacity: 1;
 }
 .store-product-gallery img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  object-position: center;
   border-radius: var(--store-radius-sm);
 }
 .store-product-utility {
@@ -1934,7 +1950,8 @@
     font-size: 22px;
   }
   .store-product-grid { grid-template-columns: 1fr; }
-  .store-product-card__image { aspect-ratio: 1 / 1.18; }
+  .store-product-card__image { aspect-ratio: 1 / 1.18; padding: 10px; }
+  .store-product-gallery button { padding: 8px; }
   .store-product-card__utility { transform: none; }
   .store-product-detail { background-attachment: scroll; }
   .store-product-detail__reference { padding: 28px 16px 72px; }
