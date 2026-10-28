@@ -38,11 +38,16 @@ async function getPublishedProductRoutes() {
       return fallbackRoutes;
     }
 
-    return (data ?? [])
+    const databaseSlugs = (data ?? [])
       .map((product) => product.slug)
       .filter((slug): slug is string => typeof slug === 'string' && slug.length > 0)
-      .filter((slug) => !tombstonedSlugs.has(slug))
-      .map((slug) => `/catalogue/${slug}`);
+      .filter((slug) => !tombstonedSlugs.has(slug));
+
+    if (databaseSlugs.length > 0 || process.env.STOREFRONT_V2_ENABLED === 'false') {
+      return databaseSlugs.map((slug) => `/catalogue/${slug}`);
+    }
+
+    return fallbackRoutes;
   } catch {
     return fallbackProducts
       .filter((product) => !tombstonedSlugs.has(product.slug))

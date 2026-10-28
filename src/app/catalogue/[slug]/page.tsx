@@ -1,13 +1,11 @@
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
-import { createClient } from "@supabase/supabase-js";
 import { createAdminClient } from "@/lib/supabase";
 import {
   applyCategoryOverrides,
   fallbackProducts,
   isMissingSchemaError,
-  mergeCatalogueProducts,
   normalizeProduct,
   type CatalogueProduct,
 } from "@/lib/catalogue-data";
@@ -67,14 +65,23 @@ async function getProduct(slug: string): Promise<CatalogueProduct | null> {
       if (normalized.is_published === false) {
         return null;
       }
-      return applyCategoryOverrides(
-        mergeCatalogueProducts(
-          [normalized],
-          fallbackProducts,
-          tombstonedSlugs,
-        ),
-        categoryOverrides,
-      ).find((product) => product.slug === slug) ?? null;
+      return applyCategoryOverrides([normalized], categoryOverrides)[0] ?? null;
+    }
+
+    const includeFigmaCatalogue = process.env.STOREFRONT_V2_ENABLED !== "false";
+    if (!includeFigmaCatalogue) {
+      return null;
+    }
+
+    // Check if the database has any published products
+    const { count } = await supabase
+      .from("products")
+      .select("id", { count: "exact", head: true })
+      .eq("is_published", true);
+
+    if (typeof count === "number" && count > 0) {
+      // Database is online and has products; do not expose Figma fallback products
+      return null;
     }
 
     if (tombstonedSlugs.has(slug)) return null;

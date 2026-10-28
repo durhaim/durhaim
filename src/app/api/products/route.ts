@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 import { createAdminClient } from "@/lib/supabase";
 import {
   applyCategoryOverrides,
@@ -88,7 +87,9 @@ export async function GET(req: NextRequest) {
     }
 
     const databaseProducts = (data ?? []).map((product) => normalizeProduct(product as Record<string, unknown>));
-    const mergedProducts = includeFigmaCatalogue
+    const hasDatabaseProducts = databaseProducts.some((product) => product.is_published !== false);
+    const shouldUseFigmaFallback = includeFigmaCatalogue && !hasDatabaseProducts;
+    const mergedProducts = shouldUseFigmaFallback
       ? mergeCatalogueProducts(databaseProducts, fallbackProducts, tombstonedSlugs)
       : databaseProducts;
     const publishedProducts = mergedProducts.filter((product) => product.is_published !== false);
@@ -96,7 +97,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({
       ...buildProductResponse(req, categorizedProducts),
       categories: categoryOverrides,
-      source: includeFigmaCatalogue ? "database+figma" : "database",
+      source: shouldUseFigmaFallback ? "figma-fallback" : "database",
     });
   } catch (error) {
     console.error("Products API error:", error);

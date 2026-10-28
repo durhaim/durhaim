@@ -24,7 +24,7 @@ type CatalogueGroup = {
 };
 
 export default function CataloguePage() {
-  const { language, t } = useCommerce();
+  const { language, t, region } = useCommerce();
   const siteSettings = useSiteSettings();
   const [category, setCategory] = useState("all");
   const [queryInput, setQueryInput] = useState("");
@@ -55,7 +55,7 @@ export default function CataloguePage() {
       setError("");
       setWarning("");
       try {
-        const params = new URLSearchParams({ sort, limit: "200" });
+        const params = new URLSearchParams({ sort, limit: "200", region });
         if (category !== "all") params.set("category", category);
         if (query.trim()) params.set("search", query.trim());
         const response = await fetch(`/api/products?${params}`, { signal: controller.signal, cache: "no-store" });
@@ -83,7 +83,7 @@ export default function CataloguePage() {
     }
     void fetchProducts();
     return () => controller.abort();
-  }, [category, query, sort, t.catalogue.unableToLoad]);
+  }, [category, query, region, sort, t.catalogue.unableToLoad]);
 
   const groups = useMemo<CatalogueGroup[]>(() => {
     const categoryMap = new Map<string, CatalogueGroup>();
