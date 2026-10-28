@@ -303,6 +303,52 @@ export default function AdminProductsPage() {
     }));
   };
 
+  async function resizeImageBeforeUpload(inputFile: File): Promise<File> {
+    if (typeof window === 'undefined') return inputFile;
+    try {
+      const img = new Image();
+      const objectUrl = URL.createObjectURL(inputFile);
+      await new Promise((resolve, reject) => {
+        img.onload = () => resolve(undefined);
+        img.onerror = () => reject();
+        img.src = objectUrl;
+      });
+      URL.revokeObjectURL(objectUrl);
+
+      const maxDimension = 1600;
+      let { width, height } = img;
+      if (width <= maxDimension && height <= maxDimension && inputFile.size < 500 * 1024 && inputFile.type === 'image/webp') {
+        return inputFile;
+      }
+
+      if (width > maxDimension || height > maxDimension) {
+        if (width > height) {
+          height = Math.round((height * maxDimension) / width);
+          width = maxDimension;
+        } else {
+          width = Math.round((width * maxDimension) / height);
+          height = maxDimension;
+        }
+      }
+
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return inputFile;
+      ctx.drawImage(img, 0, 0, width, height);
+
+      const blob = await new Promise<Blob | null>((resolve) => {
+        canvas.toBlob((b) => resolve(b), 'image/webp', 0.82);
+      });
+
+      if (!blob) return inputFile;
+      return new File([blob], inputFile.name.replace(/\.[^.]+$/, '.webp'), { type: 'image/webp' });
+    } catch {
+      return inputFile;
+    }
+  }
+
   const handleProductImageUpload = async (index: number, event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     event.target.value = '';
@@ -316,15 +362,16 @@ export default function AdminProductsPage() {
       return;
     }
 
-    if (file.size > MAX_PRODUCT_IMAGE_SIZE) {
-      setError('Image must be 3 MB or smaller.');
-      return;
-    }
-
     setUploadingImageIndex(index);
     try {
+      const processedFile = await resizeImageBeforeUpload(file);
+      if (processedFile.size > MAX_PRODUCT_IMAGE_SIZE) {
+        setError('Image must be 3 MB or smaller.');
+        return;
+      }
+
       const uploadBody = new FormData();
-      uploadBody.append('image', file);
+      uploadBody.append('image', processedFile);
 
       const res = await fetch('/api/admin/product-images', {
         method: 'POST',

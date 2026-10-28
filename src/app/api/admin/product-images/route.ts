@@ -1,12 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase';
 import { requireAdminRole } from '@/lib/admin-permissions';
+import sharp from 'sharp';
 
 export const dynamic = 'force-dynamic';
 
-const MAX_PRODUCT_IMAGE_SIZE = 3 * 1024 * 1024;
+const MAX_PRODUCT_IMAGE_SIZE = 5 * 1024 * 1024;
 const ALLOWED_PRODUCT_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
 const PRODUCT_IMAGE_BUCKET = 'product-images';
+const MAX_DIMENSION = 1600;
+const WEBP_QUALITY = 82;
 
 function getExtension(file: File) {
   const fromName = file.name.split('.').pop()?.toLowerCase();
@@ -82,7 +85,7 @@ export async function POST(req: NextRequest) {
     }
 
     if (file.size > MAX_PRODUCT_IMAGE_SIZE) {
-      return NextResponse.json({ error: 'Image must be 3 MB or smaller.' }, { status: 413 });
+      return NextResponse.json({ error: 'Image must be 5 MB or smaller.' }, { status: 413 });
     }
 
     if (!(await validateImageSignature(file))) {
@@ -91,20 +94,50 @@ export async function POST(req: NextRequest) {
 
     await ensureProductImageBucket(supabase);
 
-    const extension = getExtension(file);
+    // Resize image to max 1600x1600, auto-orient EXIF, and convert to WebP to minimize Supabase storage & egress
+    const rawBuffer = Buffer.from(await file.arrayBuffer());
+    let optimizedBuffer: Buffer;
+    try {
+      optimizedBuffer = await sharp(rawBuffer)
+        .rotate()
+        .resize({
+          width: MAX_DIMENSION,
+          height: MAX_DIMENSION,
+          fit: 'inside',
+          withoutEnlargement: true,
+        })
+        .webp({
+          quality: WEBP_QUALITY,
+          effort: 5,
+        })
+        .toBuffer();
+    } catch (sharpError) {
+      console.error('Sharp image optimization failed, using original buffer:', sharpError);
+      optimizedBuffer = rawBuffer;
+    }
+
+    const isWebP = optimizedBuffer !== rawBuffer;
+    const extension = isWebP ? 'webp' : getExtension(file);
+    const contentType = isWebP ? 'image/webp' : file.type;
     const path = `${new Date().toISOString().slice(0, 10)}/${crypto.randomUUID()}.${extension}`;
+
     const { error } = await supabase.storage
       .from(PRODUCT_IMAGE_BUCKET)
-      .upload(path, file, {
+      .upload(path, optimizedBuffer, {
         cacheControl: '31536000',
-        contentType: file.type,
+        contentType,
         upsert: false,
       });
 
     if (error) throw error;
 
     const { data } = supabase.storage.from(PRODUCT_IMAGE_BUCKET).getPublicUrl(path);
-    return NextResponse.json({ url: data.publicUrl, path });
+    return NextResponse.json({
+      url: data.publicUrl,
+      path,
+      size: optimizedBuffer.length,
+      originalSize: file.size,
+    });
   } catch (error) {
     console.error('Error uploading product image:', error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
