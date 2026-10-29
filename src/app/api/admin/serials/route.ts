@@ -39,7 +39,7 @@ function getCategoryPrefix(categoryData: unknown) {
 // built every row in memory and attempted a single insert, which hung the function until the
 // client timed out. Serials are printed onto label sheets, so a per-request ceiling well above
 // any real print run is still generous — the largest batch to date is 512.
-const MAX_SERIALS_PER_REQUEST = 2000;
+const MAX_SERIALS_PER_REQUEST = 2048;
 
 function generateSerialRows(productsToGenerate: ProductForSerialGeneration[], count: number) {
   const date = new Date();

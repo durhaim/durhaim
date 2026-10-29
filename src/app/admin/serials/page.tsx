@@ -636,7 +636,7 @@ export default function SerialsPage() {
       !selectedProduct
       || !Number.isInteger(parsedGenerateCount)
       || parsedGenerateCount < 1
-      || parsedGenerateCount > 1000
+      || parsedGenerateCount > 2048
     ) return;
     setIsGenerating(true);
 
@@ -1453,7 +1453,7 @@ export default function SerialsPage() {
                   data-testid="generate-serial-count"
                   type="number"
                   min="1"
-                  max="1000"
+                  max="2048"
                   className="w-full bg-tactical-black border border-surface-container-highest text-stark-white p-3 focus:border-signal-orange font-data-mono"
                   value={generateCount}
                   onChange={(e) => setGenerateCount(e.target.value)}
